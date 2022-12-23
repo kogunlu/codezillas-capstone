@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { useDispatch  } from 'react-redux';
+import swal from 'sweetalert';
 import {setAnswer1} from "../../../../features/booking/bookingSlice"
+
 
 
 function Card1({btnClick}) {
@@ -13,8 +15,8 @@ function Card1({btnClick}) {
     // With this dispatch, we will save user's selection to our store. Later, we will use these answers to update our firebase db
     function handleClick(){
         if(selected === ""){
-            // eslint-disable-next-line no-alert
-            alert("Please select an answer for this question!")
+            swal("Error!", "Please select an answer for this question!!");
+
         }else{
             dispatch(setAnswer1(selected))
             btnClick()
@@ -22,7 +24,7 @@ function Card1({btnClick}) {
     }
 
   return (
-    <div className='border border-solid border-gray-200 h-96 w-5/6 px-10 py-5 flex flex-col justify-between items-start rounded-md shadow-xl flex-wrap wrap'>
+    <div className='border border-solid border-gray-200 h-96 w-full md:w-5/6 px-2 md:px-10 py-5 flex flex-col justify-between items-start rounded-md shadow-xl flex-wrap wrap'>
 
         <div className='h-1/6'>
             <h2 className='text-2xl font-medium'>
@@ -30,20 +32,20 @@ function Card1({btnClick}) {
             </h2>
         </div>
 
-        <div className='w-full h-4/6 flex flex-col justify-start gap-2 pt-5'>
+        <div className='w-full h-4/6 flex flex-col justify-center md:justify-start gap-2 pt-5'>
 
 
             <input 
             type="button" 
             value="Individual Counseling" 
-            className='w-full border border-solid border-2 border-gray-200 rounded-lg text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
+            className='w-full border border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
             onClick={e => setSelected(e.target.value)} 
             />
 
             <input 
             type="button" 
             value="Teen Counseling (For My Child)" 
-            className='w-full border border-solid border-2 border-gray-200 rounded-lg text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
+            className='w-full border border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
             onClick={e => setSelected(e.target.value)}  
             />
 

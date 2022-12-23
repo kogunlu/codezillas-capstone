@@ -1,17 +1,18 @@
 import React, {useState} from 'react'
 import { useDispatch  } from 'react-redux';
-import {setAnswer4} from "../../../../features/booking/bookingSlice"
+import {setAnswer5} from "../../../../features/booking/bookingSlice"
 
 
-function Card4({btnClick}) {
+function Card5({btnClick}) {
 
     const [selected, setSelected] = useState([])
     const [checkList, setCheckList] = useState({
-        male: false,
-        female: false,
-        young: false,
-        old: false,
-        nonReligious: false
+        depression: false,
+        stress: false,
+        relationship: false,
+        family: false,
+        trauma: false,
+        eating: false
     })
 
     function handleCheck(e) {
@@ -28,23 +29,26 @@ function Card4({btnClick}) {
     const dispatch = useDispatch()
 
     function handleClick(){
-        if(checkList.male){
-            setSelected(selected.push("male"))
+        if(checkList.depression){
+            setSelected(selected.push("depression"))
         }
-        if(checkList.female){
-            setSelected(selected.push("female"))
+        if(checkList.stress){
+            setSelected(selected.push("stress"))
         }
-        if(checkList.young){
-            setSelected(selected.push("young"))
+        if(checkList.relationship){
+            setSelected(selected.push("relationship"))
         }
-        if(checkList.old){
-            setSelected(selected.push("old"))
+        if(checkList.family){
+            setSelected(selected.push("family"))
         }
-        if(checkList.nonReligious){
-            setSelected(selected.push("non-religious"))
+        if(checkList.trauma){
+            setSelected(selected.push("trauma"))
+        }
+        if(checkList.eating){
+            setSelected(selected.push("eating"))
         }
 
-        dispatch(setAnswer4(selected))
+        dispatch(setAnswer5(selected))
         btnClick()
     }
 
@@ -53,9 +57,9 @@ function Card4({btnClick}) {
 
         <div className='h-auto'>
             <h2 className='text-2xl font-medium'>
-                Are There Any Specific Qualities That You Would Like In A Councelor?* 
+                Are There Any Issues You Would Like To Focus On?* 
             </h2>
-            <p className='text-sm font-medium italic'>(* If you don’t have any preference, you can skip this question)</p>
+            <p className='text-sm font-medium italic'>(* If there is no spesific issue, you can skip this question.)</p>
         </div>
 
         <div className='w-full h-auto py-5 md:py-0 flex flex-col justify-center '>
@@ -64,13 +68,13 @@ function Card4({btnClick}) {
 
                 <input 
                 type="checkbox" 
-                value="male" 
+                value="depression" 
                 className='rounded-lg pl-2 py-2'
                 onChange={(e) => handleCheck(e)}
-                checked = {checkList.male}
+                checked = {checkList.depression}
                 />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Male Counselor
+                <p className='text-lg font-normal'>
+                    Depression
                 </p>
                 
             </div>
@@ -79,13 +83,13 @@ function Card4({btnClick}) {
 
                 <input 
                 type="checkbox" 
-                value="female" 
+                value="stress" 
                 className='rounded-lg pl-2 py-2'
                 onChange={(e) => handleCheck(e)}
-                checked = {checkList.female}
+                checked = {checkList.stress}
                 />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Female Counselor
+                <p className='text-lg font-normal'>
+                    Stress And Anxiety
                 </p>
                 
             </div>
@@ -94,13 +98,13 @@ function Card4({btnClick}) {
 
                 <input 
                 type="checkbox" 
-                value="young" 
+                value="relationship" 
                 className='rounded-lg pl-2 py-2'
                 onChange={(e) => handleCheck(e)}
-                checked = {checkList.young}
+                checked = {checkList.relationship}
                 />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Young Counselor (45-)
+                <p className='text-lg font-normal'>
+                    Relationship issues
                 </p>
                 
             </div>
@@ -109,13 +113,13 @@ function Card4({btnClick}) {
 
                 <input 
                 type="checkbox" 
-                value="old" 
+                value="family" 
                 className='rounded-lg pl-2 py-2'
                 onChange={(e) => handleCheck(e)}
-                checked = {checkList.old}
+                checked = {checkList.family}
                 />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer An Old Counselor (45+)
+                <p className='text-lg font-normal'>
+                    Family Conflicts
                 </p>
                 
             </div>
@@ -124,20 +128,35 @@ function Card4({btnClick}) {
 
                 <input 
                 type="checkbox" 
-                value="nonReligious" 
+                value="trauma" 
                 className='rounded-lg pl-2 py-2'
                 onChange={(e) => handleCheck(e)}
-                checked = {checkList.nonReligious}
+                checked = {checkList.trauma}
                 />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Non-Religious Counselor
+                <p className='text-lg font-normal'>
+                    Trauma And Abuse
+                </p>
+                
+            </div>
+
+            <div className='flex justify-start gap-2'>
+
+                <input 
+                type="checkbox" 
+                value="eating" 
+                className='rounded-lg pl-2 py-2'
+                onChange={(e) => handleCheck(e)}
+                checked = {checkList.eating}
+                />
+                <p className='text-lg font-normal'>
+                    Eating Disorders
                 </p>
                 
             </div>
 
         </div>
 
-        <div className='flex justify-start items-center w-5/6 h-auto'>
+        <div className='flex justify-start items-center w-5/6 h-auto pt-2'>
             <input 
             type="button" 
             value="NEXT" 
@@ -148,4 +167,4 @@ function Card4({btnClick}) {
   )
 }
 
-export default Card4
+export default Card5

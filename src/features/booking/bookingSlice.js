@@ -43,6 +43,8 @@ export const bookingSlice = createSlice({
     }
 })
 
+  // auto close tag, auto rename, babel javascript, color highlet, dotENV, jest, code snippets js es6, npm intellisense, tailwind intellisense, 
+  
 export const {
     setAnswer1, 
     setAnswer2, 

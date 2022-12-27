@@ -53,7 +53,7 @@ function Card4({btnClick}) {
 
         <div className='h-auto'>
             <h2 className='text-2xl font-medium'>
-                Are There Any Specific Qualities That You Would Like In A Councelor?* 
+                Are There Any Specific Qualities That You Would Like In A Counselor?* 
             </h2>
             <p className='text-sm font-medium italic'>(* If you don’t have any preference, you can skip this question)</p>
         </div>

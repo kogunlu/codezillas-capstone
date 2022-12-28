@@ -1,16 +1,17 @@
-import React, {useEffect} from 'react'
-import {useNavigate} from "react-router-dom"
+import React from 'react'
+import { useNavigate } from "react-router-dom"
 import {FaExclamation} from "react-icons/fa"
 
 function ErrorPage() {
-    const navigate = useNavigate()
 
 
-    useEffect(() => {
-        const timer = setTimeout(() => navigate("/"), 3000)
-  
-        return () => clearTimeout(timer)
-    },[])
+  const navigate = useNavigate()
+
+    
+        setTimeout(() => navigate('/'), 3000)
+
+
+
 
   return (
     <div className='flex flex-col justify-center items-center mt-5'>

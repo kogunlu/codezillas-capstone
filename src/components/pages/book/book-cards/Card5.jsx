@@ -53,7 +53,7 @@ function Card5({btnClick}) {
     }
 
   return (
-    <div className='border border-solid border-gray-200 h-auto md:h-96 w-full md:w-5/6 px-2 md:px-10 py-5 flex flex-col justify-between items-start rounded-md shadow-xl flex-wrap wrap'>
+    <div className='border border-solid border-gray-200 h-96 w-full md:w-5/6 lg:w-4/6 px-2 md:px-10 py-5 flex flex-col justify-between items-start rounded-md shadow-xl flex-wrap'>
 
         <div className='h-auto'>
             <h2 className='text-2xl font-medium'>

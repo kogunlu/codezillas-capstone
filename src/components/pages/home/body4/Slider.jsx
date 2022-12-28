@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
-import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill  } from "react-icons/bs";
+
+import Chevron from 'react-chevron';
 import { sliderArray } from "./RecentBlogs";
+
 
 function Slider(){
     const [index, setIndex] = useState(0)
@@ -42,7 +44,7 @@ function Slider(){
         <p className='text-3xl font-semibold pt-14 pb-16 pl-40'>RECENT BLOGS</p>
 
 
-<div className='grid grid-cols-3'>
+<div className='grid grid-cols-3 '>
         
         <div className='relative'>    
         <img className=' pl-36'  src={imgs[index]} alt="RecentBlogsPicture"/>
@@ -60,22 +62,26 @@ function Slider(){
         <div className='relative'>    
         <img src={imgs[index]} alt="RecentBlogsPicture"/>
     
-        <h1 className='absolute text-white text-base top-3 left-40'>MENTAL HEALTH </h1>
-        <h1 className='absolute text-white text-base top-8 left-40'>AND TECHNOLOGY</h1>
+        <h1 className='absolute text-white text-base top-3 left-5'>MENTAL HEALTH </h1>
+        <h1 className='absolute text-white text-base top-8 left-5'>AND TECHNOLOGY</h1>
         </div>
 
 </div>
 
 <div className='actions'>
-          <button className=' bg-none text-white md:text-2xl lg:text-3xl rounded hover:text-slate-300 focus:outline-none' 
+          <button className=' bg-none text-black md:text-2xl lg:text-3xl hover:text-slate-300 ' 
           onClick={prev} type='button'
           >
-            <BsFillArrowLeftCircleFill />
+            <div className="border-solid border-2 border-black rounded ">
+            <Chevron direction='left'/>
+            </div>
           </button>
-          <button className=' bg-none text-white md:text-2xl lg:text-3xl rounded hover:text-slate-300 focus:outline-none' 
+          <button className='bg-none text-black md:text-2xl lg:text-3xl hover:text-slate-300' 
           onClick={next} type='button'
           >
-            <BsFillArrowRightCircleFill />
+            <div className="border-solid border-2 border-black rounded ">
+            <Chevron direction='right'/>
+            </div>
           </button>
 
         </div>

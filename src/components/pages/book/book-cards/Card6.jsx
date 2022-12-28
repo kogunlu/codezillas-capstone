@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useDispatch  } from 'react-redux';
+import swal from 'sweetalert';
 import {setAnswer6} from "../../../../features/booking/bookingSlice"
 
 
@@ -16,9 +17,12 @@ function Card6({btnClick}) {
 
     function handleClick(){
         
-
-        dispatch(setAnswer6(text))
-        btnClick()
+        if(text === ""){
+            swal("Error!", "This part can not be empty!!");
+        }else{
+            dispatch(setAnswer6(text))
+            btnClick()
+        }
     }
 
   return (

@@ -1,51 +1,27 @@
 import React, {useState} from 'react'
 import { useDispatch  } from 'react-redux';
+import swal from 'sweetalert';
 import {setAnswer4} from "../../../../features/booking/bookingSlice"
 
 
 function Card4({btnClick}) {
 
-    const [selected, setSelected] = useState([])
-    const [checkList, setCheckList] = useState({
-        male: false,
-        female: false,
-        young: false,
-        old: false,
-        nonReligious: false
-    })
+    const [preference, setPreference] = useState("")
 
-    function handleCheck(e) {
-
-        const { value } = e.target;
-
-        const newCheckList = { ...checkList };
-
-        newCheckList[value] = !newCheckList[value]
-
-        setCheckList(newCheckList);
-    }
 
     const dispatch = useDispatch()
+    
+        function handleChange(e){
+            setPreference(e.target.value)
+        }
 
     function handleClick(){
-        if(checkList.male){
-            setSelected(selected.push("male"))
+        if(preference === ""){
+            swal("Error!", "Please select an answer for this question!!");
+        }else{
+            dispatch(setAnswer4(preference))
+            btnClick()
         }
-        if(checkList.female){
-            setSelected(selected.push("female"))
-        }
-        if(checkList.young){
-            setSelected(selected.push("young"))
-        }
-        if(checkList.old){
-            setSelected(selected.push("old"))
-        }
-        if(checkList.nonReligious){
-            setSelected(selected.push("non-religious"))
-        }
-
-        dispatch(setAnswer4(selected))
-        btnClick()
     }
 
   return (
@@ -53,88 +29,55 @@ function Card4({btnClick}) {
 
         <div className='h-auto'>
             <h2 className='text-2xl font-medium'>
-                Are There Any Specific Qualities That You Would Like In A Counselor?* 
+                Are There Any Specific Qualities That You Would Like In A Counselor? 
             </h2>
-            <p className='text-sm font-medium italic'>(* If you don’t have any preference, you can skip this question)</p>
         </div>
 
-        <div className='w-full h-auto py-5 md:py-0 flex flex-col justify-center '>
-
-            <div className='flex justify-start gap-2'>
-
+        <div className='w-full h-auto py-5 md:py-0 flex flex-col justify-center items-start gap-1 '>
+            <div>
                 <input 
-                type="checkbox" 
-                value="male" 
-                className='rounded-lg pl-2 py-2'
-                onChange={(e) => handleCheck(e)}
-                checked = {checkList.male}
-                />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Male Counselor
-                </p>
+                type="radio" 
+                value="male"
+                onChange={handleChange}
+                checked= {preference === 'male'}
+                /> I Prefer A Male Counselor
+            </div>
                 
+            <div>
+                <input 
+                type="radio" 
+                value="female"
+                onChange={handleChange} 
+                checked= {preference === 'female'}
+                /> I Prefer A Female Counselor
             </div>
 
-            <div className='flex justify-start gap-2'>
-
-                <input 
-                type="checkbox" 
-                value="female" 
-                className='rounded-lg pl-2 py-2'
-                onChange={(e) => handleCheck(e)}
-                checked = {checkList.female}
-                />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Female Counselor
-                </p>
-                
-            </div>
-
-            <div className='flex justify-start gap-2'>
-
-                <input 
-                type="checkbox" 
+            <div>
+                <input
+                type="radio" 
                 value="young" 
-                className='rounded-lg pl-2 py-2'
-                onChange={(e) => handleCheck(e)}
-                checked = {checkList.young}
-                />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Young Counselor (45-)
-                </p>
-                
+                onChange={handleChange}
+                checked= {preference === 'young'}
+                /> I Prefer A Young Counselor (45-)
             </div>
 
-            <div className='flex justify-start gap-2'>
-
-                <input 
-                type="checkbox" 
+            <div>
+                <input
+                type="radio" 
                 value="old" 
-                className='rounded-lg pl-2 py-2'
-                onChange={(e) => handleCheck(e)}
-                checked = {checkList.old}
-                />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer An Old Counselor (45+)
-                </p>
+                onChange={handleChange}
+                checked= {preference === 'old'}
+                /> I Prefer An Old Counselor (45+)
+            </div>    
                 
+            <div>
+                <input
+                type="radio" 
+                value="nonReligious"
+                onChange={handleChange}
+                checked= {preference === 'nonReligious'}
+                /> I Prefer A Non-Religious Counselor
             </div>
-
-            <div className='flex justify-start gap-2'>
-
-                <input 
-                type="checkbox" 
-                value="nonReligious" 
-                className='rounded-lg pl-2 py-2'
-                onChange={(e) => handleCheck(e)}
-                checked = {checkList.nonReligious}
-                />
-                <p className='text-md md:text-lg font-normal'>
-                    I Prefer A Non-Religious Counselor
-                </p>
-                
-            </div>
-
         </div>
 
         <div className='flex justify-start items-center w-5/6 h-auto'>

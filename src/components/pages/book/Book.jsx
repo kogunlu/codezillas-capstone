@@ -23,8 +23,6 @@ function Book() {
     setCardNumber(cardNumber+1)
   }
 
-  
-
   useEffect(() => {
 
     if(cardNumber === 1){

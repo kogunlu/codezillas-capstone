@@ -6,8 +6,8 @@ const initialState = {
         answer1 : "",
         answer2: "",
         answer3: false,
-        answer4: [],
-        answer5: [],
+        answer4: "",
+        answer5: "",
         answer6: "",
     }
 }

@@ -18,7 +18,7 @@ function About() {
            <div className="my-2 pl-52"> <img src={founderpic} alt="Our Founder" /></div>
            
            <div className="pr-52 ">
-            <h1 className="col-span-2 text-4xl font-normal ">Our Founding</h1>
+            <h1 className="col-span-2 text-4xl font-normal pl-2 ">Our Founding</h1>
             <div>Healing was founded by Payam Abubakr in 2021. It was called Healing Online, and started as a blog and an online community where some of the world`s therapists shared their research and ideas. We launched the Beginner`s Guide to Therapy and our first study, and that hub of industry expertise transformed into a small consulting firm and led us to create the Online Therapist of today!</div>
             </div>
 

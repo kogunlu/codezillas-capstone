@@ -1,9 +1,9 @@
 import React from 'react';
+import About from "./components/pages/About/About";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ErrorPage from './components/pages/404/ErrorPage';
 import Book from './components/pages/book/Book';
 import Home from "./components/pages/home/Home"
-
 
 
 
@@ -16,6 +16,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='book' element={<Book />} />
         <Route path='*' element= {<ErrorPage />}  />
+        <Route path='about' element= {<About/>} />
 
       </Routes>
     </BrowserRouter>

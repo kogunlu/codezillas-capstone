@@ -1,10 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import {FaFacebook} from "react-icons/fa"
 import {GrGoogle} from "react-icons/gr"
 import loginPicture from "./Login_picture/login.jpg"
 
 function Login() {
 
+    const navigate = useNavigate()
+
+    function handleSignUpClick(){
+        navigate('/signup')
+    }
 
   return (
     <div className='h-full w-full flex flex-col justify-start items-center gap-5 mt-10'>
@@ -39,6 +45,7 @@ function Login() {
                                     type="button" 
                                     value="Signup" 
                                     className=' py-1 md:py-3 px-5 h-10 md:h-14 focus:outline-none hover:scale-105 hover:bg-cyan-400 hover:text-white text-cyan-400 border border-cyan-400 bg-white text-lg font-semibold rounded-md w-5/12 '
+                                    onClick={() => handleSignUpClick()}
                                     />
                                 </div>
                         </div>

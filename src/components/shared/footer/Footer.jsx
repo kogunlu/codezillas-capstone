@@ -11,16 +11,16 @@ function Footer() {
 
 
   return (
-    <div className='w-full h-60 md:h-44 bg-amber-200 flex justify-center'>
+    <div className='w-full h-60 md:h-44 bg-amber-200 flex justify-center '>
 
 
     <div className='w-full md:w-10/12 h-full flex flex-col md:flex-row justify-between items-center'>
 
-      <div className='h-5/6 w-full md:w-4/12 flex flex-col items-center md:items-start justify-around'>
+      <div className='h-5/6 w-4/12 flex flex-col items-center md:items-start justify-around'>
 
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-2 '>
               <h2 className='text-2xl font-semibold'>Subscribe</h2>
-              <p className='text-gray-500'>
+              <p className='text-gray-500 '>
                 We`ll never to spam you or share your email
               </p>
           </div>
@@ -29,8 +29,8 @@ function Footer() {
       </div>
 
 
-      <div className='h-5/6 w-4/12 flex flex-col justify-evenly items-center'>
-          <div className='w-full flex justify-between items-center '>
+      <div className='h-5/6 w-full md:w-4/12 flex flex-col justify-evenly items-center'> 
+          <div className='w-full flex justify-between items-center gap-2'> 
               <Link to='/' className='text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg' >Home</Link>
               <Link to='blogs' className='text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg'>Blogs</Link>
               <Link to='about' className='text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg'>About</Link>
@@ -44,8 +44,6 @@ function Footer() {
           </div>
       </div>
     </div>
-
-
 
 
     </div>

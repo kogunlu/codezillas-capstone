@@ -5,7 +5,7 @@ function SubsThanks(){
 
     return(
             <div>
-                <Thanks text="Your email has been added to the mailing list successfuly!"/>
+                <Thanks text="Your email has been added to the mailing list successfully!"/>
             </div>
     )
 }

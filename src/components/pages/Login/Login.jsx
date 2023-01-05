@@ -1,14 +1,54 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+/* eslint-disable prefer-destructuring */
+import React, { useState } from 'react'
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+
 import { useNavigate } from 'react-router-dom'
 import loginPicture from "./Login_picture/login.jpg"
 import Socials from './Socials'
 
 function Login() {
 
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
     const navigate = useNavigate()
 
     function handleSignUpClick(){
         navigate('/signup')
+    }
+
+    function handleLoginClick(){
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+
+            const user = userCredential.user;
+
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            console.log(errorCode)
+            console.log(errorMessage)
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              
+              const {uid} = user.uid;
+              alert(`Welcome ${user.displayName}!`)
+
+            } else {
+
+              alert("Please make sure that you're typing your email/password")
+
+            }
+          });
+
+          setEmail("")
+          setPassword("")
     }
 
   return (
@@ -30,14 +70,25 @@ function Login() {
 
                             <div className='w-full h-5/6 flex flex-col justify-around items-center px-5'>
 
-                                <input type='email' className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' placeholder='Your Email'/>
-                                <input type='password' className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' placeholder='Your Password' />
+                                <input type='email' 
+                                className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
+                                placeholder='Your Email'
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                />
+                                <input type='password' 
+                                className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
+                                placeholder='Your Password'
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                                />
 
                                 <div className='w-full flex justify-between items-center'>
                                     <input 
                                     type="button" 
                                     value="Login" 
                                     className='py-1 md:py-3 px-5 h-10 md:h-14 hover:bg-cyan-200 focus:outline-none hover:scale-105 border border-cyan-400 bg-cyan-400 text-lg font-semibold rounded-md w-5/12 shadow-lg'
+                                    onClick={() => handleLoginClick()}
                                     />
 
                                     <input 

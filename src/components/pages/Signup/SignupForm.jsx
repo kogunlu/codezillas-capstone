@@ -1,14 +1,13 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-unused-vars */
 import React from 'react'
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from "formik";
 
 
-
-
 function SignupForm() {
     const navigate = useNavigate()
-
-    
 
 
     const validate = values => {
@@ -94,24 +93,31 @@ function SignupForm() {
       },
       validate,
       onSubmit: values => {
-        alert(JSON.stringify(values, null, 2))
-      }
-    })
 
+      const email = formik.values.email
+      const password = formik.values.password
 
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+
+        const {user} = userCredential.user;
+        alert("Your account is created.")
+
+      }).then(updateProfile(auth.currentUser, { displayName: formik.values.firstName }))
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        console.log(errorCode)
+        console.log(errorMessage)
+      });
+    }
+  })
 
     function handleLoginClick(){
         navigate('/login')
     }
-
-    // empty as of now
-    function handleSignupClick(){
-    
-      
-    }
-
-
-
 
 
   return (
@@ -256,7 +262,6 @@ function SignupForm() {
            type="submit" 
            value="Signup" 
            className=' py-1 md:py-3 px-5 h-10 md:h-14 focus:outline-none hover:scale-105 hover:bg-cyan-400 hover:text-white text-cyan-400 border border-cyan-400 bg-white text-lg font-semibold rounded-md w-5/12 '
-            onMouseEnter={() => handleSignupClick()}
            />
        </div>
     </form>

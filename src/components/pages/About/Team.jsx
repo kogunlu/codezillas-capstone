@@ -7,6 +7,7 @@ import team4 from "./team/team4.jpg"
 import team5 from "./team/team5.jpg"
 import team6 from "./team/team6.jpg"
 
+// About Page- Meet the Team. TeamCards.jsx called there
 function Team() {
     return (
     <div className="pb-40">
@@ -15,7 +16,7 @@ function Team() {
         <p className="text-2xl  text-gray-800 2xl:text-4xl">Meet the Team!</p>
         </div>
 
-        <div className="flex flex-wrap justify-center px-8">
+        <div className="flex flex-wrap justify-center">
             <TeamCard img={team1} name="Allan Saleh" content="Lead Engineer & Web Developer"/>
             <TeamCard img={team2} name="Payam Abubakr" content="Junior Designer & FE Developer"/>
             <TeamCard img={team3} name="Ahmed Mohammed" content="Junior Designer & FE Developer"/>

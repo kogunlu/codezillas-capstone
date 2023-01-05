@@ -1,12 +1,13 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from "formik";
 
 
 
+
 function SignupForm() {
     const navigate = useNavigate()
+
     
 
 
@@ -55,6 +56,26 @@ function SignupForm() {
         errors.confirmPassword = 'Passwords do not match.'
       }
 
+      if(!values.day){
+        errors.day = '*Required'
+      }else if(values.day < 1 || values.day > 31){
+        errors.day = 'Please submit a valid day.'
+      }else if((values.month === 2 && (values.day < 1 || values.day > 29)) || (values.month === 4 || values.month === 6 || values.month === 9 || values.month === 11) && (values.day < 1 || values.day > 30)){
+        errors.day = 'Please submit a valid day.'
+      }
+
+      if(!values.month){
+        errors.month = '*Required'
+      }else if(values.month < 1 || values.month > 12){
+        errors.month = 'Please submit a valid month.'
+      }
+
+      if(!values.year){
+        errors.year = '*Required'
+      }else if(values.year < 1900 || values.year > 2023){
+        errors.year = 'You can`t be that old!'
+      }
+
 
       return errors
     }
@@ -67,10 +88,9 @@ function SignupForm() {
         confirmEmail: "",
         password: "",
         confirmPassword: "",
-        day: 0,
-        month:0,
-        year:0,
-
+        day: "",
+        month:"",
+        year:"",
       },
       validate,
       onSubmit: values => {
@@ -96,7 +116,7 @@ function SignupForm() {
 
   return (
     <form 
-    className='w-full h-full py-10 flex flex-col justify-between gap-5 items-center px-5'
+    className='w-full h-full py-10 flex flex-col justify-between gap-5 items-center px-2 md:px-5'
     onSubmit={formik.handleSubmit}
     >
 
@@ -105,45 +125,45 @@ function SignupForm() {
         <div className='w-5/12 flex flex-col'>
 
           <input type='text' 
-          className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg' 
+          className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
           placeholder='First Name'
           id='firstName'
           {...formik.getFieldProps('firstName')}
           />
-          {formik.touched.firstName && formik.errors.firstName ? <div className='text-red-400 italic'>{formik.errors.firstName}</div> : null}
+          {formik.touched.firstName && formik.errors.firstName ? <div className='text-red-400 italic text-sm lg:text-base'>{formik.errors.firstName}</div> : null}
         </div>
 
         <div className='w-5/12 flex flex-col'>
           <input type='text' 
-          className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg' 
+          className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
           placeholder='Last Name'
           id='lastName'
           {...formik.getFieldProps('lastName')}
           />
-          {formik.touched.lastName && formik.errors.lastName ? <div className='text-red-400 italic'>{formik.errors.lastName}</div> : null}
+          {formik.touched.lastName && formik.errors.lastName ? <div className='text-red-400 italic text-sm lg:text-base'>{formik.errors.lastName}</div> : null}
         </div>
 
        </div>
 
         <div className='w-full flex flex-col'>
           <input type='email' 
-            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg' 
+            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
             placeholder='Your Email'
             id='email'
             {...formik.getFieldProps('email')}
             />
-            {formik.touched.email && formik.errors.email? <div className='text-red-400 italic'>{formik.errors.email}</div> : null}
+            {formik.touched.email && formik.errors.email? <div className='text-red-400 italic text-sm lg:text-base'>{formik.errors.email}</div> : null}
 
         </div>
 
         <div className='w-full flex flex-col'>
           <input type='email' 
-            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg' 
+            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
             placeholder='Confirm email'
             id='confirmEmail'
             {...formik.getFieldProps('confirmEmail')}
           />
-          {formik.touched.confirmEmail && formik.errors.confirmEmail? <div className='text-red-400 italic'>{formik.errors.confirmEmail}</div> : null}
+          {formik.touched.confirmEmail && formik.errors.confirmEmail? <div className='text-red-400 italic text-sm lg:text-base'>{formik.errors.confirmEmail}</div> : null}
         </div>
 
          <div className='w-full flex justify-between'>
@@ -151,41 +171,37 @@ function SignupForm() {
          <div className='w-5/12 flex flex-col'>
 
             <input type='password' 
-            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg' 
+            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
             placeholder='Password'
             id='password'
             {...formik.getFieldProps('password')}
             />
-            {formik.touched.password && formik.errors.password? <div className='text-red-400 italic'>{formik.errors.password}</div> : null}
+            {formik.touched.password && formik.errors.password? <div className='text-red-400 italic text-sm lg:text-base'>{formik.errors.password}</div> : null}
          </div>
 
           <div className='w-5/12 flex flex-col'>
 
             <input type='password' 
-            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg' 
+            className='border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base' 
             placeholder='Confirm Password'
             id='confirmPassword'
             {...formik.getFieldProps('confirmPassword')}
             />
-            {formik.touched.confirmPassword && formik.errors.confirmPassword? <div className='text-red-400 italic'>{formik.errors.confirmPassword}</div> : null}
+            {formik.touched.confirmPassword && formik.errors.confirmPassword? <div className='text-red-400 italic text-sm lg:text-base'>{formik.errors.confirmPassword}</div> : null}
           </div>
        </div>
 
        <div className='w-full flex justify-between'>
            <div className='w-5/12 flex justify-between'>
-             <label htmlFor='birthdate' className='text-gray-400 w-7/12 text-center pt-5'>Birth Date</label>
+             <p htmlFor='birthdate' className='text-gray-400 w-5/12 lg:w-7/12 text-center lg:pt-5'>Birth Date</p>
                  <input 
                  id='day'
                  name='day'
                  type='number' 
-                 className='border w-3/12 h-12 md:h-16 rounded-md pl-3 focus:outline-none focus:shadow-lg' 
+                 className='border w-3/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-3 focus:outline-none focus:shadow-lg' 
                  placeholder='DD'
                  {...formik.getFieldProps('day')}
-                // onChange={formik.handleChange}
-                // onBlur={formik.handleBlur}
-                // value={formik.values.day.toString()}
                  />
-                 
            </div>
 
            <div className='w-5/12 flex justify-between'>
@@ -193,7 +209,7 @@ function SignupForm() {
                  id='month'
                  name='month'
                  type='number' 
-                 className='border w-3/12 h-12 md:h-16 rounded-md pl-2 focus:outline-none focus:shadow-lg' 
+                 className='border w-3/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-2 focus:outline-none focus:shadow-lg' 
                  placeholder='MM'
                  {...formik.getFieldProps('month')}
                  />
@@ -202,11 +218,30 @@ function SignupForm() {
                  id='year'
                  name='year'
                  type='number' 
-                 className='border w-7/12 h-12 md:h-16 rounded-md pl-3 px-5 focus:outline-none focus:shadow-lg' 
+                 className='border w-7/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-3 lg:px-5 focus:outline-none focus:shadow-lg' 
                  placeholder='YYYY'
                  {...formik.getFieldProps('year')}
                  />    
            </div>
+       </div>
+
+       <div className='w-full flex justify-between'>
+
+        <div className='w-5/12 flex justify-end'>
+          {formik.touched.day && formik.errors.day? <div className='text-red-400 text-sm lg:text-base italic'>{formik.errors.day}</div> : null}
+        </div>
+
+        <div className='w-5/12 flex justify-between'>
+          <div className='w-full flex justify-start '>
+
+            {formik.touched.month && formik.errors.month? <div className='text-red-400 text-sm lg:text-base italic	'>{formik.errors.month}</div> : null}
+          </div>
+
+          <div className='w-full flex justify-end' >
+
+            {formik.touched.year && formik.errors.year? <div className='text-red-400 text-sm lg:text-base italic 	'>{formik.errors.year}</div> : null}
+          </div>
+        </div>
        </div>
 
        <div className='w-full flex justify-between items-center'>

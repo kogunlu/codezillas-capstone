@@ -2,7 +2,7 @@
 /* eslint-disable prefer-destructuring */
 import React, { useState } from 'react'
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-
+import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom'
 import loginPicture from "./Login_picture/login.jpg"
 import Socials from './Socials'
@@ -30,19 +30,19 @@ function Login() {
             const errorCode = error.code;
             const errorMessage = error.message;
 
-            console.log(errorCode)
-            console.log(errorMessage)
+        swal("Error!", "Something went wrong, try again.");
+
         });
 
         onAuthStateChanged(auth, (user) => {
             if (user) {
               
               const {uid} = user.uid;
-              alert(`Welcome ${user.displayName}!`)
+              swal("Welcome",`It is great to see you here ${user.displayName}!`)
 
             } else {
 
-              alert("Please make sure that you're typing your email/password")
+              swal("Ops..", "Please make sure that you're typing your email/password correctly")
 
             }
           });

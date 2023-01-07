@@ -1,6 +1,7 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import swal from 'sweetalert';
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from "formik";
@@ -102,15 +103,14 @@ function SignupForm() {
       .then((userCredential) => {
 
         const {user} = userCredential.user;
-        alert("Your account is created.")
+        swal("Your account is created.")
 
       }).then(updateProfile(auth.currentUser, { displayName: formik.values.firstName }))
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
 
-        console.log(errorCode)
-        console.log(errorMessage)
+        swal("Error!", "Something went wrong, try again.");
       });
     }
   })

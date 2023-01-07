@@ -10,6 +10,7 @@ import Footer from "./components/shared/footer/Footer"
 
 
 
+
 function App() {
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='thanks-subs' element={<SubsThanks />} />
 
       </Routes>
+    
       <Footer />
     </BrowserRouter>
   );

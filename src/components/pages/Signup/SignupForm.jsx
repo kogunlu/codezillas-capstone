@@ -1,6 +1,6 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import swal from 'sweetalert';
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore"; 
@@ -13,6 +13,8 @@ import db from "../../../db/firebase.config"
 
 function SignupForm() {
     const navigate = useNavigate()
+
+    const [isSignedUp, setIsSignedUp] = useState(false)
 
 
     const validate = values => {
@@ -112,13 +114,22 @@ function SignupForm() {
       .then((userCredential) => {
 
         const {user} = userCredential.user;
-        swal("Welcome!", "Your account is created! You will be re-directed to the homepage.", "success");
+        
+        swal({
+          title: "Welcome!",
+          text: "Your account is created! You will be re-directed to the homepage!",
+          icon: "success",
+          buttons: false,
+          timer: 3000
+        });
+
+        setIsSignedUp(true)
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
 
-        swal("Error!", "Something went wrong, try again.");
+        swal("Error!", "Something went wrong, try again.", "error");
       });
     }
   })
@@ -126,6 +137,19 @@ function SignupForm() {
     function handleLoginClick(){
         navigate('/login')
     }
+
+    useEffect(() => {
+
+      if(isSignedUp){
+
+        const timer = setTimeout(() => navigate('/'), 3000)
+        return () => clearTimeout(timer)
+      }
+
+      return undefined
+      
+
+    }, [isSignedUp])
 
 
   return (

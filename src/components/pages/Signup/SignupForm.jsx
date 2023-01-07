@@ -3,8 +3,12 @@
 import React from 'react'
 import swal from 'sweetalert';
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore"; 
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from "formik";
+import { v4 as uuidv4 } from 'uuid';
+import db from "../../../db/firebase.config"
+
 
 
 function SignupForm() {
@@ -100,12 +104,16 @@ function SignupForm() {
 
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, email, password)
+      .then(setDoc(doc(db, "user-details", uuidv4()), {
+        name: `${formik.values.firstName} ${formik.values.lastName}`,
+        email: formik.values.email,
+        birthdate: `${formik.values.day}-${formik.values.month}-${formik.values.year}`
+      }))
       .then((userCredential) => {
 
         const {user} = userCredential.user;
-        swal("Your account is created.")
-
-      }).then(updateProfile(auth.currentUser, { displayName: formik.values.firstName }))
+        swal("Welcome!", "Your account is created! You will be re-directed to the homepage.", "success");
+      })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;

@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from 'react'
 import swal from 'sweetalert';
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc, getDoc } from "firebase/firestore"; 
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from "formik";
-import { v4 as uuidv4 } from 'uuid';
 import db from "../../../db/firebase.config"
+import userPicture from "./Signup_picture/user.jpg"
 
 
 
@@ -99,17 +99,31 @@ function SignupForm() {
         year:"",
       },
       validate,
-      onSubmit: values => {
+      onSubmit: async (values) => {
+
+
+    const docRef = doc(db, "user-details", formik.values.email);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      swal({
+        title: "Opps!",
+        text: "You already have an account, please try to log in!",
+        icon: "error",
+      });
+    } else {
+      
+      const auth = getAuth();
 
       const email = formik.values.email
       const password = formik.values.password
 
-      const auth = getAuth();
       createUserWithEmailAndPassword(auth, email, password)
-      .then(setDoc(doc(db, "user-details", uuidv4()), {
+      .then(setDoc(doc(db, "user-details", formik.values.email ), {
         name: `${formik.values.firstName} ${formik.values.lastName}`,
         email: formik.values.email,
-        birthdate: `${formik.values.day}-${formik.values.month}-${formik.values.year}`
+        birthdate: `${formik.values.day}-${formik.values.month}-${formik.values.year}`,
+        photoUrl: userPicture
       }))
       .then((userCredential) => {
 
@@ -132,6 +146,8 @@ function SignupForm() {
         swal("Error!", "Something went wrong, try again.", "error");
       });
     }
+    
+    }
   })
 
     function handleLoginClick(){
@@ -150,6 +166,7 @@ function SignupForm() {
       
 
     }, [isSignedUp])
+
 
 
   return (

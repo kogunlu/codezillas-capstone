@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import Socials from "../Login/Socials"
 import signupPicture from "./Signup_picture/signup.jpg"
@@ -6,8 +7,6 @@ import SignupForm from './SignupForm'
 
 function Signup() {
 
-
-    
 
   return (
     <div className='h-full w-full flex flex-col justify-center items-center lg:items-end gap-5 mt-10 mb-5'>

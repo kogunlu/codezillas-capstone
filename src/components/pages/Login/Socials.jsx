@@ -40,7 +40,7 @@ function Socials() {
         text: "You already have an account. You will be re-directed to the homepage.",
         icon: "warning",
         buttons: false,
-        timer: 3000
+        timer: 2000
       });
   
       setIsSignedUp(true)
@@ -86,7 +86,7 @@ function Socials() {
 
     if(isSignedUp){
 
-      const timer = setTimeout(() => navigate('/'), 3000)
+      const timer = setTimeout(() => navigate('/'), 2000)
       return () => clearTimeout(timer)
     }
 

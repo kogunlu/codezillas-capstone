@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Team from "./Team";
+import TeamCard from "../TeamCard";
 
-it('Renders correctly for Team Component', () => {
+it('Renders correctly for TeamCard Component', () => {
     const tree = renderer
-    .create(<Team />)
+    .create(<TeamCard />)
     .toJSON();
     expect(tree).toMatchSnapshot();
   });

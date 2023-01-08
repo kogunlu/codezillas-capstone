@@ -22,7 +22,7 @@ exports[`Renders correctly for Team Component 1`] = `
     className="flex flex-wrap justify-center"
   >
     <div
-      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80"
+      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80 hover:scale-105 hover:shadow-lg rounded-3xl"
     >
       <img
         alt="Team Member"
@@ -45,7 +45,7 @@ exports[`Renders correctly for Team Component 1`] = `
       </div>
     </div>
     <div
-      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80"
+      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80 hover:scale-105 hover:shadow-lg rounded-3xl"
     >
       <img
         alt="Team Member"
@@ -68,7 +68,7 @@ exports[`Renders correctly for Team Component 1`] = `
       </div>
     </div>
     <div
-      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80"
+      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80 hover:scale-105 hover:shadow-lg rounded-3xl"
     >
       <img
         alt="Team Member"
@@ -91,7 +91,7 @@ exports[`Renders correctly for Team Component 1`] = `
       </div>
     </div>
     <div
-      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80"
+      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80 hover:scale-105 hover:shadow-lg rounded-3xl"
     >
       <img
         alt="Team Member"
@@ -114,7 +114,7 @@ exports[`Renders correctly for Team Component 1`] = `
       </div>
     </div>
     <div
-      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80"
+      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80 hover:scale-105 hover:shadow-lg rounded-3xl"
     >
       <img
         alt="Team Member"
@@ -137,7 +137,7 @@ exports[`Renders correctly for Team Component 1`] = `
       </div>
     </div>
     <div
-      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80"
+      className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80 hover:scale-105 hover:shadow-lg rounded-3xl"
     >
       <img
         alt="Team Member"

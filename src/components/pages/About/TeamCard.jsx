@@ -5,7 +5,7 @@ function TeamCard({img,name,content}) {
    const props={img,name,content}
     return (
 
-    <div className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80">
+    <div className="flex flex-col m-3 w-36  xl:w-36 2xl:w-80 hover:scale-105 hover:shadow-lg rounded-3xl">
        <img src={props.img} alt="Team Member" className="object-contain"/>
 
        <div className="bg-cyan-50 rounded-b-3xl">

@@ -1,11 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import About from "./About";
+import Team from "../Team";
 
-
-it('Renders correctly for About Component', () => {
+it('Renders correctly for Team Component', () => {
     const tree = renderer
-    .create(<About />)
+    .create(<Team />)
     .toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import swal from 'sweetalert';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore"; 
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from "formik";
@@ -166,8 +166,6 @@ function SignupForm() {
       
 
     }, [isSignedUp])
-
-
 
   return (
     <form 

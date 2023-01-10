@@ -79,7 +79,9 @@ exports[`Navbar component renders correctly 1`] = `
             Contact Us
           </a>
         </li>
-        <li>
+        <li
+          className="flex justify-center items-center"
+        >
           <input
             className="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
             onClick={[Function]}

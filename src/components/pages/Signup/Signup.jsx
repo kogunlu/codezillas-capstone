@@ -4,7 +4,6 @@ import React from 'react';
 import Socials from '../Login/Socials';
 import signupPicture from './Signup_picture/signup.jpg';
 import SignupForm from './SignupForm';
-import './style.css';
 
 function Signup() {
   return (
@@ -23,7 +22,7 @@ function Signup() {
             </div>
 
             <div className="h-auto md:h-4/6 w-full md:w-10/12 lg:w-6/12 flex flex-col justify-evenly md:justify-center md:gap-5 lg:justify-evenly lg:gap-0 items-center">
-              <div className="w-full form-height md:h-3/6 lg:h-full shadow-xl rounded-md flex justify-center items-center ">
+              <div className="w-full h-max md:h-3/6 lg:h-full shadow-xl rounded-md flex justify-center items-center ">
                 <SignupForm />
               </div>
 

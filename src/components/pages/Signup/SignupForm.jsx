@@ -170,7 +170,7 @@ function SignupForm() {
       className="w-full h-full py-10 flex flex-col justify-between gap-5 items-center px-2 md:px-5"
       onSubmit={formik.handleSubmit}
     >
-      <div className="w-full flex justify-between">
+      <div className="w-full h-20 flex justify-between">
         <div className="w-5/12 flex flex-col">
           <input
             type="text"
@@ -202,7 +202,7 @@ function SignupForm() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col">
+      <div className="w-full h-20 flex flex-col">
         <input
           type="email"
           className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
@@ -217,7 +217,7 @@ function SignupForm() {
         ) : null}
       </div>
 
-      <div className="w-full flex flex-col">
+      <div className="w-full h-20 flex flex-col">
         <input
           type="email"
           className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
@@ -232,7 +232,7 @@ function SignupForm() {
         ) : null}
       </div>
 
-      <div className="w-full flex justify-between">
+      <div className="w-full h-20 flex justify-between">
         <div className="w-5/12 flex flex-col">
           <input
             type="password"
@@ -264,69 +264,71 @@ function SignupForm() {
         </div>
       </div>
 
-      <div className="w-full flex justify-between">
-        <div className="w-5/12 flex justify-between">
-          <p
-            htmlFor="birthdate"
-            className="text-gray-400 w-5/12 lg:w-7/12 text-center lg:pt-5"
-          >
-            Birth Date
-          </p>
-          <input
-            id="day"
-            name="day"
-            type="number"
-            className="border w-3/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-3 focus:outline-none focus:shadow-lg"
-            placeholder="DD"
-            {...formik.getFieldProps('day')}
-          />
+      <div className="w-full h-24 flex flex-col justify-around">
+        <div className="w-full flex justify-between">
+          <div className="w-5/12 flex justify-between">
+            <p
+              htmlFor="birthdate"
+              className="text-gray-400 w-5/12 lg:w-7/12 text-center lg:pt-5"
+            >
+              Birth Date
+            </p>
+            <input
+              id="day"
+              name="day"
+              type="number"
+              className="border w-3/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-3 focus:outline-none focus:shadow-lg"
+              placeholder="DD"
+              {...formik.getFieldProps('day')}
+            />
+          </div>
+
+          <div className="w-5/12 flex justify-between">
+            <input
+              id="month"
+              name="month"
+              type="number"
+              className="border w-3/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-2 focus:outline-none focus:shadow-lg"
+              placeholder="MM"
+              {...formik.getFieldProps('month')}
+            />
+
+            <input
+              id="year"
+              name="year"
+              type="number"
+              className="border w-7/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-3 lg:px-5 focus:outline-none focus:shadow-lg"
+              placeholder="YYYY"
+              {...formik.getFieldProps('year')}
+            />
+          </div>
         </div>
 
-        <div className="w-5/12 flex justify-between">
-          <input
-            id="month"
-            name="month"
-            type="number"
-            className="border w-3/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-2 focus:outline-none focus:shadow-lg"
-            placeholder="MM"
-            {...formik.getFieldProps('month')}
-          />
-
-          <input
-            id="year"
-            name="year"
-            type="number"
-            className="border w-7/12 h-12 md:h-16 rounded-md text-center lg:text-start lg:pl-3 lg:px-5 focus:outline-none focus:shadow-lg"
-            placeholder="YYYY"
-            {...formik.getFieldProps('year')}
-          />
-        </div>
-      </div>
-
-      <div className="w-full flex justify-between">
-        <div className="w-5/12 flex justify-end">
-          {formik.touched.day && formik.errors.day ? (
-            <div className="text-red-400 text-sm lg:text-base italic">
-              {formik.errors.day}
-            </div>
-          ) : null}
-        </div>
-
-        <div className="w-5/12 flex justify-between">
-          <div className="w-full flex justify-start ">
-            {formik.touched.month && formik.errors.month ? (
-              <div className="text-red-400 text-sm lg:text-base italic	">
-                {formik.errors.month}
+        <div className="w-full h-8 flex justify-between">
+          <div className="w-5/12 flex justify-end">
+            {formik.touched.day && formik.errors.day ? (
+              <div className="text-red-400 text-sm lg:text-base italic">
+                {formik.errors.day}
               </div>
             ) : null}
           </div>
 
-          <div className="w-full flex justify-end">
-            {formik.touched.year && formik.errors.year ? (
-              <div className="text-red-400 text-sm lg:text-base italic 	">
-                {formik.errors.year}
-              </div>
-            ) : null}
+          <div className="w-5/12 flex justify-between">
+            <div className="w-full flex justify-start ">
+              {formik.touched.month && formik.errors.month ? (
+                <div className="text-red-400 text-sm lg:text-base italic	">
+                  {formik.errors.month}
+                </div>
+              ) : null}
+            </div>
+
+            <div className="w-full flex justify-end">
+              {formik.touched.year && formik.errors.year ? (
+                <div className="text-red-400 text-sm lg:text-base italic 	">
+                  {formik.errors.year}
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
       </div>

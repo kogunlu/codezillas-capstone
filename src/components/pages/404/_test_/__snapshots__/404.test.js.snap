@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="flex flex-col justify-center items-center mt-5"
+  className="h-screen flex flex-col justify-center items-center mt-5"
 >
   <svg
     className="text-6xl mb-2"

@@ -7,13 +7,17 @@ import {
   onAuthStateChanged,
 } from 'firebase/auth';
 import swal from 'sweetalert';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import loginPicture from './Login_picture/login.jpg';
 import Socials from './Socials';
+import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -22,36 +26,49 @@ function Login() {
   }
 
   function handleLoginClick() {
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+    if (!(email && password)) {
+      swal('Error!', 'Please fill the related parts to login!', 'error');
+    } else {
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          navigate('/');
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
 
-        swal('Error!', 'Something went wrong, try again.');
+          swal('Error!', 'Something went wrong, try again.');
+        });
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          dispatch(setAnswer1(user.email));
+          dispatch(setAnswer2(user.displayName));
+
+          if (user.displayName) {
+            swal('Welcome', `It is great to see you here ${user.displayName}!`);
+          } else {
+            swal('Welcome', `It is great to see you here!`);
+          }
+
+          navigate('/');
+        } else {
+          swal(
+            'Ops..',
+            "Please make sure that you're typing your email/password correctly"
+          );
+        }
       });
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const { uid } = user.uid;
-        swal('Welcome', `It is great to see you here ${user.displayName}!`);
-      } else {
-        swal(
-          'Ops..',
-          "Please make sure that you're typing your email/password correctly"
-        );
-      }
-    });
-
-    setEmail('');
-    setPassword('');
+      setEmail('');
+      setPassword('');
+    }
   }
 
   return (
-    <div className="h-full w-full flex flex-col justify-start items-center gap-5 mt-10">
+    <div className="h-full w-full flex flex-col justify-start items-center gap-5 mt-10 mb-5">
       <div className="w-10/12">
         <h2 className=" text-center lg:text-start text-2xl font-semibold">
           LOGIN

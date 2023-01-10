@@ -1,41 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders and redirect correctly 1`] = `
-<div
-  className="flex flex-col justify-center items-center mt-5"
->
-  <svg
-    className="text-6xl mb-2"
-    fill="currentColor"
-    height="1em"
-    stroke="currentColor"
-    strokeWidth="0"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-    viewBox="0 0 192 512"
-    width="1em"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"
-    />
-  </svg>
-  <h3
-    className="font-bold text-4xl"
-  >
-    404 not found.
-  </h3>
-  <p
-    className="font-semibold text-lg italic"
-  >
-    You will be re-directed to the home page soon.
-  </p>
-</div>
-`;
-
 exports[`renders correctly 1`] = `
 <div
   className="flex flex-col justify-center items-center mt-5"

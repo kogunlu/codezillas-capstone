@@ -4,11 +4,10 @@ import About from "./components/pages/About/About";
 import ErrorPage from './components/pages/404/ErrorPage';
 import Book from './components/pages/book/Book';
 import Home from "./components/pages/home/Home"
+import Navbar from "./components/shared/navbar/Navbar"
 import Team from './components/pages/About/Team';
 import SubsThanks from "./components/pages/thanks/SubsThanks"
 import Footer from "./components/shared/footer/Footer"
-
-
 
 
 
@@ -17,6 +16,7 @@ function App() {
 
   return (
     <BrowserRouter >
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='book' element={<Book />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import PurchaseCard from './PurchaseCard';
-
+/* Purchase button should take us to the Select Card and Learn More button shoul navigate to the Why Work With Healing? */
 function PurchaseTickets() {
   return (
     <div className="flex justify-center">

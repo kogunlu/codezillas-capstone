@@ -16,6 +16,11 @@ code {
     monospace;
 }
 
+.nav-bg{
+  background-color: #EAF8F9;
+}
+
+
 @layer base {
   input[type='number']::-webkit-outer-spin-button,
   input[type='number']::-webkit-inner-spin-button,
@@ -25,3 +30,4 @@ code {
     -moz-appearance: textfield !important;
   }
 }
+

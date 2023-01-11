@@ -76,8 +76,8 @@ function Blog() {
       </div>
 
       <div className="flex justify-center mb-10">
-        <div className="w-5/6 flex justify-between gap-4">
-          <div className="w-6/12 relative">
+        <div className="w-5/6 flex flex-col lg:flex-row justify-between gap-4">
+          <div className="w-full lg:w-6/12 relative">
             <img
               className=" "
               title="HEAL FROM TRAUMA"
@@ -93,11 +93,11 @@ function Blog() {
               </p>
             </span>
           </div>
-          <div className="w-6/12 relative">
+          <div className="w-full lg:w-6/12 relative">
             <img className="" src={anxiety} alt="anxiety" />
 
             <span className="absolute top-5 left-3 w-2/6">
-              <p className="font-medium text-lg text-start">
+              <p className="font-medium text-sm md:text-lg text-start">
                 TELL ME ALL I NEED TO KNOW ABOUT ANXIETY
               </p>
             </span>

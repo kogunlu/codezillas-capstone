@@ -34,33 +34,36 @@ function Login() {
         .then((userCredential) => {
           const user = userCredential.user;
           navigate('/');
+
+          onAuthStateChanged(auth, (userLoggedIn) => {
+            if (user) {
+              dispatch(setAnswer1(userLoggedIn.email));
+              dispatch(setAnswer2(userLoggedIn.displayName));
+
+              if (userLoggedIn.displayName) {
+                swal(
+                  'Welcome',
+                  `It is great to see you here ${userLoggedIn.displayName}!`
+                );
+              } else {
+                swal('Welcome', `It is great to see you here!`);
+              }
+
+              navigate('/');
+            } else {
+              swal(
+                'Ops..',
+                "Please make sure that you're typing your email/password correctly"
+              );
+            }
+          });
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
 
-          swal('Error!', 'Something went wrong, try again.');
+          swal('Error!', 'Please login with correct credentials.');
         });
-
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          dispatch(setAnswer1(user.email));
-          dispatch(setAnswer2(user.displayName));
-
-          if (user.displayName) {
-            swal('Welcome', `It is great to see you here ${user.displayName}!`);
-          } else {
-            swal('Welcome', `It is great to see you here!`);
-          }
-
-          navigate('/');
-        } else {
-          swal(
-            'Ops..',
-            "Please make sure that you're typing your email/password correctly"
-          );
-        }
-      });
 
       setEmail('');
       setPassword('');

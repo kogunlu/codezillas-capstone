@@ -1,17 +1,39 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { getAuth, signOut } from 'firebase/auth';
+import swal from 'sweetalert';
 import { GrUserSettings } from 'react-icons/gr';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
 import Button from '../button/Button';
 
 function Navbar() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const user = useSelector((state) => state.user.user);
 
   function handleLoginClick() {
     navigate('/login');
   }
+
+  function handleSignOut() {
+    const auth = getAuth();
+
+    signOut(auth)
+      .then(() => {
+        swal('Signed Out', `Hope to see you soon!`);
+
+        dispatch(setAnswer1(''));
+        dispatch(setAnswer2(''));
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+        console.log(error.message);
+      });
+  }
+
   return (
     <div className="nav-bg">
       <div className="p-3">
@@ -47,7 +69,9 @@ function Navbar() {
             </li>
             <li className="flex justify-center items-center">
               {user.email ? (
-                <GrUserSettings className="text-2xl" />
+                <button type="button" onClick={handleSignOut}>
+                  <GrUserSettings className="text-2xl" />
+                </button>
               ) : (
                 <Button
                   className="col-span-2"

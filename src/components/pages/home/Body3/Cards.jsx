@@ -6,12 +6,12 @@ import video from './images/video.png'
 const Cards = () => {
   return (
     
- <div className="  container justify-center  flex flex-wrap  my-16 items-starts   ">
-  <div className='flex items-center justify-center  '>  
+ <div className="   justify-center  flex flex-wrap items-starts  ">
+  <div className='flex items-center justify-center mb-20 '>  
 
 
-     <div className=' flex flex-wrap gap-5 justify-center '>
-       <div className=' max-w-sm bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700 p-6 mb-5 '>
+     <div className=' flex flex-wrap gap-5 justify-center mb-20 '>
+       <div className=' max-w-sm bg-white border border-gray-200 rounded-3xl shadow-lg  dark:border-gray-700 p-6 mb-5 '>
          <div className=' flex flex-col justify-center items-center '>
             <img className="object-scale-down h-20 w-25 md:object-scale-down " src={phone} alt="phone" />
            </div>
@@ -21,7 +21,7 @@ const Cards = () => {
                    </div>
         
     <div className=' flex items-stretch'>
-    <div className= 'w-full max-w-sm  bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700 p-6 mb-5  md:shrink-0 items-center '>
+    <div className= 'w-full max-w-sm  bg-white border border-gray-200 rounded-3xl shadow-lg dark:border-gray-700 p-6 mb-5  md:shrink-0 items-center '>
     <div className=' flex flex-col justify-center items-center '>
     <img className="object-scale-down h-20 w-25 md:object-scale-down " src={chat} alt="chat" />
     </div>
@@ -32,7 +32,7 @@ const Cards = () => {
     </div>
    
     <div className=' flex items-stretch '>
-    <div className=' w-full max-w-sm bg-white border border-gray-200  rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700 p-6 mb-5 md:shrink-0 '>
+    <div className=' w-full max-w-sm bg-white border border-gray-200  rounded-3xl shadow-lg  dark:border-gray-700 p-6 mb-5 md:shrink-0 '>
     <div className=' flex flex-col justify-center items-center '>
     <img className="object-scale-down h-20 w-25 md:object-scale-down " src={video} alt="video" />
     </div>

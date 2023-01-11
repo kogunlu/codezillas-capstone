@@ -11,32 +11,34 @@ const Body2 = () => {
   }
 
   return (
-    <div className='w-full h-screen bg-amber-100 flex justify-center items-center'>
-      <div className='w-8/12 h-5/6 border flex flex-col items-start justify-evenly '>
-        <div className="h-3/6 flex flex-col justify-evenly items-start gap-10">
-          <h4 className='text-5xl font-medium uppercase '>Professional, licensed, and vetted therapists that you can trust</h4>
+    
+    <div className='  bg-amber-100 flex flex-col justify-center items-center max-w-[ 1440px] min-w-[500px]'>
+      <div className='w-8/12 h-screen border flex flex-col items-start justify-evenly  '>
+        <div className="h-4/6 flex flex-col justify-evenly items-start gap-10 min-w-fit ">
+          <h4 className=' w-3/4  text-5xl font-medium uppercase font-sans mt-10 '>Professional, licensed, and vetted therapists that you can trust</h4>
 
-          <div>
+          <div className='flex'>
               
               <img src={People} alt="People" />
           </div>
 
           <div className="flex">
-            <p>Tap into the world`s largest network of licensed, accredited, and experienced therapists who can help you with a range of issues including depression, anxiety, relationships, trauma, grief, and more. with our therapists, you get the same professionalism and quality you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.</p>
+            <p className=' font-sans font-medium   md:text-lg'>Tap into the world`s largest network of licensed, accredited, and experienced therapists who can help you with a range of issues including depression, anxiety, relationships, trauma, grief, and more. with our therapists, you get the same professionalism and quality you would expect from an in-office therapist, but with the ability to communicate whenever and however you want.</p>
           </div>
 
         </div>
 
-        <div className="h-2/6 flex justify-center items-start">
+        <div className="flex flex-col items-start justify-evenly gap-5 sm:-mt-10 ">
         <input 
               type="button" 
               value="BOOK AN APPOINTMENT" 
-              className=' py-2 px-5 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg'
+              className='  py-3 px-5 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-lg md:text-lg'
               onClick={() => handleClick()}/>
         </div>
       </div>
       
     </div>
+    
   )
 }
 

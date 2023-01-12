@@ -23,10 +23,10 @@ function App() {
         <Route path='*' element= {<ErrorPage />}  />
         <Route path='about' element= {<About/>} />
         <Route path='thanks-subs' element={<SubsThanks />} />
-        
+        <Route path='blog' element={<Blog />} />
 
-      </Routes>
-      <Blog/>
+      </Routes> 
+      
       <Footer />
     </BrowserRouter>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';

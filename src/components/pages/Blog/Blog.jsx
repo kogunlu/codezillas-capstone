@@ -1,19 +1,19 @@
 import React from 'react';
 import meditation from './images/meditation.png';
 import trauma from './images/trauma.png';
-import anxiety from './images/anxiety.png';
+import anxiety from './images/anxiety.png'; 
 import SubsInput from '../../shared/subsInput/SubsInput';
 
 function Blog() {
   return (
-    <div className=" mx-auto text-justify md:m-0 ">
+    <div className=" lg:mx-auto lg:text-justify ">
       <img
-        className="justify-center rounded mx-auto py-7 p-12"
+        className=" items-start lg:justify-center rounded mx-auto py-7  "
         src={meditation}
         alt="meditation"
-      />
-      <div className="max-w-[800px] mt-[90px] w-full h-screen mx-auto  flex flex-col justify-center ">
-        <h1 className="py-14 mt-6 text-bold text-3xl">
+      /> 
+      <div className="max-w-[800px]  w-full  mx-auto  flex flex-col justify-center px-3">
+        <h1 className=" my-3 text-bold text-3xl">
           MENTAL HEALTH AND TECHNOLOGY
         </h1>
         <p className="uppercase mb-4">
@@ -64,10 +64,10 @@ function Blog() {
           China.
         </p>
       </div>
-      <div className="max-w-[800px] mt-[-200px] w-full h-screen mx-auto  flex flex-col justify-center">
-        <h3 className="uppercase text-xl font-weight:600 sm:m-0">
+      <div className=" w-full max-w-[800px] mx-auto mt-12 mb-24 flex flex-col justify-center px-3">
+        <h3 className="uppercase lg:text-xl font-weight:600 sm:m-0">
           Sign up for The Healing blog
-        </h3>
+        </h3> 
         <h6 className="uppercase mb-4 py-2 font-weight:600">
           A weekly, ad-free Blog that helps you stay in the know.
         </h6>
@@ -75,7 +75,7 @@ function Blog() {
         <SubsInput className="" />
       </div>
 
-      <div className="flex justify-center mb-10">
+      <div className="flex justify-center mb-10 ">
         <div className="w-5/6 flex flex-col lg:flex-row justify-between gap-4">
           <div className="w-full lg:w-6/12 relative">
             <img
@@ -85,17 +85,16 @@ function Blog() {
               alt="trauma"
             />
             <span className="absolute bottom-1/4 left-5 w-max ">
-              <p className="text-white text-start text-2xl font-bold bg-slate-400 opacity-90">
+              <p className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90  ">
                 HEAL FROM
               </p>
-              <p className="text-white text-start text-2xl font-bold bg-slate-400 opacity-90 mt-1">
+              <p className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90 mt-1 ">
                 TRAUMA
-              </p>
+              </p> 
             </span>
           </div>
           <div className="w-full lg:w-6/12 relative">
             <img className="" src={anxiety} alt="anxiety" />
-
             <span className="absolute top-5 left-3 w-2/6">
               <p className="font-medium text-sm md:text-lg text-start">
                 TELL ME ALL I NEED TO KNOW ABOUT ANXIETY

@@ -44,25 +44,25 @@ function Slider(){
 
 
 
- <div className="flex flex-wrap justify-center w-full gap-8 mt-10">
+ <div className="flex flex-wrap sm:flex sm:flex-row justify-center w-full gap-8 mt-10">
         <div className='relative w-1/4'>    
         <img src={imgs[index]} alt="RecentBlogsImages"/>
    
-        <h1 className='absolute text-white text-base top-3 left-5'>MENTAL HEALTH </h1>
-        <h1 className='absolute text-white text-base top-8 left-5'>AND TECHNOLOGY</h1>
+        <h1 className='absolute text-white top-4 left-5'>MENTAL HEALTH </h1>
+        <h1 className='absolute text-white top-9 left-5'>AND TECHNOLOGY</h1>
         </div>
          
         <div className='relative w-1/4'>    
         <img  src={imgs[index]} alt="RecentBlogsPicture"/>    
-        <h1 className='absolute text-white text-2xl top-32 left-10 bg-gray-800 opacity-50'>HEAL FROM </h1>
-        <h1 className='absolute text-white text-2xl top-40 left-10 bg-gray-800 opacity-50'>TRAUMA</h1>        
+        <h1 className='absolute text-white text-xl bottom-14 left-5 bg-gray-800 opacity-50'>HEAL FROM </h1>
+        <h1 className='absolute text-white text-xl bottom-8 left-5 bg-gray-800 opacity-50'>TRAUMA</h1>        
         </div>
  
         <div className='relative w-1/4'>    
         <img src={imgs[index]} alt="RecentBlogsPicture"/>
    
-        <h1 className='absolute text-white text-base top-3 left-5'>MENTAL HEALTH </h1>
-        <h1 className='absolute text-white text-base top-8 left-5'>AND TECHNOLOGY</h1>
+        <h1 className='absolute text-white text-base top-4 left-5'>MENTAL HEALTH </h1>
+        <h1 className='absolute text-white text-base top-9 left-5'>AND TECHNOLOGY</h1>
         </div>
         </div>
     </div>

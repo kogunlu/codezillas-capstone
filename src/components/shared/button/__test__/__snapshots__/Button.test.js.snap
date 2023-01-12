@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders correctly 1`] = `
+<input
+  className=" py-2 px-5  hover:bg-cyan-200 bg-cyan-400 md:font-medium md:font-small rounded text-sm md:text-lg"
+  onClick={[Function]}
+  type="button"
+  value="CLICK"
+/>
+`;

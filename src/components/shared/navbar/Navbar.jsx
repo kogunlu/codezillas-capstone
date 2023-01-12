@@ -12,7 +12,7 @@ function Navbar() {
             <Link to="/">
               <div className='grid grid-cols-2 ml-20'>
                 <img src="/logo.png" alt='Healing logo' />
-                <h1 className='text-5xl' >Healing</h1>
+                <h1 className='sm:text-xl md:text-5xl' >Healing</h1>
               </div>
             </Link>
           </div>

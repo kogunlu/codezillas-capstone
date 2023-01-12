@@ -16,9 +16,9 @@ export default function Button(props)
     }
     return(
         <input 
-        type={props.type}
-        value={props.name}
-        className={props.classes}
+        type={props.type ? props.type : "button"}
+        value={props.name ? props.name : "CLICK"}
+        className={props.classes ? props.classes : " py-2 px-5  hover:bg-cyan-200 bg-cyan-400 md:font-medium md:font-small rounded text-sm md:text-lg"}
         onClick={()=> handleClick()} />
     );
 }

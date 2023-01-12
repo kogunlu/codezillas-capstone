@@ -25,7 +25,7 @@ exports[`Navbar component renders correctly 1`] = `
               src="/logo.png"
             />
             <h1
-              className="text-5xl"
+              className="sm:text-xl md:text-5xl"
             >
               Healing
             </h1>
@@ -81,7 +81,7 @@ exports[`Navbar component renders correctly 1`] = `
         </li>
         <li>
           <input
-            className="py-2 px-5 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
+            className="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
             onClick={[Function]}
             type="button"
             value="Login"

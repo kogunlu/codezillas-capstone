@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders correctly 1`] = `
+<div
+  className="nav-bg"
+>
+  <div
+    className="p-3"
+  >
+    <div
+      className="grid grid-cols-4"
+    >
+      <div
+        className="grid grid-cols-3 col-span-2"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <div
+            className="grid grid-cols-2 ml-20"
+          >
+            <img
+              alt="Healing logo"
+              src="/logo.png"
+            />
+            <h1
+              className="text-5xl"
+            >
+              Healing
+            </h1>
+          </div>
+        </a>
+      </div>
+      <ul
+        className="grid grid-cols-6 col-span-2 content-center "
+      >
+        <li
+          className="py-2"
+        >
+          <a
+            className="hover:text-yellow-white"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="py-2"
+        >
+          <a
+            className="hover:text-yellow-white"
+            href="/blogs"
+            onClick={[Function]}
+          >
+            Blogs
+          </a>
+        </li>
+        <li
+          className="py-2"
+        >
+          <a
+            className="hover:text-yellow-white"
+            href="/about"
+            onClick={[Function]}
+          >
+            About Us
+          </a>
+        </li>
+        <li
+          className="py-2"
+        >
+          <a
+            className="hover:text-yellow-white"
+            href="/contact"
+            onClick={[Function]}
+          >
+            Contact Us
+          </a>
+        </li>
+        <li
+          className="flex justify-center items-center"
+        >
+          <input
+            className="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
+            onClick={[Function]}
+            type="button"
+            value="Login"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

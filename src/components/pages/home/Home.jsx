@@ -1,9 +1,13 @@
 import React from 'react'
+import PurchaseTickets from './body5/PurchaseTickets';
+
 
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+     <PurchaseTickets/>
+      </div> 
+  );
 }
 
-export default Home
+export default Home 

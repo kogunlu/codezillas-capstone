@@ -4,7 +4,7 @@ import CareerList from './CareerList'
 const OpenPositions = () => {
   return (
     <div>
-         <div className='  bg-white flex flex-col justify-center items-start max-w-[ 1440px] min-w-[500px] ml-10'>
+         <div className='  bg-white flex flex-col justify-center items-start max-w-[ 1440px] min-w-[700px] ml-10'>
             <div className=' h-full  flex flex-col items-start justify-start mt-20'>
               <div className="h-3/6  flex flex-col justify-evenly items-start  min-w-fit ">
                 <div className='flex flex-col  '>

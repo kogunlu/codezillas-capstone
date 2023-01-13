@@ -4,13 +4,16 @@ const CareerList = ({header, text, subheader, title}) => {
   return (
    
        <div>
-                  <div className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[500px]  ">
-                    <ul className=' flex flex-col w-11/12 border-b border-black'>
-                        <li className=' flex flex-col justify-evenly  '>
+                  <div className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] ">
+                  
+                    <ul className=' flex flex-col w-11/12 '>
+                    
+                        <li className=' flex flex-col justify-evenly min-w-fit '>
+                        <div className='border-b border-black '>
                             <div className='justify-evenly items-start flex flex-row '>
                            <div className='flex flex-col justify-start items-start w-full ' >
                              <h4  className='text-teal-400 text-2xl hover:underline'>{header}</h4>
-                              <p className=' w-3/4 '>{text}</p>
+                              <p className=' w-3/4  min-w-fit '>{text}</p>
                         </div>
                         <div className='flex flex-col justify-start items-start'>
                            <div className='flex flex-col justify-start items-start mx-20'>
@@ -19,10 +22,12 @@ const CareerList = ({header, text, subheader, title}) => {
                            </div> 
                            </div>
                        </div> 
+                       </div>
                        </li>
+                       
                        </ul>
                            
-                       
+                     
     </div>
     </div>
    

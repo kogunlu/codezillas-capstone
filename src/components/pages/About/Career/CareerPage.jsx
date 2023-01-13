@@ -14,8 +14,8 @@ const CareerPage = () => {
           <div className='  bg-white flex flex-col justify-center items-center max-w-[ 1440px] min-w-[500px]'>
             <div className='w-8/12 h-full  flex flex-col items-start justify-start mt-20'>
               <div className="h-3/6  flex flex-col justify-evenly items-start  min-w-fit ">
-                <div className='flex flex-col w-3/4 '>
-                <h4 className=' w-3/4  text-5xl font-medium uppercase item-start font-sans mb-5  '>CAREERS AT HEALING</h4>
+                <div className='flex flex-col  '>
+                <h4 className='  text-5xl font-medium uppercase item-start font-sans mb-5  '>CAREERS AT HEALING</h4>
                 <h3 className='w-3/4  text-xl font-medium font-sans text-gray-500 mb-20' >Be a part of making people feel better.</h3>
                   </div>
                 <div className="flex flex-col justify-evenly items-start">
@@ -35,13 +35,14 @@ const CareerPage = () => {
               </div>
               
               </div>
-              <div className='  bg-amber-200 flex flex-col justify-center items-center max-w-[ 1440px] min-w-[700px] mt-20  '>
+              <div className='w-full max-w-screen flex flex-col min-w-screen '>
+              <div className='  bg-amber-200 flex flex-col justify-center items-center max-w-screen min-w-[900px] mt-20  '>
       <div className='w-8/12 flex flex-col items-start justify-evenly '>
         <div className="h-3/6 flex flex-col justify-evenly items-start gap-5 min-w-fit ">
             <h4 className='w-3/4  text-4xl font-medium uppercase item-start font-sans mt-5 text-slate-600 '>OUR HIRING PHILOSOPHY</h4>
             <p className='w-3/4 font-medium font-sans mb-10 text-slate-600'>To build the very best SEO tools, we need a workforce that reflects the diversity of our communities and customers. We want Online Therapy to be a place where everyone feels welcome and engaged, bar none. It`s our mission and promise to interview a diverse and representative slate of candidates before making an offer for our open roles.</p>
 </div>
-</div>
+</div></div>
 </div>
               
             </div>

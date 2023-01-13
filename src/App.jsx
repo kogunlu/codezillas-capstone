@@ -14,7 +14,7 @@ import Team from './components/pages/About/Team';
 import SubsThanks from "./components/pages/thanks/SubsThanks"
 import Footer from "./components/shared/footer/Footer"
 import Career from './components/pages/About/Career/Career';
-import CareerList from './components/pages/About/Career/CareerList';
+import OpenPositions from './components/pages/About/Career/OpenPositions';
 
 
 
@@ -29,7 +29,7 @@ function App() {
         <Route path='book' element={<Book />} />
         <Route path='about' element= {<About/>} />
         <Route path='career' element= {<Career/>} />
-        <Route path='careerlist' element= {<CareerList/>} />
+        <Route path='OpenPositions' element= {<OpenPositions/>} />
         <Route path='login' element = {<Login />} />
         <Route path='signup' element = {<Signup />} />
         <Route path='team' element= {<Team/>} /> 

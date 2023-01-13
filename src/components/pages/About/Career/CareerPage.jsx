@@ -6,7 +6,7 @@ const CareerPage = () => {
         const navigate = useNavigate()
       
         function handleClick(){
-          navigate('/CareerList')
+          navigate('/OpenPositions')
         }
       
         return (
@@ -36,9 +36,9 @@ const CareerPage = () => {
               
               </div>
               <div className='  bg-amber-200 flex flex-col justify-center items-center max-w-[ 1440px] min-w-[700px] mt-20  '>
-      <div className='w-8/12 flex flex-col items-start justify-evenly  '>
+      <div className='w-8/12 flex flex-col items-start justify-evenly '>
         <div className="h-3/6 flex flex-col justify-evenly items-start gap-5 min-w-fit ">
-            <h4 className='w-3/4  text-4xl font-medium uppercase item-start font-sans mt-5 text-slate-600'>OUR HIRING PHILOSOPHY</h4>
+            <h4 className='w-3/4  text-4xl font-medium uppercase item-start font-sans mt-5 text-slate-600 '>OUR HIRING PHILOSOPHY</h4>
             <p className='w-3/4 font-medium font-sans mb-10 text-slate-600'>To build the very best SEO tools, we need a workforce that reflects the diversity of our communities and customers. We want Online Therapy to be a place where everyone feels welcome and engaged, bar none. It`s our mission and promise to interview a diverse and representative slate of candidates before making an offer for our open roles.</p>
 </div>
 </div>

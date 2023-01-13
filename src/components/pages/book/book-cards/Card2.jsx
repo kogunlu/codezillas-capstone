@@ -36,21 +36,21 @@ function Card2({btnClick}) {
             <input 
             type="button" 
             value="Single" 
-            className='w-full border border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
+            className='w-full border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
             onClick={e => setSelected(e.target.value)} 
             />
 
             <input 
             type="button" 
             value="Married" 
-            className='w-full border border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
+            className='w-full border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
             onClick={e => setSelected(e.target.value)}  
             />
 
             <input 
             type="button" 
             value="Divorced" 
-            className='w-full border border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
+            className='w-full border-solid border-2 border-gray-200 rounded-lg text-md md:text-xl font-semibold pl-2 py-2 text-left hover:bg-gray-100 focus:bg-cyan-400 focus:text-slate-100'
             onClick={e => setSelected(e.target.value)}  
             />
 

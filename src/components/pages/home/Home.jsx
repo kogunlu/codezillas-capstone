@@ -1,11 +1,14 @@
 import React from 'react'
-import Blog from "../Blog/Blog"
+import PurchaseTickets from './body5/PurchaseTickets';
+
 
 
 function Home() {
   return (
     <div>
-    <Blog/>
+
+     <PurchaseTickets/>
+
       </div> 
   );
 }

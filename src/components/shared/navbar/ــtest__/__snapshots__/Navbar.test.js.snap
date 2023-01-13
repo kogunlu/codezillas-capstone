@@ -51,7 +51,7 @@ exports[`Navbar component renders correctly 1`] = `
         >
           <a
             className="hover:text-yellow-white"
-            href="/blogs"
+            href="/blog"
             onClick={[Function]}
           >
             Blogs

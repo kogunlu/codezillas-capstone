@@ -6,6 +6,10 @@ const initialState = {
     displayName: '',
     password: '',
     birthdate: '',
+    education: '',
+    hobbies: [],
+    family: 0,
+    gender: '',
   },
 };
 

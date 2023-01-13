@@ -1,5 +1,6 @@
 import React from 'react';
 import userAvatarBlack from '../Signup/Signup_picture/user.jpg';
+import UserForm from './forms/UserForm';
 import editUserAvatar from './pictures/edit-user.jpg';
 
 function EditUser() {
@@ -16,16 +17,18 @@ function EditUser() {
           <span className="flex justify-center">
             <img src={userAvatarBlack} alt="userAvatar" className="h-60" />
           </span>
-          <span className="border absolute left-2/4">
+          <button type="button" className="absolute left-56 top-48">
             <img
               src={editUserAvatar}
               alt="editUser"
-              className="h-16 border-2 p-1 pl-2 border-black rounded-full"
+              className="h-12 border-black border-2 rounded-full"
             />
-          </span>
+          </button>
         </div>
 
-        <div className="w-3/6 border">Form will be here</div>
+        <div className="w-3/6 border">
+          <UserForm />
+        </div>
       </div>
     </div>
   );

@@ -90,7 +90,8 @@ function Socials() {
 
   useEffect(() => {
     if (isSignedUp) {
-      const timer = setTimeout(() => navigate('/'), 2000);
+      // const timer = setTimeout(() => navigate('/'), 2000);
+      const timer = setTimeout(() => navigate('/edit-user'), 2000);
       return () => clearTimeout(timer);
     }
 

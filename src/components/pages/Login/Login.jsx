@@ -48,8 +48,9 @@ function Login() {
               } else {
                 swal('Welcome', `It is great to see you here!`);
               }
-
-              navigate('/');
+              // change later
+              // navigate('/')
+              navigate('/edit-user');
             } else {
               swal(
                 'Ops..',

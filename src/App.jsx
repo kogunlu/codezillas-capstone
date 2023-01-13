@@ -3,7 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './components/pages/About/About';
 import ErrorPage from './components/pages/404/ErrorPage';
 import Book from './components/pages/book/Book';
-import Home from './components/pages/home/Home';
+import Home from "./components/pages/home/Home";
+import SubsThanks from "./components/pages/thanks/SubsThanks";
+import Footer from "./components/shared/footer/Footer";
+import Blog from "./components/pages/Blog/Blog";
+
+
 
 import Navbar from './components/shared/navbar/Navbar';
 
@@ -20,6 +25,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="book" element={<Book />} />
         <Route path="about" element={<About />} />
@@ -28,6 +34,7 @@ function App() {
         <Route path="team" element={<Team />} />
         <Route path="thanks-subs" element={<SubsThanks />} />
         <Route path="thanks-signup" element={<SignupThanks />} />
+        <Route path='blog' element={<Blog />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>

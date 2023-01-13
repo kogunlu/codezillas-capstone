@@ -13,6 +13,8 @@ import Signup from './components/pages/Signup/Signup';
 import Team from './components/pages/About/Team';
 import SubsThanks from "./components/pages/thanks/SubsThanks"
 import Footer from "./components/shared/footer/Footer"
+import Career from './components/pages/About/Career/Career';
+import CareerList from './components/pages/About/Career/CareerList';
 
 
 
@@ -26,6 +28,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='book' element={<Book />} />
         <Route path='about' element= {<About/>} />
+        <Route path='career' element= {<Career/>} />
+        <Route path='careerlist' element= {<CareerList/>} />
         <Route path='login' element = {<Login />} />
         <Route path='signup' element = {<Signup />} />
         <Route path='team' element= {<Team/>} /> 

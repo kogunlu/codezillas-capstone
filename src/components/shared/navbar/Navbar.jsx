@@ -15,12 +15,12 @@ function Navbar() {
     if(SideMenuClose === 'hidden')
     {
       setSideMenu('hidden')
-      setSideMenuClose()
+      setSideMenuClose("")
       setShowHide('left-[0px] opacity-100')
     }else{
-      setSideMenu()
+      setSideMenu("")
       setSideMenuClose('hidden')
-      setShowHide()
+      setShowHide("")
     }
   }
   return (

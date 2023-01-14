@@ -6,9 +6,9 @@ export default function Body1()
     const navigate = useNavigate();
 
     return(
-        <div className="mb-48 md:mb-0 ">
+        <div className="mb-60 md:mb-0 ">
             <div className='w-full'>
-                <div className=" grid grid-cols-12 grid-rows-6 absolute">
+                <div className=" grid grid-cols-12 grid-rows-6 absolute gap-y-10">
                     <span className="col-span-12 row-span-1" />
                     <div className="grid row-span-5 col-span-5 col-start-3 md:col-start-1 ">
                         <div className="md:col-start-3">

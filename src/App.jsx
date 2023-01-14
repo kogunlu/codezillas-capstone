@@ -13,6 +13,7 @@ import Signup from './components/pages/Signup/Signup';
 import Team from './components/pages/About/Team';
 import SubsThanks from "./components/pages/thanks/SubsThanks"
 import Footer from "./components/shared/footer/Footer"
+import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 
 
@@ -30,6 +31,8 @@ function App() {
         <Route path='signup' element = {<Signup />} />
         <Route path='team' element= {<Team/>} /> 
         <Route path='thanks-subs' element={<SubsThanks />} />
+        <Route path='work-with-healing' element={<HealingRequirement />} />
+      
 
 
         <Route path='*' element= {<ErrorPage />}  />

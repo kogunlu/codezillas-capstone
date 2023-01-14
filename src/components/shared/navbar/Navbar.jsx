@@ -16,7 +16,7 @@ function Navbar() {
     {
       setSideMenu('hidden')
       setSideMenuClose()
-      setShowHide('z-[-1] left-[0px] opacity-100 ')
+      setShowHide('left-[0px] opacity-100')
     }else{
       setSideMenu()
       setSideMenuClose('hidden')
@@ -40,7 +40,7 @@ function Navbar() {
                         <path id="x" d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
                     </g>
                 </svg>
-                <svg className={`col-start-5 row-start-2 row-span-3 ${SideMenu}`} height="32px"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+                <svg className={`col-start-5 row-start-2 row-span-3 w-8 ${SideMenu}`} height="32px"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
             </button>
           </div>
           <ul className={`grid place-content-center md:grid-cols-6 my-0 col-span-2 content-center z-[1] md:z-auto absolute md:static nav-bg left-0 w-full md:w-auto py-4 ma:py-0 pl-7 md:pl-0 opacity-0 md:opacity-100 left-[-400px] transition-all ease-in duration-500 gap-4 ${ShowHide}` }>

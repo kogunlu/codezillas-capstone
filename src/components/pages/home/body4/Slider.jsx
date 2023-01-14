@@ -1,94 +1,76 @@
-import React, {useState, useEffect}  from "react";
-import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
+import * as React from "react";
+// import { useEffect, useState, useRef } from "react";
+import Slider from "react-slick";
+import {Link } from 'react-router-dom';
+
 import { sliderArray } from "./SliderArray";
 
-function Slider(){
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./slider.css";
 
-    const [index, setIndex] = useState(0)
- 
-    useEffect(() => {
-      setIndex(0)
-    },[])
-   
-    const imgs = []
-   
-    sliderArray.map(item => {
-      return (
-        imgs.push(item.picture)
-      )
-    })
-   
-    const next = () => {
-      if(index === imgs.length -1 ){
-        setIndex(0)
-      }else{
-        setIndex(index+1)
-      }
-    }
-   
-    const prev = () => {
-      if(index === 0){
-        setIndex(imgs.length -1)
-      }else{
-        setIndex(index-1)
-      }
-    }
+const Slidernew = () => {
+
   
-    return(
-<div className="bg-cyan-50 flex justify-center mt-20 mb-20 pb-40">
-    <div className="w-5/6 flex flex-col items-center">
-    <p className="w-5/6 text-center text-4xl md:text-start 2xl:text-6xl font-bold mt-10 mb-16 ">RECENT BLOGS</p>
- 
-
-
-
-
-
- <div className="flex flex-wrap sm:flex sm:flex-row justify-center w-full gap-8 mt-10">
-        <div className='relative w-1/4'>    
-        <img src={imgs[index]} alt="RecentBlogsImages"/>
-   
-        <h1 className='absolute text-white top-4 left-5'>MENTAL HEALTH </h1>
-        <h1 className='absolute text-white top-9 left-5'>AND TECHNOLOGY</h1>
-        </div>
-         
-        <div className='relative w-1/4'>    
-        <img  src={imgs[index]} alt="RecentBlogsPicture"/>    
-        <h1 className='absolute text-white text-xl bottom-14 left-5 bg-gray-800 opacity-50'>HEAL FROM </h1>
-        <h1 className='absolute text-white text-xl bottom-8 left-5 bg-gray-800 opacity-50'>TRAUMA</h1>        
-        </div>
- 
-        <div className='relative w-1/4'>    
-        <img src={imgs[index]} alt="RecentBlogsPicture"/>
-   
-        <h1 className='absolute text-white text-base top-4 left-5'>MENTAL HEALTH </h1>
-        <h1 className='absolute text-white text-base top-9 left-5'>AND TECHNOLOGY</h1>
-        </div>
-        </div>
-    </div>
-
-
-       
-        
-          <button onClick={prev} type='button'>
-            <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl p-2 border-solid border-2 border-black rounded ">
-            < BsChevronCompactLeft size={20}/>
-            </div>
-          </button>
-          <button onClick={next} type='button'>
-            <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl p-2 border-solid border-2 border-black rounded ">
-            <BsChevronCompactRight size={20}/>
-            </div>
-          </button>
- 
-        
-
+  const settings = {
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+           
+        ],
     
-
-</div>
     
+   
+  };
 
+  return (
 
-    )
-}
-export default Slider
+    <div className="bg-cyan-50">
+    <div className="w-5/6 flex flex-col items-center pt-20 pb-10">
+    <p className="w-5/6 text-center text-4xl md:text-start 2xl:text-6xl font-bold mt-10">RECENT BLOGS</p>
+  </div>
+<div className="mt-5 flex justify-center pb-20">
+      <Slider
+      {...settings}
+        className="w-5/6  justify-center"
+      > 
+        {sliderArray.map((card) => (
+          <div className="flex justify-center">
+            <Link  to="/Blogs">
+            <img alt={card.title} src={card.picture} className="max-w-full p-2 h-auto"/>
+            </Link>
+        </div>
+     ))}  
+      </Slider>
+      </div>
+
+   </div>
+  );
+};
+
+export default Slidernew;

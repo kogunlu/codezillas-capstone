@@ -1,0 +1,11 @@
+.slick-prev:before {
+ color: black;
+}
+.slick-next:before {
+    color: black;
+   }
+
+   .slick-slide  {
+    display: flex !important;
+    justify-content: center;
+   }

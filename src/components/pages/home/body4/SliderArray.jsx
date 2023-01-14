@@ -1,5 +1,6 @@
-import Rectangle40 from "./recentBlogImages/Rectangle40.jpg"
-import Rectangle41 from "./recentBlogImages/Rectangle41.jpg"
+import Rectangle40 from "./recentBlogImages/Rectangle40.png"
+import Rectangle41 from "./recentBlogImages/Rectangle41.png"
+import Rectangle42 from "./recentBlogImages/Rectangle42.png"
  
 const sliderArray=[
     {
@@ -10,12 +11,17 @@ const sliderArray=[
     {
         id:2,
         picture:Rectangle41,
-        title:"HEAL FROM TRAUMA",
+         title:"HEAL FROM TRAUMA",
     },
     {
         id:3,
         picture:Rectangle40,
-        title:"MENTAL HEALTH AND TECHNOLOGY",
+         title:"MENTAL HEALTH AND TECHNOLOGY",
+    },
+    {
+        id:4,
+        picture:Rectangle42,
+        title:"ANXIETY",
     }
 ]
  

@@ -1,11 +1,11 @@
 import React from 'react'
 import PurchaseTickets from './body5/PurchaseTickets';
-import Slider from './body4/Slider';
+import Slidernew from './body4/Slider';
 
 function Home() {
   return (
     <div>
-     <Slider/>
+     <Slidernew/>
      <PurchaseTickets/>
       </div> 
   );

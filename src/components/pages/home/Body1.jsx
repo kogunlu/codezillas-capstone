@@ -10,7 +10,7 @@ export default function Body1()
             <div className='w-full'>
                 <div className=" grid grid-cols-12 grid-rows-6 absolute gap-y-10">
                     <span className="col-span-12 row-span-1" />
-                    <div className="grid row-span-5 col-span-5 col-start-3 md:col-start-1 ">
+                    <div className="grid row-span-5 col-span-5 col-start-4 md:col-start-1 ">
                         <div className="md:col-start-3">
                             <p className="uppercase text-lg md:text-4xl">We are here to</p>
                             <p className="uppercase text-7xl md:text-9xl">Help</p>

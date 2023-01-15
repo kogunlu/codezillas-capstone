@@ -14,7 +14,7 @@ exports[`Navbar component renders correctly 1`] = `
         className="col-span-12 row-span-1"
       />
       <div
-        className="grid row-span-5 col-span-5 col-start-3 md:col-start-1 "
+        className="grid row-span-5 col-span-5 col-start-4 md:col-start-1 "
       >
         <div
           className="md:col-start-3"

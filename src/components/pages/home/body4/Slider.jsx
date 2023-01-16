@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.css";
 
+//Home Page Recent Blog Slider images should link us to the Blog page
 const Slidernew = () => {
   const settings = {
     arrows: true,

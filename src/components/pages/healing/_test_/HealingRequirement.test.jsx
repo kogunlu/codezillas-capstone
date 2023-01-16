@@ -12,6 +12,7 @@ it(`renders correctly for HealingRequirement`, () => {
             </BrowserRouter>
         </Provider>       
     )
+    
     .toJSON()
         expect(Healingcomponent).toMatchSnapshot()   
 })

@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./selectCard.css";
 import Button from "../../shared/button/Button";
 
-// Confirm purchase button should take us to the related "Thank you" page Link is already created
+// Confirm purchase button should take us to the related "Thank you" page Link is already created. Slider arrows needs manupilating
 const Slidernew = () => {
     const settings = {
       arrows: true,

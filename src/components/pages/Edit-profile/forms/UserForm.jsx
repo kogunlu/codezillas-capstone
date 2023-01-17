@@ -47,6 +47,10 @@ function UserForm() {
       errors.gender = '*Required';
     }
 
+    if (!values.birthdate) {
+      errors.birthdate = '*Required';
+    }
+
     return errors;
   };
 
@@ -58,13 +62,15 @@ function UserForm() {
       family: '',
       gender: '',
       birthdate: `${activeUser.birthdate}`,
+      email: `${activeUser.email}`,
     },
     validate,
     onSubmit: async (values) => {
       console.log(values);
+      console.log(activeUser);
     },
   });
-  console.log(formik.values.birthdate);
+
   function handleChangeSelect(e, trgt) {
     if (trgt === 'edu') {
       setSelectedOptionEdu(e.target.value);
@@ -92,13 +98,18 @@ function UserForm() {
 
     return false;
   }
-
+  // Class names for dropdown list
   const notSelectedClassList =
     'border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base italic text-gray-400';
 
   const selectedClassList =
     'border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base ';
 
+  // Class names for input[date]
+  const classNoSelection =
+    'border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-white focus:text-black';
+  const classWithSelection =
+    'border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base';
   return (
     <div>
       <p className="text-4xl font-bold px-5">PROFILE INFO</p>
@@ -240,7 +251,54 @@ function UserForm() {
             </div>
           </div>
         </div>
-        {/* Birthdate section */}.<button type="submit">submit</button>
+        {/* Birthdate section */}
+        <div className="w-full h-20 flex justify-between">
+          <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
+            <p className="text-xl font-semibold">Birth Date</p>
+          </span>
+
+          <div className="w-8/12 flex flex-col">
+            <input
+              type="date"
+              className={
+                formik.values.birthdate ? classWithSelection : classNoSelection
+              }
+              id="birthdate"
+              name="birthdate"
+              min="1900-01-01"
+              max="2022-12-31"
+              {...formik.getFieldProps('birthdate')}
+            />
+            {formik.touched.birthdate && formik.errors.birthdate ? (
+              <div className="text-red-400 italic text-sm lg:text-base">
+                {formik.errors.birthdate}
+              </div>
+            ) : null}
+          </div>
+        </div>
+        {/* Email section */}
+        <div className="w-full h-20 flex justify-between">
+          <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
+            <p className="text-xl font-semibold">Full Name</p>
+          </span>
+
+          <div className="w-8/12 flex flex-col">
+            <input
+              type="text"
+              className="border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+              id="fullName"
+              name="fullName"
+              {...formik.getFieldProps('fullName')}
+            />
+            {formik.touched.fullName && formik.errors.fullName ? (
+              <div className="text-red-400 italic text-sm lg:text-base">
+                {formik.errors.fullName}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        <button type="submit">submit</button>
       </form>
     </div>
   );

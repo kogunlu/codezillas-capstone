@@ -127,7 +127,6 @@ function UserForm() {
             ) : null}
           </div>
         </div>
-
         {/* Education section */}
         <div className="w-full h-20 flex justify-between">
           <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
@@ -162,7 +161,6 @@ function UserForm() {
             </div>
           </div>
         </div>
-
         {/* Hobbies section */}
         <div className="w-full h-20 flex justify-between">
           <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
@@ -184,7 +182,6 @@ function UserForm() {
             ) : null}
           </div>
         </div>
-
         {/* Family section */}
         <div className="w-full h-20 flex justify-between">
           <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
@@ -212,7 +209,6 @@ function UserForm() {
             ) : null}
           </div>
         </div>
-
         {/* Gender section */}
         <div className="w-full h-20 flex justify-between">
           <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
@@ -244,10 +240,7 @@ function UserForm() {
             </div>
           </div>
         </div>
-
-        {/* Birthdate section */}
-
-        <button type="submit">submit</button>
+        {/* Birthdate section */}.<button type="submit">submit</button>
       </form>
     </div>
   );

@@ -57,13 +57,14 @@ function UserForm() {
       hobbies: [],
       family: '',
       gender: '',
+      birthdate: `${activeUser.birthdate}`,
     },
     validate,
     onSubmit: async (values) => {
       console.log(values);
     },
   });
-
+  console.log(formik.values.birthdate);
   function handleChangeSelect(e, trgt) {
     if (trgt === 'edu') {
       setSelectedOptionEdu(e.target.value);

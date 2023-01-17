@@ -11,7 +11,11 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import loginPicture from './Login_picture/login.jpg';
 import Socials from './Socials';
-import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
+import {
+  setAnswer1,
+  setAnswer2,
+  setAnswer4,
+} from '../../../features/user/userSlice';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -39,6 +43,7 @@ function Login() {
             if (user) {
               dispatch(setAnswer1(userLoggedIn.email));
               dispatch(setAnswer2(userLoggedIn.displayName));
+              // fetch data from DB with the certain email adress and dispatch the details
 
               if (userLoggedIn.displayName) {
                 swal(

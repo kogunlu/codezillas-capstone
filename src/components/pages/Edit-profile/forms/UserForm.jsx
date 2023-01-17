@@ -7,7 +7,10 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
+import { BsPlusLg } from 'react-icons/bs';
+import { GrLock } from 'react-icons/gr';
 import { useSelector, useDispatch } from 'react-redux';
+import Button from '../../../shared/button/Button';
 import db from '../../../../db/firebase.config';
 
 function UserForm() {
@@ -51,18 +54,48 @@ function UserForm() {
       errors.birthdate = '*Required';
     }
 
+    if (!values.email) {
+      errors.email = '*Required';
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = 'Invalid email address';
+    }
+
+    if (!values.phone) {
+      errors.phone = '*Required';
+    }
+
+    if (!values.id) {
+      errors.id = '*Required';
+    } else if (values.id < 10_000_000_000 || values.id > 99_999_999_999) {
+      errors.id = 'Please type a valid ID number';
+    }
+
+    if (values.password.length < 8 || values.password.length > 20) {
+      errors.password = 'Between 8-20 characters.';
+    }
+
+    if (values.confirmPassword !== values.password) {
+      errors.confirmPassword = 'Passwords don`t match';
+    }
+
     return errors;
   };
 
   const formik = useFormik({
     initialValues: {
       fullName: `${activeUser.displayName}`,
-      education: `${selectedOptionEdu}`,
-      hobbies: [],
-      family: '',
+      education: `${activeUser.education}`,
+      hobbies: `${activeUser.hobbies}`,
+      family: `${activeUser.family}`,
       gender: '',
       birthdate: `${activeUser.birthdate}`,
       email: `${activeUser.email}`,
+      phone: `${activeUser.phone}`,
+      id: `${activeUser.id}`,
+      password: `${activeUser.password}`,
+      confirmPassword: `${activeUser.confirmPassword}`,
     },
     validate,
     onSubmit: async (values) => {
@@ -71,6 +104,7 @@ function UserForm() {
     },
   });
 
+  // Functions start
   function handleChangeSelect(e, trgt) {
     if (trgt === 'edu') {
       setSelectedOptionEdu(e.target.value);
@@ -98,6 +132,27 @@ function UserForm() {
 
     return false;
   }
+
+  function handleSaveBtn() {
+    console.log('123');
+  }
+
+  function handleDeleteBtn() {
+    console.log('delete');
+  }
+
+  function handleCancelBtn() {
+    console.log('cancel');
+  }
+
+  function handleShowBtn() {
+    console.log('show');
+  }
+
+  function handleBuyBtn() {
+    console.log('buy');
+  }
+
   // Class names for dropdown list
   const notSelectedClassList =
     'border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base italic text-gray-400';
@@ -279,22 +334,169 @@ function UserForm() {
         {/* Email section */}
         <div className="w-full h-20 flex justify-between">
           <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
-            <p className="text-xl font-semibold">Full Name</p>
+            <p className="text-xl font-semibold">Email</p>
           </span>
 
           <div className="w-8/12 flex flex-col">
             <input
-              type="text"
+              type="email"
               className="border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-              id="fullName"
-              name="fullName"
-              {...formik.getFieldProps('fullName')}
+              id="email"
+              name="email"
+              {...formik.getFieldProps('email')}
             />
-            {formik.touched.fullName && formik.errors.fullName ? (
+            {formik.touched.email && formik.errors.email ? (
               <div className="text-red-400 italic text-sm lg:text-base">
-                {formik.errors.fullName}
+                {formik.errors.email}
               </div>
             ) : null}
+          </div>
+        </div>
+        {/* Phone section */}
+        <div className="w-full h-20 flex justify-between">
+          <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
+            <p className="text-xl font-semibold">Phone</p>
+          </span>
+
+          <div className="w-8/12 flex flex-col">
+            <input
+              type="tel"
+              className="border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}"
+              maxLength="16"
+              placeholder="90 555 999 99 99"
+              {...formik.getFieldProps('phone')}
+            />
+            {formik.touched.phone && formik.errors.phone ? (
+              <div className="text-red-400 italic text-sm lg:text-base">
+                {formik.errors.phone}
+              </div>
+            ) : null}
+          </div>
+        </div>
+        {/* ID section */}
+        <div className="w-full h-20 flex justify-between">
+          <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
+            <p className="text-xl font-semibold">Upload ID</p>
+          </span>
+
+          <div className="w-8/12 flex flex-col relative">
+            <input
+              type="number"
+              className="border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+              id="id"
+              name="id"
+              value={formik.values.id}
+              onChange={(e) => formik.setFieldValue('id', e.target.value)}
+            />
+            <BsPlusLg className="absolute right-5 top-6" />
+            {formik.touched.id && formik.errors.id ? (
+              <div className="text-red-400 italic text-sm lg:text-base">
+                {formik.errors.id}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        <div className="w-full my-5">
+          <p className="text-4xl font-bold text-left">Security</p>
+        </div>
+
+        {/* Password Section */}
+        <div className="w-full h-20 flex justify-between">
+          <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
+            <p className="text-xl font-semibold">Password</p>
+          </span>
+
+          <div className="w-8/12 h-20 flex flex-col relative">
+            <input
+              type="password"
+              className="border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+              id="password"
+              name="password"
+              value={formik.values.password}
+              onChange={(e) => formik.setFieldValue('password', e.target.value)}
+            />
+            <GrLock className="absolute right-5 top-6" />
+            {formik.errors.password ? (
+              <div className="text-red-400 italic text-sm lg:text-base">
+                {formik.errors.password}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {/* Confirm Password Section  */}
+        <div className="w-full h-20 flex justify-between">
+          <span className="w-4/12 h-12 md:h-16 flex justify-start items-center">
+            <p className="text-xl font-semibold">Confirm Password</p>
+          </span>
+
+          <div className="w-8/12 h-20 flex flex-col relative">
+            <input
+              type="password"
+              className="border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+              id="confirmPassword"
+              name="confirmPassword"
+              value={formik.values.confirmPassword}
+              onChange={(e) =>
+                formik.setFieldValue('confirmPassword', e.target.value)
+              }
+            />
+            <GrLock className="absolute right-5 top-6" />
+            {formik.errors.confirmPassword ? (
+              <div className="text-red-400 italic text-sm lg:text-base">
+                {formik.errors.confirmPassword}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {/* Buttons */}
+        <div className="w-full flex justify-between">
+          <Button
+            name="SAVE CHANGES"
+            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+            function={() => handleSaveBtn()}
+          />
+          <Button
+            name="DELETE ACCOUNT"
+            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+            function={() => handleDeleteBtn()}
+          />
+          <Button
+            name="CANCEL"
+            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+            function={() => handleCancelBtn()}
+          />
+        </div>
+
+        <div className="w-full my-5">
+          <p className="text-4xl font-bold text-left">
+            Payment Methods & Tickets
+          </p>
+        </div>
+
+        {/* Ticket and Payment section */}
+        <div className="w-full flex flex-col justify-start gap-2">
+          <div className="w-8/12 flex justify-between">
+            <p className="w-5/12">3 Cards Added</p>
+            <p className="w-5/12">10 Tickets Remaining</p>
+          </div>
+
+          <div className="w-8/12 flex justify-between">
+            <Button
+              name="SHOW CARDS"
+              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+              function={() => handleShowBtn()}
+            />
+            <Button
+              name="BUY TICKETS"
+              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+              function={() => handleBuyBtn()}
+            />
           </div>
         </div>
 

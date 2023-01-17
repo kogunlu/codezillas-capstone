@@ -7,9 +7,12 @@ const initialState = {
     password: '',
     birthdate: '',
     education: '',
-    hobbies: [],
+    hobbies: '',
     family: 0,
     gender: '',
+    phone: '',
+    id: '',
+    confirmPassword: '',
   },
 };
 

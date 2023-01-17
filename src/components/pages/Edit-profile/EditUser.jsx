@@ -5,7 +5,7 @@ import editUserAvatar from './pictures/edit-user.jpg';
 
 function EditUser() {
   return (
-    <div className="flex flex-col justify-start items-center h-[800px] my-5 gap-5">
+    <div className="flex flex-col justify-start items-center h-full my-5 gap-5">
       <div className="w-5/6">
         <p className="text-center text-red-500 font-semibold text-lg">
           Please fill al the fields with correct and valid details to complete

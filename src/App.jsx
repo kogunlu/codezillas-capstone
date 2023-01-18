@@ -15,6 +15,10 @@ import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 
 import Team from './components/pages/About/Team';
+import SubsThanks from "./components/pages/thanks/SubsThanks"
+import Footer from "./components/shared/footer/Footer"
+import HealingRequirement from './components/pages/healing/HealingRequirement';
+
 
 function App() {
   return (
@@ -30,6 +34,7 @@ function App() {
         <Route path="thanks-subs" element={<SubsThanks />} />
         <Route path="thanks-signup" element={<SignupThanks />} />
         <Route path="blog" element={<Blog />} />
+        <Route path='work-with-healing' element={<HealingRequirement />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>

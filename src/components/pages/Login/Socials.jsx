@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import {
   getAuth,
@@ -14,9 +15,12 @@ import {
 import { FaFacebook } from 'react-icons/fa';
 import { GrGoogle } from 'react-icons/gr';
 import db from '../../../db/firebase.config';
+import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
 
 function Socials() {
   const [isSignedUp, setIsSignedUp] = useState(false);
+
+  const dispatch = useDispatch();
 
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
@@ -66,6 +70,9 @@ function Socials() {
 
           setIsSignedUp(true);
         }
+
+        dispatch(setAnswer1(user.email));
+        dispatch(setAnswer2(user.displayName));
       })
       .catch(async (error) => {
         if (error) {

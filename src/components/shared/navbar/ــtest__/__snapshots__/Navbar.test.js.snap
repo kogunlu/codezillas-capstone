@@ -2,16 +2,16 @@
 
 exports[`Navbar component renders correctly 1`] = `
 <div
-  className="nav-bg"
+  className="bg-main-background"
 >
   <div
     className="p-3"
   >
     <div
-      className="grid grid-cols-4"
+      className="md:grid md:grid-cols-4 justify-center"
     >
       <div
-        className="grid grid-cols-3 col-span-2"
+        className="grid grid-cols-3 md:grid-col-2 col-span-2"
       >
         <a
           href="/"
@@ -32,14 +32,44 @@ exports[`Navbar component renders correctly 1`] = `
           </div>
         </a>
       </div>
+      <button
+        className="cursor-pointer md:hidden block col-start-3 grid grid-flow-col grid-cols-5 grid-rows-5"
+        onClick={[Function]}
+        type="button"
+      >
+        <svg
+          className="col-start-5 row-start-2 row-span-3 hidden"
+          height="32"
+          viewBox="0 0 24 24"
+          width="32"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"
+              id="x"
+            />
+          </g>
+        </svg>
+        <svg
+          className="col-start-5 row-start-2 row-span-3 w-8 "
+          height="32px"
+        >
+          <path
+            d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+          />
+        </svg>
+      </button>
       <ul
-        className="grid grid-cols-6 col-span-2 content-center "
+        className="grid place-content-center md:grid-cols-12 my-0 col-span-2 content-center z-[1] md:z-auto absolute md:static bg-main-background left-0 w-full md:w-auto py-4 ma:py-0 pl-7 md:pl-0  md:opacity-100  transition-all ease-in duration-500 gap-4 left-[-400px] opacity-0 "
       >
         <li
-          className="py-2"
+          className="py-2 text-center md:col-span-2"
         >
           <a
-            className="hover:text-yellow-white"
+            aria-current="page"
+            className="hover:text-yellow-white duration-300 active"
             href="/"
             onClick={[Function]}
           >
@@ -47,32 +77,85 @@ exports[`Navbar component renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="py-2"
+          className="py-2 text-center md:col-span-2"
         >
           <a
-            className="hover:text-yellow-white"
-            href="/blog"
+            className="hover:text-yellow-white duration-300"
+            href="/blogs"
             onClick={[Function]}
           >
             Blogs
           </a>
         </li>
         <li
-          className="py-2"
+          className="py-2 flex justify-center grid  md:col-span-3"
         >
-          <a
-            className="hover:text-yellow-white"
-            href="/about"
+          <button
+            className="hover:text-yellow-white duration-300 grid grid-cols-3 w-36"
             onClick={[Function]}
+            type="button"
           >
-            About Us
-          </a>
+            <span
+              className="col-span-2"
+            >
+              About
+            </span>
+            <span>
+              <svg
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                width="20px"
+              >
+                <path
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul
+            className="row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-10 static md:block md:absolute transition-all ease-in duration-500 z-[1] opacity-0 hidden"
+          >
+            <li
+              className="text-center py-2 w-full"
+            >
+              <a
+                className="hover:text-yellow-white duration-300"
+                href="/about"
+                onClick={[Function]}
+              >
+                About Us
+              </a>
+            </li>
+            <li
+              className="text-center py-2 w-full"
+            >
+              <a
+                className="hover:text-yellow-white duration-300"
+                href="/team"
+                onClick={[Function]}
+              >
+                Team
+              </a>
+            </li>
+            <li
+              className="text-center py-2  w-full"
+            >
+              <a
+                className="hover:text-yellow-white duration-300"
+                href="/career"
+                onClick={[Function]}
+              >
+                Career
+              </a>
+            </li>
+          </ul>
         </li>
         <li
-          className="py-2"
+          className="py-2 text-center md:col-span-2"
         >
           <a
-            className="hover:text-yellow-white"
+            className="hover:text-yellow-white duration-300"
             href="/contact"
             onClick={[Function]}
           >
@@ -80,7 +163,7 @@ exports[`Navbar component renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="flex justify-center items-center"
+          className="text-center md:col-span-3"
         >
           <input
             className="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"

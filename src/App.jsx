@@ -17,6 +17,7 @@ import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 import Team from './components/pages/About/Team';
 import Contact from './components/pages/Contact/Contact';
+import ContactThanks from './components/pages/Contact/ContactThanks/ContactThanks';
 
 
 function App() {
@@ -35,12 +36,13 @@ function App() {
         <Route path="thanks-signup" element={<SignupThanks />} />
         <Route path='blog' element={<Blog />} />
         <Route path='contact' element={<Contact />} />
+        <Route path= "thanks-contact" element={<ContactThanks />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
       <Footer />
     </BrowserRouter>
   );
-}
+} 
 
 export default App;

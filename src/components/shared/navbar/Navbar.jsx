@@ -3,7 +3,7 @@ import {React,useState} from 'react';
 import { Link,NavLink, useNavigate } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
 import swal from 'sweetalert';
-import { GrUserSettings } from 'react-icons/gr';
+import { GrUserSettings,GrMenu,GrClose,GrFormDown } from 'react-icons/gr';
 import { useSelector, useDispatch } from 'react-redux';
 import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
 import Button from '../button/Button';
@@ -69,6 +69,22 @@ function Navbar() {
   }
 
 
+
+  const [NavDropDownProfile, setNavDropDownProfile] = useState("opacity-0 hidden")
+
+  function handleNavAboutDropDownProfile()
+  {
+    if(NavDropDownProfile === 'opacity-0 hidden')
+    {
+      setNavDropDownProfile('opacity-100')
+    }else{
+      setNavDropDownProfile('opacity-0 block')
+      setTimeout(()=>setNavDropDownProfile('opacity-0 hidden'),500)
+
+    }
+
+  }
+
   return (
     <div className='bg-main-background'>
       <div className='p-3'>
@@ -82,24 +98,16 @@ function Navbar() {
             </Link>
           </div>
             <button type='button' className='cursor-pointer md:hidden block col-start-4 grid grid-flow-col grid-cols-4 grid-rows-5' onClick={()=> handleSideMenu() } >
-                <svg className={`col-start-5 row-start-2 row-span-3 ${SideMenuClose}`} width="32" height="32" viewBox="0 0 24 24">
-                    <g id="close">
-                        <path id="x" d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
-                    </g>
-                </svg>
-                <svg className={`col-start-5 row-start-2 row-span-3 w-8 ${SideMenu}`} height="32px"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+                <GrClose className={`col-start-5 row-start-2 row-span-3 text-3xl ${SideMenuClose}`} />
+                <GrMenu className={`col-start-5 row-start-2 row-span-3 w-8 text-3xl ${SideMenu}`} />
             </button>
           <ul className={`grid place-content-center md:grid-cols-12 mt-16 md:my-0 col-span-2 content-center  md:z-auto absolute md:static bg-main-background left-0 w-full md:w-auto py-4 ma:py-0 pl-7 md:pl-0  md:opacity-100  transition-all ease-in duration-500 gap-4 ${ShowHide}` }>
             <li className='py-2 text-center md:col-span-2'><NavLink to="/" className="hover:text-yellow-white duration-300">Home</NavLink></li>
             <li className='py-2 text-center md:col-span-2'><NavLink to="/blogs" className="hover:text-yellow-white duration-300" >Blogs</NavLink></li>
             <li className='py-2 flex justify-center grid md:col-span-3'>
-              <button type='button' className='hover:text-yellow-white duration-300 grid grid-cols-3 w-20 lg:w-28' onClick={()=>handleNavAboutDropDown()}>
+              <button type='button' className='hover:text-yellow-white duration-300 grid grid-cols-3 w-30 ' onClick={()=>handleNavAboutDropDown()}>
                 <span className='col-span-2'>About</span>
-                <span>
-                  <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" width="20px">
-                    <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" />
-                  </svg>
-                </span>
+                <span><GrFormDown className='text-xl' /></span>
               </button>
               <ul className={`row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-10 static md:block md:absolute transition-all ease-in duration-500 z-[1] ${NavDropDown}`}>
                 <li className='text-center py-2 w-full'><NavLink className='hover:text-yellow-white duration-300' to="/about">About Us</NavLink></li>
@@ -108,9 +116,9 @@ function Navbar() {
               </ul>
             </li>
             <li className='py-2 text-center md:col-span-2'><NavLink className='hover:text-yellow-white duration-300' to="/contact">Contact Us</NavLink></li>
-            <li className="text-center md:col-span-3">
+            <li className=" md:col-span-3 grid place-content-center w-32">
               {user.email ? (
-                <button type="button" onClick={handleSignOut}>
+                <button type="button" onClick={handleNavAboutDropDownProfile} className="grid place-content-center ">
                   <GrUserSettings className="text-2xl" />
                 </button>
               ) : (
@@ -122,6 +130,9 @@ function Navbar() {
                   function={() => handleLoginClick()}
                 />
               )}
+              <ul className={`row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-12 static md:block md:absolute transition-all ease-in duration-500 z-[1] ${NavDropDownProfile}`}>
+                <li className='text-center py-2 w-full hover:text-yellow-white duration-300 '><button className='place-self-center' type='button' onClick={()=>{ handleSignOut();handleNavAboutDropDownProfile();}}>Sign Out</button></li>
+              </ul>
             </li>
           </ul>
         </div>

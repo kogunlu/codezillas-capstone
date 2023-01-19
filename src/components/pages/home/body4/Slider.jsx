@@ -1,12 +1,13 @@
 import * as React from "react";
 import Slider from "react-slick";
 import {Link } from 'react-router-dom';
+import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
 import { sliderArray } from "./SliderArray";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.css";
 
-//Home Page Recent Blog Slider images should link us to the Blog page
+// Home Page Recent Blog Slider images should link us to the Blog page
 const Slidernew = () => {
   const settings = {
     arrows: true,
@@ -15,7 +16,9 @@ const Slidernew = () => {
     autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-  responsive: [
+    nextArrow: <BsChevronCompactRight />,
+    prevArrow: <BsChevronCompactLeft />,
+    responsive: [
             {
                 breakpoint: 1024,
                 settings: {
@@ -52,7 +55,7 @@ const Slidernew = () => {
       > 
         {sliderArray.map((card) => (
           <div className="flex justify-center">
-            <Link  to="/Blogs">
+            <Link  to="/blogs">
             <img alt={card.title} src={card.picture} className="max-w-full p-2 h-auto"/>
             </Link>
         </div>

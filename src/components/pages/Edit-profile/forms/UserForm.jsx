@@ -3,8 +3,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import swal from 'sweetalert';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import {
+  getAuth,
+  updateEmail,
+  updatePassword,
+  deleteUser,
+} from 'firebase/auth';
+import { doc, setDoc, deleteDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { BsPlusLg } from 'react-icons/bs';
@@ -17,7 +22,24 @@ function UserForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const [isDocSaved, setIsDocSaved] = useState(false);
+
+  const auth = getAuth();
   const activeUser = useSelector((state) => state.user.user);
+
+  useEffect(() => {
+    // console.log(activeUser);
+  }, [activeUser]);
+
+  useEffect(() => {
+    if (isDocSaved) {
+      const timer = setTimeout(() => navigate('/'), 2000);
+
+      return () => clearTimeout(timer);
+    }
+
+    return undefined;
+  }, [isDocSaved]);
 
   const [selectedOptionEdu, setSelectedOptionEdu] = useState('none');
   const [selectedOptionGen, setSelectedOptionGen] = useState('none');
@@ -30,14 +52,8 @@ function UserForm() {
   const validate = (values) => {
     const errors = {};
 
-    if (!values.fullName) {
-      errors.fullName = '*Required';
-    } else if (values.fullName.length > 40) {
+    if (values.fullName.length > 40) {
       errors.fullName = 'Can not be more than 40 character';
-    }
-
-    if (values.hobbies.length < 1) {
-      errors.hobbies = '*Required';
     }
 
     if (values.family < 0 || values.family > 20) {
@@ -54,30 +70,24 @@ function UserForm() {
       errors.birthdate = '*Required';
     }
 
-    if (!values.email) {
-      errors.email = '*Required';
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
+    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
       errors.email = 'Invalid email address';
     }
 
-    if (!values.phone) {
-      errors.phone = '*Required';
+    if (values.id) {
+      if (values.id < 10_000_000_000 || values.id > 99_999_999_999) {
+        errors.id = 'Please type a valid ID number';
+      }
     }
 
-    if (!values.id) {
-      errors.id = '*Required';
-    } else if (values.id < 10_000_000_000 || values.id > 99_999_999_999) {
-      errors.id = 'Please type a valid ID number';
-    }
+    if (values.password) {
+      if (values.password.length < 6 || values.password.length > 20) {
+        errors.password = 'Between 6-20 characters.';
+      }
 
-    if (values.password.length < 8 || values.password.length > 20) {
-      errors.password = 'Between 8-20 characters.';
-    }
-
-    if (values.confirmPassword !== values.password) {
-      errors.confirmPassword = 'Passwords don`t match';
+      if (values.confirmPassword !== values.password) {
+        errors.confirmPassword = 'Passwords don`t match';
+      }
     }
 
     return errors;
@@ -89,7 +99,7 @@ function UserForm() {
       education: `${activeUser.education}`,
       hobbies: `${activeUser.hobbies}`,
       family: `${activeUser.family}`,
-      gender: '',
+      gender: `${activeUser.gender}`,
       birthdate: `${activeUser.birthdate}`,
       email: `${activeUser.email}`,
       phone: `${activeUser.phone}`,
@@ -99,8 +109,34 @@ function UserForm() {
     },
     validate,
     onSubmit: async (values) => {
-      console.log(values);
       console.log(activeUser);
+      console.log(values);
+
+      await deleteDoc(doc(db, 'user-details', activeUser.email));
+      await setDoc(doc(db, 'user-details', values.email), {
+        name: values.fullName,
+        email: values.email,
+        birthdate: values.birthdate,
+        education: values.education,
+        id: values.id,
+        family: values.family,
+        gender: values.gender,
+        hobbies: values.hobbies,
+        phone: values.phone,
+      });
+
+      updateEmail(auth.currentUser, values.email);
+      updatePassword(auth.currentUser, values.confirmPassword);
+
+      swal({
+        title: `Your changes are saved!`,
+        text: 'You will be re-directed to the homepage!',
+        icon: 'success',
+        buttons: false,
+        timer: 3000,
+      });
+
+      setIsDocSaved(true);
     },
   });
 
@@ -133,16 +169,37 @@ function UserForm() {
     return false;
   }
 
-  function handleSaveBtn() {
-    console.log('123');
-  }
+  async function handleDeleteBtn() {
+    const user = auth.currentUser;
 
-  function handleDeleteBtn() {
-    console.log('delete');
+    await deleteDoc(doc(db, 'user-details', user.email));
+
+    deleteUser(user)
+      .then(() => {
+        swal({
+          title: `Your account is deleted!`,
+          text: 'You will be re-directed to the homepage!',
+          icon: 'success',
+          buttons: false,
+          timer: 3000,
+        });
+      })
+      .catch((error) => {
+        swal({
+          title: `Something went wrong!`,
+          text: 'You will be re-directed to the homepage! Please try again.',
+          icon: 'error',
+          buttons: false,
+          timer: 3000,
+        });
+
+        console.log(error);
+        setIsDocSaved(true);
+      });
   }
 
   function handleCancelBtn() {
-    console.log('cancel');
+    console.log('canceled');
   }
 
   function handleShowBtn() {
@@ -456,19 +513,19 @@ function UserForm() {
 
         {/* Buttons */}
         <div className="w-full flex justify-between">
-          <Button
-            name="SAVE CHANGES"
-            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
-            function={() => handleSaveBtn()}
+          <input
+            type="submit"
+            className="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
+            value="SAVE CHANGES"
           />
           <Button
             name="DELETE ACCOUNT"
-            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-red-600 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
             function={() => handleDeleteBtn()}
           />
           <Button
             name="CANCEL"
-            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
             function={() => handleCancelBtn()}
           />
         </div>
@@ -489,18 +546,16 @@ function UserForm() {
           <div className="w-8/12 flex justify-between">
             <Button
               name="SHOW CARDS"
-              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
               function={() => handleShowBtn()}
             />
             <Button
               name="BUY TICKETS"
-              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg"
+              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
               function={() => handleBuyBtn()}
             />
           </div>
         </div>
-
-        <button type="submit">submit</button>
       </form>
     </div>
   );

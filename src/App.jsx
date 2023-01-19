@@ -21,7 +21,7 @@ import ContactThanks from './components/pages/Contact/ContactThanks/ContactThank
 
 
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
       <Navbar />
       <Routes>

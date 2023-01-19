@@ -1,19 +1,19 @@
-import {useState} from 'react'
+
 import {useNavigate} from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid';
 import { doc, setDoc } from "firebase/firestore"; 
 import db from "../../../db/firebase.config"
 
-function ContactInput(name, email, details){
+function ContactInput({nameValue, handleNameChange, emailValue, handleEmailChange, detailsValue, handleDetailsChange}){
     
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [details, setDetails] = useState("")
+  
+  
+  
   const navigate = useNavigate()
 
   async function sendData(obj){
     
-    await setDoc(doc(db, "subscription-list", uuidv4()), {
+    await setDoc(doc(db, "contact-form", uuidv4()), {
       input: obj
     });
 
@@ -22,12 +22,10 @@ function ContactInput(name, email, details){
  
 
   function onChange(){
-    sendData(name, email, details).then(setName, setEmail, setDetails("")).then(navigate('/thanks-contacts'))
+    sendData(nameValue, emailValue, detailsValue).then(handleNameChange, handleEmailChange, handleDetailsChange, ("")).then(navigate('/thanks-contacts'))
   }
- 
-    return {
-        name, email, details 
-       render: (
+
+    return (
        <form className=' w-full md:w-1/4 lg:w-4/6 px-2 md:px-8 sm:text-small  '>
         <span className='mb-3 '>
             <label htmlFor='name' className='font-medium'>Full Name:
@@ -37,13 +35,13 @@ function ContactInput(name, email, details){
         </span>
         <span className='mb-3 '>
             <label htmlFor='email' className='font-medium'>Email:
-            <input type="email" placeholder='Enter your email address here...' value={email} onChange={(e) => setEmail(e.target.value)} className='w-full border rounded-md
+            <input type="email" placeholder='Enter your email address here...' value={emailValue} onChange={handleEmailChange} className='w-full border rounded-md
              border-slate-300 p-3 mt-2 mb-2 shadow-md focus:outline-none'/>
             </label>
         </span>
         <span className=''>
             <label htmlFor='details' className='font-medium'>Details:
-            <textarea type="details" rows={6} placeholder='Enter your details here...' value={details} onChange={(e) => setDetails(e.target.value)} className='w-full border rounded-md
+            <textarea type="details" rows={6} placeholder='Enter your details here...' value={detailsValue} onChange={handleDetailsChange} className='w-full border rounded-md
              border-slate-300 p-3 mt-2 shadow-md focus:outline-none'  style={{resize: "none"}}/>
             </label>
         </span>
@@ -56,7 +54,7 @@ function ContactInput(name, email, details){
           
         </div> 
        </form>
-    )}
+    )
 }
 
 export default ContactInput

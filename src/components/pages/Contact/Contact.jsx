@@ -6,7 +6,9 @@ import ContactAdress from "./ContactAdress";
 
 
 function Contact () {
-   const {render, name, email, details} = ContactInput()
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [details, setDetails] = useState("")
    return ( 
    <div className="">
     <div className="py-10 pl-10">
@@ -27,8 +29,11 @@ function Contact () {
       /> </div> 
    </div>
       <div className="flex ">
-        <ContactInput {...{name, email, details}} />
-        {render}
+        <ContactInput 
+        handleNameChange={(e) => setName(e.target.value)} nameValue={name}
+        handleEmailChange={(e) => setEmail(e.target.value)} emailValue={email}
+        handleDetailsChange={(e) => setDetails(e.target.value)} detailsValue={details}
+        />
         <ContactAdress />
       </div>
    </div>

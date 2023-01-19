@@ -16,19 +16,22 @@ const breakPoints = [
   { width: 1, CardsToShow: 1 },
   { width: 550, itemsToShow: 2 },
   { width: 768, itemsToShow: 3 },
+   
   
 ];
 
 function CardSlider() {
   return (
-   <div>
+   <div className="">
       
       <div className=" justify-center items-center flex flex-col min-w-[500px] ">
         
       <div className='justify-center flex flex-col w-full items-center h-11/12 '>
-        <Carousel breakPoints={breakPoints} className='justify-center items-center h-11/12 w-full'>
-         
+     
+        <Carousel breakPoints={breakPoints} className='justify-center items-center h-11/12 w-full '>
+        
         <Card 
+        
         img={cardbg}
         altText="card_bg"
         Name="Karthik P"
@@ -90,10 +93,10 @@ function CardSlider() {
         />
  
         </Carousel>
-       
+        </div>
       </div>
       </div>
-      </div>
+     
   );
 }
 

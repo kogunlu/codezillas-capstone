@@ -12,12 +12,19 @@ function EditUser() {
           your profile.
         </p>
       </div>
-      <div className="w-5/6 h-full flex flex-row justify-between">
-        <div className="w-2/6 border relative">
-          <span className="flex justify-center">
-            <img src={userAvatarBlack} alt="userAvatar" className="h-60" />
+      <div className="w-5/6 h-full flex flex-col justify-center items-center gap-5 lg:flex-row lg:justify-between lg:items-start lg:gap-0">
+        <div className="w-2/6 h-full">
+          <span className="flex justify-center ">
+            <img
+              src={userAvatarBlack}
+              alt="userAvatar"
+              className="h-60 xl:h-80 -z-10 "
+            />
           </span>
-          <button type="button" className="absolute left-56 top-48">
+          <button
+            type="button"
+            className="z-20 -mt-10 w-full flex justify-center"
+          >
             <img
               src={editUserAvatar}
               alt="editUser"
@@ -26,7 +33,7 @@ function EditUser() {
           </button>
         </div>
 
-        <div className="w-3/6 border">
+        <div className="w-full lg:w-3/6 ">
           <UserForm />
         </div>
       </div>

@@ -17,6 +17,18 @@ import { GrLock } from 'react-icons/gr';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '../../../shared/button/Button';
 import db from '../../../../db/firebase.config';
+import {
+  setAnswer1,
+  setAnswer2,
+  setAnswer3,
+  setAnswer4,
+  setAnswer5,
+  setAnswer6,
+  setAnswer7,
+  setAnswer8,
+  setAnswer9,
+  setAnswer10,
+} from '../../../../features/user/userSlice';
 
 function UserForm() {
   const navigate = useNavigate();
@@ -26,10 +38,6 @@ function UserForm() {
 
   const auth = getAuth();
   const activeUser = useSelector((state) => state.user.user);
-
-  useEffect(() => {
-    // console.log(activeUser);
-  }, [activeUser]);
 
   useEffect(() => {
     if (isDocSaved) {
@@ -93,6 +101,13 @@ function UserForm() {
     return errors;
   };
 
+  useEffect(() => {
+    if (activeUser) {
+      setSelectedOptionEdu(activeUser.education);
+      setSelectedOptionGen(activeUser.gender);
+    }
+  }, []);
+
   const formik = useFormik({
     initialValues: {
       fullName: `${activeUser.displayName}`,
@@ -144,6 +159,7 @@ function UserForm() {
   function handleChangeSelect(e, trgt) {
     if (trgt === 'edu') {
       setSelectedOptionEdu(e.target.value);
+
       formik.setFieldValue('education', e.target.value);
     } else if (trgt === 'gen') {
       setSelectedOptionGen(e.target.value);
@@ -174,11 +190,11 @@ function UserForm() {
 
     await deleteDoc(doc(db, 'user-details', user.email));
 
-    deleteUser(user)
+    await deleteUser(user)
       .then(() => {
         swal({
           title: `Your account is deleted!`,
-          text: 'You will be re-directed to the homepage!',
+          text: 'You are directed to the home page!',
           icon: 'success',
           buttons: false,
           timer: 3000,
@@ -194,8 +210,19 @@ function UserForm() {
         });
 
         console.log(error);
-        setIsDocSaved(true);
       });
+
+    navigate('/');
+    dispatch(setAnswer1(''));
+    dispatch(setAnswer2(''));
+    dispatch(setAnswer3(''));
+    dispatch(setAnswer4(''));
+    dispatch(setAnswer5(''));
+    dispatch(setAnswer6(0));
+    dispatch(setAnswer7(''));
+    dispatch(setAnswer8(''));
+    dispatch(setAnswer9(''));
+    dispatch(setAnswer10(''));
   }
 
   function handleCancelBtn() {
@@ -224,7 +251,9 @@ function UserForm() {
     'border shadow-md w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base';
   return (
     <div>
-      <p className="text-4xl font-bold px-5">PROFILE INFO</p>
+      <p className="text-4xl font-bold px-5 text-center lg:text-start">
+        PROFILE INFO
+      </p>
       <form
         className="w-full h-full py-10 flex flex-col justify-between gap-5 items-center px-2 md:px-5"
         onSubmit={formik.handleSubmit}
@@ -512,20 +541,20 @@ function UserForm() {
         </div>
 
         {/* Buttons */}
-        <div className="w-full flex justify-between">
+        <div className="w-full flex flex-col flex-wrap items-center gap-5 md:flex-row md:justify-between">
           <input
             type="submit"
-            className="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
+            className="py-2 px-2 w-10/12 md:w-3/12 lg:w-5/12 xl:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
             value="SAVE CHANGES"
           />
           <Button
             name="DELETE ACCOUNT"
-            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-red-600 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
+            classList="py-2 px-2 w-10/12 md:w-3/12 lg:w-5/12 xl:w-3/12 hover:bg-red-600 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
             function={() => handleDeleteBtn()}
           />
           <Button
             name="CANCEL"
-            classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
+            classList="py-2 px-2 w-10/12 md:w-3/12 lg:w-5/12 xl:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
             function={() => handleCancelBtn()}
           />
         </div>
@@ -537,21 +566,25 @@ function UserForm() {
         </div>
 
         {/* Ticket and Payment section */}
-        <div className="w-full flex flex-col justify-start gap-2">
-          <div className="w-8/12 flex justify-between">
-            <p className="w-5/12">3 Cards Added</p>
-            <p className="w-5/12">10 Tickets Remaining</p>
-          </div>
-
-          <div className="w-8/12 flex justify-between">
+        <div className="w-full flex flex-colitems-center md:flex-row md:justify-start gap-2">
+          <div className="w-full md:w-8/12 flex flex-col items-center md:items-start justify-between gap-3">
+            <p className="w-10/12 md:w-5/12 text-center md:text-start">
+              3 Cards Added
+            </p>
             <Button
               name="SHOW CARDS"
-              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
+              classList="py-2 px-2 w-10/12 md:w-8/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
               function={() => handleShowBtn()}
             />
+          </div>
+
+          <div className="w-full md:w-8/12 flex flex-col items-center md:items-start justify-between gap-3">
+            <p className="w-10/12 md:w-8/12 text-center md:text-start">
+              10 Tickets Remaining
+            </p>
             <Button
               name="BUY TICKETS"
-              classList="py-2 px-2 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
+              classList="py-2 px-2 w-10/12 md:w-8/12 hover:bg-cyan-200 bg-cyan-400 font-semibold rounded text-sm md:text-md shadow-lg cursor-pointer"
               function={() => handleBuyBtn()}
             />
           </div>

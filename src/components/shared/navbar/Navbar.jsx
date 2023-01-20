@@ -24,7 +24,7 @@ function Navbar() {
     signOut(auth)
       .then(() => {
         swal('Signed Out', `Hope to see you soon!`);
-
+        navigate('/');
         dispatch(setAnswer1(''));
         dispatch(setAnswer2(''));
       })

@@ -52,16 +52,18 @@ function Login() {
   async function writeData(userEmail) {
     const relatedData = await readLoggedInUserData(userEmail);
 
-    dispatch(setAnswer1(relatedData.email));
-    dispatch(setAnswer2(relatedData.name));
-    dispatch(setAnswer3(relatedData.password));
-    dispatch(setAnswer4(relatedData.birthdate));
-    dispatch(setAnswer5(relatedData.education));
-    dispatch(setAnswer6(relatedData.family));
-    dispatch(setAnswer7(relatedData.gender));
-    dispatch(setAnswer8(relatedData.phone));
-    dispatch(setAnswer9(relatedData.id));
-    dispatch(setAnswer10(relatedData.hobbies));
+    if (relatedData) {
+      dispatch(setAnswer1(relatedData.email));
+      dispatch(setAnswer2(relatedData.name));
+      dispatch(setAnswer3(relatedData.password));
+      dispatch(setAnswer4(relatedData.birthdate));
+      dispatch(setAnswer5(relatedData.education));
+      dispatch(setAnswer6(relatedData.family));
+      dispatch(setAnswer7(relatedData.gender));
+      dispatch(setAnswer8(relatedData.phone));
+      dispatch(setAnswer9(relatedData.id));
+      dispatch(setAnswer10(relatedData.hobbies));
+    }
 
     return relatedData;
   }
@@ -78,8 +80,6 @@ function Login() {
 
           onAuthStateChanged(auth, (userLoggedIn) => {
             if (user) {
-              console.log('logged in user => ', user);
-
               writeData(user.email);
 
               if (userLoggedIn.displayName) {
@@ -91,8 +91,7 @@ function Login() {
                 swal('Welcome', `It is great to see you here!`);
               }
 
-              // navigate('/');
-              navigate('/edit-user');
+              navigate('/');
             } else {
               swal(
                 'Ops..',

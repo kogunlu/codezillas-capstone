@@ -1,6 +1,7 @@
 
-import React from "react";
+import React from 'react';
 import Carousel from "react-elastic-carousel";
+
 import Card from "./Card";
 import logo from './images/logo.png'
 import logo2 from './images/logo2.png'
@@ -12,6 +13,7 @@ import cardbg3 from './images/card_bg_3.svg'
 
 import "./CardSlider.css";
 
+
 const breakPoints = [
   { width: 1, CardsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -21,6 +23,7 @@ const breakPoints = [
 ];
 
 function CardSlider() {
+  
   return (
    <div className="">
       
@@ -31,11 +34,11 @@ function CardSlider() {
         <Carousel breakPoints={breakPoints} className='justify-center items-center h-11/12 w-full '>
         
         <Card 
-        
+       
         img={cardbg}
         altText="card_bg"
         Name="Karthik P"
-        CardNumber="4642  3489  9867  7632"
+        CardNumber='4642  3489  9867  7632'
         Valid=" 11/15"
         Expiry=" 03/25"
         CVC=" ···"
@@ -70,7 +73,9 @@ function CardSlider() {
         Expiry=" 03/25"
         CVC=" ···"
         logo={logo2} 
+   
         />
+        
           <Card 
         img={cardbg2}
         altText="card_bg"

@@ -1,6 +1,13 @@
-import React from 'react'
+/* eslint-disable no-alert */
+import React from 'react';
+
+
+
+
 
 const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
+ // eslint-disable-next-line no-unused-vars
+ 
   return (
     <div>
        <div className="bg-white flex flex-col justify-center items-center   ">
@@ -55,6 +62,18 @@ const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
                                 <p className="font-bold tracking-more-wider text-sm">
                                     ···
                                 </p>
+                                </div>
+                                <div className=' justify-end mt-10  '>
+                              
+                                <input 
+                    type="button" 
+                    value=" Delete Card -"
+                    className=' justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm'
+                    onClick={() => alert('Do you confirm deleting this card?')}
+                  />
+                  
+              </div>
+              </div>
                             </div>
                         </div>
                     </div>
@@ -62,8 +81,7 @@ const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
                 </div>
             </div>
     </div>
-    </div>
-    </div>
+    
     
   )
 }

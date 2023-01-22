@@ -1,6 +1,7 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-destructuring */
-import React, { useEffect, useState } from 'react';
+{/* import React, { useEffect, useState } from 'react';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
@@ -114,4 +115,4 @@ function Socials() {
   );
 }
 
-export default Socials;
+export default Socials; */}

@@ -54,7 +54,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="py-2">
-              <Link className="hover:text-yellow-white" to="/blogs">
+              <Link className="hover:text-yellow-white" to="/blog">
                 Blogs
               </Link>
             </li>

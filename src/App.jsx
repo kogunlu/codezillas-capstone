@@ -15,8 +15,6 @@ import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 
 import Team from './components/pages/About/Team';
-import SubsThanks from "./components/pages/thanks/SubsThanks"
-import Footer from "./components/shared/footer/Footer"
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 

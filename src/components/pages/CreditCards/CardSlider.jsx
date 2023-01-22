@@ -9,6 +9,7 @@ import cardbg from './images/card_bg.svg'
 import cardbg1 from './images/card_bg_1.svg'
 import cardbg2 from './images/card_bg_2.svg'
 import cardbg3 from './images/card_bg_3.svg'
+import cardbg4 from './images/card_bg_4.svg'
 
 
 import "./CardSlider.css";
@@ -38,37 +39,37 @@ function CardSlider() {
         img={cardbg}
         altText="card_bg"
         Name="Karthik P"
-        CardNumber='4642  3489  9867  7632'
+        CardNumber='XXXX  XXXX  XXXX  7632'
         Valid=" 11/15"
         Expiry=" 03/25"
         CVC=" ···"
         logo={logo} 
         />
          <Card 
-        img={cardbg1}
+        img={cardbg3}
         altText="card_bg"
         Name="Karthik P"
-        CardNumber="4642  3489  9867  7632"
+        CardNumber="XXXX  XXXX  XXXX  7632"
         Valid=" 11/15"
         Expiry=" 03/25"
         CVC=" ···"
         logo={logo} 
         />
            <Card 
-        img={cardbg2}
+        img={cardbg4}
         altText="card_bg"
         Name="Karthik P"
-        CardNumber="4642  3489  9867  7632"
+        CardNumber="XXXX  XXXX  XXXX  7632"
         Valid=" 11/15"
         Expiry=" 03/25"
         CVC=" ···"
         logo={logo} 
         />
           <Card 
-        img={cardbg3}
+        img={cardbg1}
         altText="card_bg"
         Name="Karthik P"
-        CardNumber="4642  3489  9867  7632"
+        CardNumber="XXXX  XXXX  XXXX  7632"
         Valid=" 11/15"
         Expiry=" 03/25"
         CVC=" ···"
@@ -77,20 +78,20 @@ function CardSlider() {
         />
         
           <Card 
-        img={cardbg2}
+        img={cardbg3}
         altText="card_bg"
         Name="Karthik P"
-        CardNumber="4642  3489  9867  7632"
+        CardNumber="XXXX  XXXX  XXXX  7632"
         Valid=" 11/15"
         Expiry=" 03/25"
         CVC=" ···"
         logo={logo} 
         />
          <Card 
-        img={cardbg}
+        img={cardbg2}
         altText="card_bg"
         Name="Karthik P"
-        CardNumber="4642  3489  9867  7632"
+        CardNumber="XXXX  XXXX  XXXX  7632"
         Valid=" 11/15"
         Expiry=" 03/25"
         CVC=" ···"

@@ -6,7 +6,7 @@ import React from 'react';
 
 
 const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
- // eslint-disable-next-line no-unused-vars
+ 
  
   return (
     <div>
@@ -40,30 +40,30 @@ const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
                         <div className="flex justify-between ">
                             <div className="">
                                 <p className="font-light text-xs">
-                                    {Valid}
+                                    Valid
                                 </p>
                                 <p className="font-medium tracking-wider text-sm ">
-                                    11/15
+                                {Valid}
                                 </p>
                             </div>
                             <div className="">
                                 <p className="font-light  text-xs">
-                                    {Expiry}
+                                    Expiry
                                 </p>
                                 <p className="font-medium tracking-wider text-sm">
-                                    03/25
+                                {Expiry}
                                 </p>
                             </div>
     
                             <div className="">
                                 <p className="font-light text-xs">
-                                    {CVC}
+                                    CVV
                                 </p>
                                 <p className="font-bold tracking-more-wider text-sm">
-                                    ···
+                                {CVC}
                                 </p>
                                 </div>
-                                <div className=' justify-end mt-10  '>
+                                <div className=' flex flex-col justify-center items-end mt-10 mb-5  '>
                               
                                 <input 
                     type="button" 

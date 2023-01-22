@@ -6,8 +6,8 @@ const OpenPositions = () => {
     <div>
          <div className='  bg-white flex flex-col justify-center items-start max-w-[ 1440px] min-w-[700px] ml-10 '>
             <div className=' h-full  flex flex-col items-start justify-start mt-20'>
-              <div className="h-3/6  flex flex-col justify-evenly items-start  min-w-fit ">
-                <div className='flex flex-col overflow-scroll '>
+              <div className="h-full  flex flex-col justify-evenly items-start   ">
+                <div className='flex flex-col  '>
                 <h4 className='   text-5xl font-medium uppercase item-start font-sans mb-5  '>CURRENT OPEN POSITIONS</h4>
                 <h3 className='  text-2xl font-medium font-sans text-gray-500 mb-20' >Please send us an email with the application title as the subject with an attached CV in PDF format!</h3>
              

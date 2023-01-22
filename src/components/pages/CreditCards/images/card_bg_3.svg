@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="343" height="183" viewBox="0 0 343 183">
   <defs>
     <linearGradient id="linear-gradient" x1="0.068" y1="0.546" x2="1.199" y2="0.704" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#dea3f3"/>
-      <stop offset="1" stop-color="#ecd4f5"/>
+      <stop offset="0" stop-color="#FF83A1"/>
+      <stop offset="1" stop-color="#F66A8C"/>
     </linearGradient>
     <linearGradient id="linear-gradient-2" x1="0.944" y1="0.408" x2="0.04" y2="0.63" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#edc551"/>
-      <stop offset="1" stop-color="#ffe599"/>
+      <stop offset="0" stop-color="#FF83A1"/>
+      <stop offset="1" stop-color="#F66A8C"/>
     </linearGradient>
     <clipPath id="clip-path">
       <rect id="Rectangle_2141" data-name="Rectangle 2141" width="343" height="183" rx="15" fill="url(#linear-gradient)"/>

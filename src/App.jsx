@@ -36,7 +36,7 @@ function App() {
         <Route path="thanks-signup" element={<SignupThanks />} />
         <Route path='blog' element={<Blog />} />
         <Route path='contact' element={<Contact />} />
-        <Route path= "thanks-contact" element={<ContactThanks />} />
+        <Route path= "thanks-contacts" element={<ContactThanks />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 

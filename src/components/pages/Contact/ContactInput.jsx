@@ -11,10 +11,12 @@ function ContactInput({nameValue, handleNameChange, emailValue, handleEmailChang
   
   const navigate = useNavigate()
 
-  async function sendData(obj){
+  async function sendData(nameValue1, emailValue1, detailsValue1){
     
-    await setDoc(doc(db, "contact-form", uuidv4()), {
-      input: obj
+    await setDoc(doc(db, "contactUs-list", uuidv4()), {
+      name: nameValue1,
+      email: emailValue1,
+      details: detailsValue1
     });
 
   }

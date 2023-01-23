@@ -1,28 +1,28 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useDispatch  } from 'react-redux';
 import swal from 'sweetalert';
 
 
 
-function CardContact({btnClick}) {
+function CardContact() {
 
-    const [preference, setPreference] = useState("")
-
+    
 
     const dispatch = useDispatch()
     
-        function handleChange(e){
-            setPreference(e.target.value)
+        const handleContactType = (e) => {
+            setContactType(e.target.value)
+            dispatch()
         }
 
-   /* function handleClick(){
+   function handleClick(){
         if(preference === ""){
             swal("Error!", "Please select an answer for this question!!");
         }else{
             dispatch((preference))
             btnClick()
         }
-    } */
+    } 
 
   return (
     <div className=' h-96 w-full md:w-5/6 lg:w-4/6 px-2 md:px-10 py-5 flex  justify-between items-start   flex-wrap'>
@@ -37,7 +37,7 @@ function CardContact({btnClick}) {
             <div className='mb-2'>
                 <input 
                 type="radio" 
-                value="service"
+                value={contactType}
                 onChange={handleChange}
                 checked= {preference === 'service'}
                 /> I have a question about the service.
@@ -46,7 +46,7 @@ function CardContact({btnClick}) {
             <div className='mb-2'>
                 <input 
                 type="radio" 
-                value="support"
+                value={contactType}
                 onChange={handleChange} 
                 checked= {preference === 'support'}
                 /> I’m a registered client and I need support.
@@ -55,7 +55,7 @@ function CardContact({btnClick}) {
             <div className='mb-2'>
                 <input
                 type="radio" 
-                value="joining" 
+                value={contactType}
                 onChange={handleChange}
                 checked= {preference === 'joining'}
                 /> I’m a counselor interested in joining.
@@ -65,7 +65,7 @@ function CardContact({btnClick}) {
                 <input
                
                 type="radio" 
-                value="counselorSupport" 
+                value={contactType} 
                 onChange={handleChange}
                 checked= {preference === 'counselorSupport'}
                 /> I’m a registered counselor and I need support.
@@ -75,7 +75,7 @@ function CardContact({btnClick}) {
                 <input
            
                 type="radio" 
-                value="business"
+                value={contactType}
                 onChange={handleChange}
                 checked= {preference === 'business'}
                 /> I have a business-related inquiry.
@@ -84,7 +84,7 @@ function CardContact({btnClick}) {
             <div className='mb-2'>
                 <input
                 type="radio" 
-                value="healingOnline"
+                value={contactType}
                 onChange={handleChange}
                 checked= {preference === 'healingOnline'}
                 /> I’m interested in Healing Online for my organization.
@@ -93,7 +93,7 @@ function CardContact({btnClick}) {
             <div>
                 <input
                 type="radio" 
-                value="billing"
+                value={contactType}
                 onChange={handleChange}
                 checked= {preference === 'billing'}
                 /> I have a billing related question.

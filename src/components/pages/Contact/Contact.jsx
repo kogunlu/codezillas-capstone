@@ -6,6 +6,7 @@ import ContactAdress from "./ContactAdress";
 
 
 function Contact () {
+    const [contactType, setContactType] = useState("") 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [details, setDetails] = useState("")
@@ -19,7 +20,8 @@ function Contact () {
     <div className="flex ">
   
     <div>
-        <CardContact />
+        <CardContact
+        handleContactType={(e) => setContactType(e.target.value)} contactType={contactType} />
     </div>
     
     <div><img

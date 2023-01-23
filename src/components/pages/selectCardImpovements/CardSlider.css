@@ -1,0 +1,89 @@
+.CardSlider {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400vh;
+  }
+  /* square buttons */
+.rec.rec-arrow {
+    border-radius: 0;
+    background-color: white;
+   
+   
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+
+
+   
+};
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+   
+}
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+.rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px lightgrey;
+    background-color: black;
+   
+}
+.rec-dot_active {
+    background-color:rgb(34 211 238 )!important;
+    box-shadow: 0 0 1px 2px white !important;
+}
+.rec-dot:focus,
+.rec-dot:hover {
+    box-shadow: 0 0 1px 2px white !important;
+    background-color: rgb(34 211 238 );
+    color: white;
+}
+.rec-dot_active:focus,
+.rec-dot_active:hover {
+    background-color: rgb(34 211 238 )!important;
+    box-shadow: 0 0 1px 2px white!important;
+}
+
+
+
+
+
+
+
+
+.rec.rec-arrow-left{
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 1px 2px black;
+}
+.rec.rec-arrow-right{
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 1px 2px black;
+}
+.rec.rec-arrow-left:focus:enabled{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 1px 2px black;
+}
+.rec.rec-arrow-right:focus:enabled{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 1px 2px black;
+}
+.rec.rec-arrow-left:hover:enabled{
+    color: white;
+    background-color: rgb(34 211 238 );
+    box-shadow: 0 0 1px 3px white;
+}
+.rec.rec-arrow-right:hover:enabled{
+    color: white;
+    background-color: rgb(34 211 238 );
+    box-shadow: 0 0 1px 3px white;
+}

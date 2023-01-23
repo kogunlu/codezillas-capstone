@@ -8,7 +8,6 @@ import SubsThanks from './components/pages/thanks/SubsThanks';
 import Footer from './components/shared/footer/Footer';
 import Blog from './components/pages/Blog/Blog';
 
-
 import Navbar from './components/shared/navbar/Navbar';
 import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup/Signup';
@@ -17,16 +16,10 @@ import Team from './components/pages/About/Team';
 import EditUser from './components/pages/Edit-profile/EditUser';
 import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 
-import SubsThanks from "./components/pages/thanks/SubsThanks"
-import Footer from "./components/shared/footer/Footer"
-
 import HealingRequirement from './components/pages/healing/HealingRequirement';
-
 
 import SelectCard from './components/pages/selectCard/SelectCard';
 import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
-
-import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 function App() {
   return (
@@ -48,7 +41,6 @@ function App() {
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blog" element={<Blog />} />
         <Route path="work-with-healing" element={<HealingRequirement />} />
-
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>

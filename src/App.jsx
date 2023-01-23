@@ -19,6 +19,7 @@ import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 
 import SubsThanks from "./components/pages/thanks/SubsThanks"
 import Footer from "./components/shared/footer/Footer"
+
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 

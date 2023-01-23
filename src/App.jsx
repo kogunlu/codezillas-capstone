@@ -15,6 +15,11 @@ import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 
 import Team from './components/pages/About/Team';
+import SubsThanks from "./components/pages/thanks/SubsThanks"
+import Footer from "./components/shared/footer/Footer"
+import SelectCard from './components/pages/selectCard/SelectCard';
+import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
+
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 
@@ -23,6 +28,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
+        
+        <Route path='select-card' element={<SelectCard />} />
+        <Route path='purchase-thanks' element={<PurchaseThanks />} />
         <Route path="/" element={<Home />} />
         <Route path="book" element={<Book />} />
         <Route path="about" element={<About />} />
@@ -35,6 +43,7 @@ function App() {
         <Route path='work-with-healing' element={<HealingRequirement />} />
 
         <Route path="*" element={<ErrorPage />} />
+
       </Routes>
 
       <Footer />

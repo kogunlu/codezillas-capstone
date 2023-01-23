@@ -24,7 +24,7 @@ function Navbar() {
     signOut(auth)
       .then(() => {
         swal('Signed Out', `Hope to see you soon!`);
-
+        navigate('/');
         dispatch(setAnswer1(''));
         dispatch(setAnswer2(''));
       })
@@ -126,7 +126,7 @@ function Navbar() {
                   className="col-span-2 duration-500"
                   type="button"
                   name="Login"
-                  classes="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
+                  classList="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
                   function={() => handleLoginClick()}
                 />
               )}

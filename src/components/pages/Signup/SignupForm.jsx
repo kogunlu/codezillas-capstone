@@ -12,8 +12,6 @@ import userPicture from './Signup_picture/user.jpg';
 function SignupForm() {
   const navigate = useNavigate();
 
-  const [isSignedUp, setIsSignedUp] = useState(false);
-
   const validate = (values) => {
     const errors = {};
 
@@ -134,7 +132,7 @@ function SignupForm() {
           .then((userCredential) => {
             const { user } = userCredential.user;
 
-            setIsSignedUp(true);
+            navigate('/thanks-signup');
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -149,14 +147,6 @@ function SignupForm() {
   function handleLoginClick() {
     navigate('/login');
   }
-
-  useEffect(() => {
-    if (isSignedUp) {
-      navigate('/thanks-signup');
-    }
-
-    return undefined;
-  }, [isSignedUp]);
 
   return (
     <form

@@ -1,11 +1,21 @@
-.slick-prev:before {
- color: black;
-}
-.slick-next:before {
-    color: black;
-   }
-
-   .slick-slide  {
+    .slick-slide  {
     display: flex !important;
     justify-content: center;
    }
+
+    .slick-arrow.slick-prev{
+    color:black;
+    border-style: solid;
+    border-radius:4px;
+    width: 2vw;
+    height: 2vw;
+    border-width: thin medium;
+    }
+    .slick-arrow.slick-next{
+    color:black;
+    border-style: solid;
+    border-radius:4px;
+    width: 2vw;
+    height: 2vw;
+    border-width: thin medium;
+    }

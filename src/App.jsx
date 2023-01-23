@@ -23,11 +23,18 @@ import Footer from "./components/shared/footer/Footer"
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 
+import SelectCard from './components/pages/selectCard/SelectCard';
+import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
+
+import HealingRequirement from './components/pages/healing/HealingRequirement';
+
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
+        <Route path="select-card" element={<SelectCard />} />
+        <Route path="purchase-thanks" element={<PurchaseThanks />} />
         <Route path="/" element={<Home />} />
         <Route path="book" element={<Book />} />
         <Route path="about" element={<About />} />
@@ -40,7 +47,7 @@ function App() {
         <Route path="edit-user" element={<EditUser />} />
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blog" element={<Blog />} />
-        <Route path='work-with-healing' element={<HealingRequirement />} />
+        <Route path="work-with-healing" element={<HealingRequirement />} />
 
 
         <Route path="*" element={<ErrorPage />} />

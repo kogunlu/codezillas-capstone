@@ -1,13 +1,24 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable no-undef */
 /* eslint-disable no-alert */
 import React from 'react';
+import { confirm } from "react-confirm-box";
+
+const Confirmation = async () => {
+  const result = await confirm("Are you sure?");
+  if (result) {
+    console.log("You click yes!");
+    return;
+  }
+  console.log("You click No!");
+};
 
 
 
 
 
 const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
- 
- 
+
   return (
     <div>
        <div className="bg-white flex flex-col justify-center items-center   ">
@@ -65,12 +76,16 @@ const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
                                 </div>
                                 <div className=' flex flex-col justify-center items-end mt-10 mb-5  '>
                               
-                                <input 
+                   {/* <input 
                     type="button" 
                     value=" Delete Card -"
                     className=' justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm'
-                    onClick={() => alert('Do you confirm deleting this card?')}
-                  />
+                    // eslint-disable-next-line no-restricted-globals
+                    onClick={() => Confirmation}
+  /> */}
+  <button type="button "  className=' justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm' onClick={Confirmation}> Delete Card - </button>
+                
+               
                   
               </div>
               </div>

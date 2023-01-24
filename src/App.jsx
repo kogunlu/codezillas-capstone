@@ -18,7 +18,7 @@ import Career from './components/pages/About/Career/Career';
 import OpenPositions from './components/pages/About/Career/OpenPositions';
 import Card from './components/pages/CreditCards/Card'
 import SavedCards from './components/pages/CreditCards/SavedCards';
-import CardForm from './components/pages/CreditCards/CardForm';
+
 
 
 
@@ -38,7 +38,6 @@ function App() {
         <Route path='OpenPositions' element= {<OpenPositions/>} />
         <Route path='Card' element= {<Card/>} />
         <Route path='SavedCards' element= {<SavedCards/>} />
-        <Route path='CardForm' element= {<CardForm/>} />
         <Route path='login' element = {<Login />} />
         <Route path='signup' element = {<Signup />} />
         <Route path='team' element= {<Team/>} /> 

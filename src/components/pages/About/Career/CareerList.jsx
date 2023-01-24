@@ -6,7 +6,7 @@ const CareerList = ({header, text, subheader, title}) => {
        <div className='   '>
                   <div className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   ">
                   
-                    <ul className=' flex flex-col w-11/12  '>
+                    <ul className=' flex flex-col w-11/12 overflow-scroll '>
                     <div className='  '>
                         <li className=' flex flex-col justify-evenly min-w-fit h-3/6 max-h-[400px] '>
                         <div className='border-b border-black overflow-y-auto h-1/2 '>

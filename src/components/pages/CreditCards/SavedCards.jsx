@@ -11,7 +11,7 @@ const SavedCards = () => {
         function handleClick(){
           navigate('/OpenPositions')
         }
- // eslint-disable-next-line no-unused-vars
+ 
  
 
   return (

@@ -8,14 +8,32 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
 } from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
 import swal from 'sweetalert';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import loginPicture from './Login_picture/login.jpg';
 import Socials from './Socials';
+import db from '../../../db/firebase.config';
+import {
+  setAnswer1,
+  setAnswer2,
+  setAnswer3,
+  setAnswer4,
+  setAnswer5,
+  setAnswer6,
+  setAnswer7,
+  setAnswer8,
+  setAnswer9,
+  setAnswer10,
+} from '../../../features/user/userSlice';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch();
+  const activeUser = useSelector((state) => state.user.user);
 
   const navigate = useNavigate();
 
@@ -23,37 +41,81 @@ function Login() {
     navigate('/signup');
   }
 
+  async function readLoggedInUserData(userEmailAdress) {
+    const docRef = doc(db, 'user-details', `${userEmailAdress}`);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      return docSnap.data();
+    }
+    return null;
+  }
+
+  async function writeData(userEmail) {
+    const relatedData = await readLoggedInUserData(userEmail);
+
+    if (relatedData) {
+      dispatch(setAnswer1(relatedData.email));
+      dispatch(setAnswer2(relatedData.name));
+      dispatch(setAnswer3(relatedData.password));
+      dispatch(setAnswer4(relatedData.birthdate));
+      dispatch(setAnswer5(relatedData.education));
+      dispatch(setAnswer6(relatedData.family));
+      dispatch(setAnswer7(relatedData.gender));
+      dispatch(setAnswer8(relatedData.phone));
+      dispatch(setAnswer9(relatedData.id));
+      dispatch(setAnswer10(relatedData.hobbies));
+    }
+
+    return relatedData;
+  }
+
   function handleLoginClick() {
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+    if (!(email && password)) {
+      swal('Error!', 'Please fill the related parts to login!', 'error');
+    } else {
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          navigate('/');
 
-        swal('Error!', 'Something went wrong, try again.');
-      });
+          onAuthStateChanged(auth, (userLoggedIn) => {
+            if (user) {
+              writeData(user.email);
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const { uid } = user.uid;
-        swal('Welcome', `It is great to see you here ${user.displayName}!`);
-      } else {
-        swal(
-          'Ops..',
-          "Please make sure that you're typing your email/password correctly"
-        );
-      }
-    });
+              if (userLoggedIn.displayName) {
+                swal(
+                  'Welcome',
+                  `It is great to see you here ${userLoggedIn.displayName}!`
+                );
+              } else {
+                swal('Welcome', `It is great to see you here!`);
+              }
 
-    setEmail('');
-    setPassword('');
+              navigate('/');
+            } else {
+              swal(
+                'Ops..',
+                "Please make sure that you're typing your email/password correctly"
+              );
+            }
+          });
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+
+          swal('Error!', 'Please login with correct credentials.');
+        });
+
+      setEmail('');
+      setPassword('');
+    }
   }
 
   return (
-    <div className="h-full w-full flex flex-col justify-start items-center gap-5 mt-10">
+    <div className="h-full w-full flex flex-col justify-start items-center gap-5 mt-10 mb-5">
       <div className="w-10/12">
         <h2 className=" text-center lg:text-start text-2xl font-semibold">
           LOGIN

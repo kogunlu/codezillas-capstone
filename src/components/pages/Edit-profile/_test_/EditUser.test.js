@@ -1,15 +1,15 @@
-import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
+import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import Navbar from '../Navbar';
 import { store } from '../../../../app/store';
+import EditUser from '../EditUser';
 
-test('Navbar component renders correctly', () => {
+it('Renders correctly for EditUser Component', () => {
   const tree = renderer
     .create(
       <Provider store={store}>
         <BrowserRouter>
-          <Navbar />
+          <EditUser />
         </BrowserRouter>
       </Provider>
     )

@@ -16,9 +16,11 @@ code {
     monospace;
 }
 
-.nav-bg{
-  background-color: #EAF8F9;
+.active{
+  color: #FEE89E;
+  text-decoration-line: underline;
 }
+
 
 
 @layer base {

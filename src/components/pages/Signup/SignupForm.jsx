@@ -13,8 +13,6 @@ import userPicture from './Signup_picture/user.jpg';
 function SignupForm() {
   const navigate = useNavigate();
 
-  const [isSignedUp, setIsSignedUp] = useState(false);
-
   const validate = (values) => {
     const errors = {};
 
@@ -118,8 +116,10 @@ function SignupForm() {
       } else {
         const auth = getAuth();
 
+        const displayName = formik.values.firstName;
         const email = formik.values.email;
         const password = formik.values.password;
+        const birthdate = formik.values.birthdate;
 
         createUserWithEmailAndPassword(auth, email, password)
           .then(
@@ -133,15 +133,7 @@ function SignupForm() {
           .then((userCredential) => {
             const { user } = userCredential.user;
 
-            swal({
-              title: 'Welcome!',
-              text: 'Your account is created! You will be re-directed to the homepage!',
-              icon: 'success',
-              buttons: false,
-              timer: 3000,
-            });
-
-            setIsSignedUp(true);
+            navigate('/thanks-signup');
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -156,15 +148,6 @@ function SignupForm() {
   function handleLoginClick() {
     navigate('/login');
   }
-
-  useEffect(() => {
-    if (isSignedUp) {
-      const timer = setTimeout(() => navigate('/'), 3000);
-      return () => clearTimeout(timer);
-    }
-
-    return undefined;
-  }, [isSignedUp]);
 
   return (
     <form

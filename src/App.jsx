@@ -19,6 +19,7 @@ import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 import SelectCard from './components/pages/selectCard/SelectCard';
 import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
+import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blog" element={<Blog />} />
         <Route path="work-with-healing" element={<HealingRequirement />} />
+        <Route path="/thanks-therapist" element={<ThanksTherapist />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>

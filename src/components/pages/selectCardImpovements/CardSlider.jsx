@@ -36,7 +36,7 @@ function CardSlider() {
     <div>
    <div className="">
     <div className="h-full w-full flex flex-col justify-between items-center ">
-        <div className="w-full px-5 py-10 lg:pb-20 lg:px-32 xl:px-64 flex flex-col justify-evenly gap-5">
+        <div className="w-full px-5 py-10 lg:pb-20 lg:px-40 xl:px-52 2xl:px-80 flex flex-col justify-evenly gap-5">
             <div className="h-full w-full flex flex-col md:items-center lg:items-start">
                 <h1 className="text-4xl font-normal 2xl:text-6xl my-4">SELECT CARD</h1>
                 <p className="text-lg text-gray-400 2xl:text-xl">Please select the card you want to buy the tickets with</p>
@@ -46,7 +46,7 @@ function CardSlider() {
 
 
      
-      <div className=" justify-center items-center flex flex-col min-w-[500px] ">
+      <div className="px-5 py-10 lg:px-20 xl:px-32 content-center justify-center items-center flex flex-col">
        
       <div className='justify-center flex flex-col w-full items-center h-11/12 '>
      
@@ -121,13 +121,13 @@ function CardSlider() {
       </div>
       </div>
 <div>
-<p className="w-full px-5 py-10 lg:pb-20 lg:px-32 xl:px-64 flex flex-col justify-evenly gap-5 text-xl font-medium my-2 ">Click Confirm To Use The Selected Card To Purchase 5 Tickets For 10$</p>
+<p className="w-full flex flex-col justify-between md:items-center lg:items-start px-5 py-10 lg:pb-20 lg:px-40 xl:px-52 2xl:px-80 text-xl font-medium my-2 ">Click Confirm To Use The Selected Card To Purchase 5 Tickets For 10$</p>
    
 
 
 
 
-<div className="w-full px-5 py-10 lg:pb-20 lg:pl-20 xl:px-20 flex  justify-evenly ">
+<div className="pb-20 flex flex-col items-center">
   <Link  to="/purchase-thanks">
   <Button type='button' name="CONFIRM PURCHASE" classes="py-2 px-5 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"/>
   </Link>

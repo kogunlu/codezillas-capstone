@@ -1,6 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom"
-import { v4 as uuidv4 } from 'uuid';
+import {useNavigate} from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore"; 
 import { useDispatch  } from 'react-redux';
 import db from "../../../db/firebase.config";
@@ -26,15 +26,15 @@ function Contact () {
       
         async function sendData(contactTypeValue1, nameValue1, emailValue1, detailsValue1){
           
-          await setDoc(doc(db, "contactUs-list", uuidv4()), {
+          await setDoc(doc(db, "contactUs-list", emailValue1), {
             contactType: contactTypeValue1,
             name: nameValue1,
             email: emailValue1,
             details: detailsValue1
-          });
-      
+          })
+          .then(handleContactChange, handleNameChange, handleEmailChange, handleDetailsChange, ("")).then(navigate('/thanks-contacts'))
         }
-          sendData(contactType, name, email, details).then(handleContactChange, handleNameChange, handleEmailChange, handleDetailsChange, ("")).then(navigate('/thanks-contacts'))
+         
         
 
 
@@ -171,7 +171,7 @@ function Contact () {
               type="button" 
               value="SUBMIT" 
               className='py-2 px-5 w-6/12 md:w-5/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded'
-              onClick={() => sendData()} />
+              onClick={() =>  sendData(contactType, name, email, details)} />
             
           </div> 
          </form>

@@ -108,10 +108,6 @@ function CreateAccountTherapist() {
     },
   });
 
-  function handleLoginClick() {
-    navigate('/login');
-  }
-
   return (
     <form
       className="w-full h-full py-10 flex flex-col justify-between gap-5 items-start px-2 md:px-5"

@@ -76,13 +76,7 @@ const Card = ({img, Name, CardNumber, Valid, Expiry, CVC, altText, logo }) => {
                                 </div>
                                 <div className=' flex flex-col justify-center items-end mt-10 mb-5  '>
                               
-                   {/* <input 
-                    type="button" 
-                    value=" Delete Card -"
-                    className=' justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm'
-                    // eslint-disable-next-line no-restricted-globals
-                    onClick={() => Confirmation}
-  /> */}
+                  
   <button type="button "  className=' justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm' onClick={Confirmation}> Delete Card - </button>
                 
                

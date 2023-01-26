@@ -7,7 +7,7 @@ import CareerPage from '../CareerPage';
 
 
 
-test('Navbar component renders correctly', () => {
+test('Career component renders correctly', () => {
   const tree = renderer
     .create(
       <BrowserRouter>

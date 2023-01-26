@@ -1,5 +1,2037 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Career component renders correctly 1`] = `
+Array [
+  <div>
+    <div
+      className="bg-white flex flex-col justify-center items-center   "
+    >
+      <div
+        className="space-y-16 mx-5 h-60 w-11/12  "
+      >
+        <div
+          className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+        >
+          <img
+            className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+          />
+          <div
+            className="w-full px-8 absolute top-3  "
+          >
+            <div
+              className="flex justify-between"
+            >
+              <div
+                className=""
+              >
+                <p
+                  className="font-light"
+                >
+                  Name
+                </p>
+                <p
+                  className="font-medium tracking-widest"
+                />
+              </div>
+              <img
+                className="w-1/6 h-1/6  "
+              />
+            </div>
+            <div
+              className="pt-1"
+            >
+              <p
+                className="font-light"
+              >
+                Card Number
+              </p>
+              <p
+                className="font-medium tracking-more-wider"
+              />
+            </div>
+            <div
+              className="mt-4 pr-6 "
+            >
+              <div
+                className="flex justify-between "
+              >
+                <div
+                  className=""
+                >
+                  <p
+                    className="font-light text-xs"
+                  >
+                    Valid
+                  </p>
+                  <p
+                    className="font-medium tracking-wider text-sm "
+                  />
+                </div>
+                <div
+                  className=""
+                >
+                  <p
+                    className="font-light  text-xs"
+                  >
+                    Expiry
+                  </p>
+                  <p
+                    className="font-medium tracking-wider text-sm"
+                  />
+                </div>
+                <div
+                  className=""
+                >
+                  <p
+                    className="font-light text-xs"
+                  >
+                    CVV
+                  </p>
+                  <p
+                    className="font-bold tracking-more-wider text-sm"
+                  />
+                </div>
+                <div
+                  className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                >
+                  <button
+                    className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                    onClick={[Function]}
+                    type="button "
+                  >
+                     Delete Card - 
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="  bg-white flex flex-col justify-center items-start w-fullmin-w-[700px] mx-20"
+  >
+    <div
+      className="w-full h-full  flex flex-col items-start justify-start mt-20"
+    >
+      <div
+        className="flex flex-col justify-center w-full items-start"
+      >
+        <h1
+          className=" w-full text-5xl font-medium uppercase items-center  font-sans mt-10 ml-10"
+        >
+          Your saved cards
+        </h1>
+        <h3
+          className="w-full  text-xl font-medium font-sans items-center ml-10 text-gray-500 mb-40 "
+        >
+          We only support cards as a payment method at the moment!
+        </h3>
+        <div
+          className="w-full justify-center items-center"
+        >
+          <div
+            className=""
+          >
+            <div
+              className=" justify-center items-center flex flex-col min-w-[500px] "
+            >
+              <div
+                className="justify-center flex flex-col w-full items-center h-11/12 "
+              >
+                <div
+                  className="sc-jSUZER dQEjUh rec rec-carousel-wrapper justify-center items-center h-11/12 w-full "
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-eDvSVe lguFiu rec rec-carousel"
+                    size={
+                      Object {
+                        "height": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 0,
+                      }
+                    }
+                  >
+                    <button
+                      className="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-left"
+                      disabled={true}
+                      onClick={[Function]}
+                      style={Object {}}
+                      tabIndex={0}
+                      type="button"
+                    >
+                      ❮
+                    </button>
+                    <div
+                      className="sc-dkrFOg biYdFZ rec rec-slider-container"
+                    >
+                      <div
+                        className="sc-hLBbgP ikrMvi rec rec-slider"
+                        style={
+                          Object {
+                            "left": "0px",
+                            "right": "auto",
+                            "top": "auto",
+                            "transition": "all 500ms ease",
+                          }
+                        }
+                      >
+                        <div
+                          className="rec rec-swipable"
+                          onMouseDown={[Function]}
+                          style={
+                            Object {
+                              "display": "flex",
+                              "flexDirection": "row",
+                            }
+                          }
+                        >
+                          <div
+                            className="rec rec-carousel-item rec-carousel-item-0 rec-carousel-item-visible"
+                          >
+                            <div
+                              className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                              id={0}
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "padding": "0px 0px 0px 0px",
+                                  "width": "0px",
+                                }
+                              }
+                            >
+                              <div>
+                                <div
+                                  className="bg-white flex flex-col justify-center items-center   "
+                                >
+                                  <div
+                                    className="space-y-16 mx-5 h-60 w-11/12  "
+                                  >
+                                    <div
+                                      className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                                    >
+                                      <img
+                                        alt="card_bg"
+                                        className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                        src="card_bg.svg"
+                                      />
+                                      <div
+                                        className="w-full px-8 absolute top-3  "
+                                      >
+                                        <div
+                                          className="flex justify-between"
+                                        >
+                                          <div
+                                            className=""
+                                          >
+                                            <p
+                                              className="font-light"
+                                            >
+                                              Name
+                                            </p>
+                                            <p
+                                              className="font-medium tracking-widest"
+                                            >
+                                              Karthik P
+                                            </p>
+                                          </div>
+                                          <img
+                                            alt="card_bg"
+                                            className="w-1/6 h-1/6  "
+                                            src="logo.png"
+                                          />
+                                        </div>
+                                        <div
+                                          className="pt-1"
+                                        >
+                                          <p
+                                            className="font-light"
+                                          >
+                                            Card Number
+                                          </p>
+                                          <p
+                                            className="font-medium tracking-more-wider"
+                                          >
+                                            XXXX  XXXX  XXXX  7632
+                                          </p>
+                                        </div>
+                                        <div
+                                          className="mt-4 pr-6 "
+                                        >
+                                          <div
+                                            className="flex justify-between "
+                                          >
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                Valid
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm "
+                                              >
+                                                 11/15
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light  text-xs"
+                                              >
+                                                Expiry
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm"
+                                              >
+                                                 03/25
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                CVV
+                                              </p>
+                                              <p
+                                                className="font-bold tracking-more-wider text-sm"
+                                              >
+                                                 ···
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                            >
+                                              <button
+                                                className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                                onClick={[Function]}
+                                                type="button "
+                                              >
+                                                 Delete Card - 
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="rec rec-carousel-item rec-carousel-item-1 rec-carousel-item-hidden rec-carousel-item-next"
+                          >
+                            <div
+                              className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                              id={1}
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "padding": "0px 0px 0px 0px",
+                                  "width": "0px",
+                                }
+                              }
+                            >
+                              <div>
+                                <div
+                                  className="bg-white flex flex-col justify-center items-center   "
+                                >
+                                  <div
+                                    className="space-y-16 mx-5 h-60 w-11/12  "
+                                  >
+                                    <div
+                                      className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                                    >
+                                      <img
+                                        alt="card_bg"
+                                        className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                        src="card_bg_3.svg"
+                                      />
+                                      <div
+                                        className="w-full px-8 absolute top-3  "
+                                      >
+                                        <div
+                                          className="flex justify-between"
+                                        >
+                                          <div
+                                            className=""
+                                          >
+                                            <p
+                                              className="font-light"
+                                            >
+                                              Name
+                                            </p>
+                                            <p
+                                              className="font-medium tracking-widest"
+                                            >
+                                              Karthik P
+                                            </p>
+                                          </div>
+                                          <img
+                                            alt="card_bg"
+                                            className="w-1/6 h-1/6  "
+                                            src="logo.png"
+                                          />
+                                        </div>
+                                        <div
+                                          className="pt-1"
+                                        >
+                                          <p
+                                            className="font-light"
+                                          >
+                                            Card Number
+                                          </p>
+                                          <p
+                                            className="font-medium tracking-more-wider"
+                                          >
+                                            XXXX  XXXX  XXXX  7632
+                                          </p>
+                                        </div>
+                                        <div
+                                          className="mt-4 pr-6 "
+                                        >
+                                          <div
+                                            className="flex justify-between "
+                                          >
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                Valid
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm "
+                                              >
+                                                 11/15
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light  text-xs"
+                                              >
+                                                Expiry
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm"
+                                              >
+                                                 03/25
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                CVV
+                                              </p>
+                                              <p
+                                                className="font-bold tracking-more-wider text-sm"
+                                              >
+                                                 ···
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                            >
+                                              <button
+                                                className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                                onClick={[Function]}
+                                                type="button "
+                                              >
+                                                 Delete Card - 
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="rec rec-carousel-item rec-carousel-item-2 rec-carousel-item-hidden"
+                          >
+                            <div
+                              className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                              id={2}
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "padding": "0px 0px 0px 0px",
+                                  "width": "0px",
+                                }
+                              }
+                            >
+                              <div>
+                                <div
+                                  className="bg-white flex flex-col justify-center items-center   "
+                                >
+                                  <div
+                                    className="space-y-16 mx-5 h-60 w-11/12  "
+                                  >
+                                    <div
+                                      className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                                    >
+                                      <img
+                                        alt="card_bg"
+                                        className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                        src="card_bg_4.svg"
+                                      />
+                                      <div
+                                        className="w-full px-8 absolute top-3  "
+                                      >
+                                        <div
+                                          className="flex justify-between"
+                                        >
+                                          <div
+                                            className=""
+                                          >
+                                            <p
+                                              className="font-light"
+                                            >
+                                              Name
+                                            </p>
+                                            <p
+                                              className="font-medium tracking-widest"
+                                            >
+                                              Karthik P
+                                            </p>
+                                          </div>
+                                          <img
+                                            alt="card_bg"
+                                            className="w-1/6 h-1/6  "
+                                            src="logo.png"
+                                          />
+                                        </div>
+                                        <div
+                                          className="pt-1"
+                                        >
+                                          <p
+                                            className="font-light"
+                                          >
+                                            Card Number
+                                          </p>
+                                          <p
+                                            className="font-medium tracking-more-wider"
+                                          >
+                                            XXXX  XXXX  XXXX  7632
+                                          </p>
+                                        </div>
+                                        <div
+                                          className="mt-4 pr-6 "
+                                        >
+                                          <div
+                                            className="flex justify-between "
+                                          >
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                Valid
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm "
+                                              >
+                                                 11/15
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light  text-xs"
+                                              >
+                                                Expiry
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm"
+                                              >
+                                                 03/25
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                CVV
+                                              </p>
+                                              <p
+                                                className="font-bold tracking-more-wider text-sm"
+                                              >
+                                                 ···
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                            >
+                                              <button
+                                                className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                                onClick={[Function]}
+                                                type="button "
+                                              >
+                                                 Delete Card - 
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="rec rec-carousel-item rec-carousel-item-3 rec-carousel-item-hidden"
+                          >
+                            <div
+                              className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                              id={3}
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "padding": "0px 0px 0px 0px",
+                                  "width": "0px",
+                                }
+                              }
+                            >
+                              <div>
+                                <div
+                                  className="bg-white flex flex-col justify-center items-center   "
+                                >
+                                  <div
+                                    className="space-y-16 mx-5 h-60 w-11/12  "
+                                  >
+                                    <div
+                                      className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                                    >
+                                      <img
+                                        alt="card_bg"
+                                        className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                        src="card_bg_1.svg"
+                                      />
+                                      <div
+                                        className="w-full px-8 absolute top-3  "
+                                      >
+                                        <div
+                                          className="flex justify-between"
+                                        >
+                                          <div
+                                            className=""
+                                          >
+                                            <p
+                                              className="font-light"
+                                            >
+                                              Name
+                                            </p>
+                                            <p
+                                              className="font-medium tracking-widest"
+                                            >
+                                              Karthik P
+                                            </p>
+                                          </div>
+                                          <img
+                                            alt="card_bg"
+                                            className="w-1/6 h-1/6  "
+                                            src="logo2.png"
+                                          />
+                                        </div>
+                                        <div
+                                          className="pt-1"
+                                        >
+                                          <p
+                                            className="font-light"
+                                          >
+                                            Card Number
+                                          </p>
+                                          <p
+                                            className="font-medium tracking-more-wider"
+                                          >
+                                            XXXX  XXXX  XXXX  7632
+                                          </p>
+                                        </div>
+                                        <div
+                                          className="mt-4 pr-6 "
+                                        >
+                                          <div
+                                            className="flex justify-between "
+                                          >
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                Valid
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm "
+                                              >
+                                                 11/15
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light  text-xs"
+                                              >
+                                                Expiry
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm"
+                                              >
+                                                 03/25
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                CVV
+                                              </p>
+                                              <p
+                                                className="font-bold tracking-more-wider text-sm"
+                                              >
+                                                 ···
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                            >
+                                              <button
+                                                className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                                onClick={[Function]}
+                                                type="button "
+                                              >
+                                                 Delete Card - 
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="rec rec-carousel-item rec-carousel-item-4 rec-carousel-item-hidden"
+                          >
+                            <div
+                              className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                              id={4}
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "padding": "0px 0px 0px 0px",
+                                  "width": "0px",
+                                }
+                              }
+                            >
+                              <div>
+                                <div
+                                  className="bg-white flex flex-col justify-center items-center   "
+                                >
+                                  <div
+                                    className="space-y-16 mx-5 h-60 w-11/12  "
+                                  >
+                                    <div
+                                      className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                                    >
+                                      <img
+                                        alt="card_bg"
+                                        className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                        src="card_bg_3.svg"
+                                      />
+                                      <div
+                                        className="w-full px-8 absolute top-3  "
+                                      >
+                                        <div
+                                          className="flex justify-between"
+                                        >
+                                          <div
+                                            className=""
+                                          >
+                                            <p
+                                              className="font-light"
+                                            >
+                                              Name
+                                            </p>
+                                            <p
+                                              className="font-medium tracking-widest"
+                                            >
+                                              Karthik P
+                                            </p>
+                                          </div>
+                                          <img
+                                            alt="card_bg"
+                                            className="w-1/6 h-1/6  "
+                                            src="logo.png"
+                                          />
+                                        </div>
+                                        <div
+                                          className="pt-1"
+                                        >
+                                          <p
+                                            className="font-light"
+                                          >
+                                            Card Number
+                                          </p>
+                                          <p
+                                            className="font-medium tracking-more-wider"
+                                          >
+                                            XXXX  XXXX  XXXX  7632
+                                          </p>
+                                        </div>
+                                        <div
+                                          className="mt-4 pr-6 "
+                                        >
+                                          <div
+                                            className="flex justify-between "
+                                          >
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                Valid
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm "
+                                              >
+                                                 11/15
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light  text-xs"
+                                              >
+                                                Expiry
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm"
+                                              >
+                                                 03/25
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                CVV
+                                              </p>
+                                              <p
+                                                className="font-bold tracking-more-wider text-sm"
+                                              >
+                                                 ···
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                            >
+                                              <button
+                                                className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                                onClick={[Function]}
+                                                type="button "
+                                              >
+                                                 Delete Card - 
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="rec rec-carousel-item rec-carousel-item-5 rec-carousel-item-hidden"
+                          >
+                            <div
+                              className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                              id={5}
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "padding": "0px 0px 0px 0px",
+                                  "width": "0px",
+                                }
+                              }
+                            >
+                              <div>
+                                <div
+                                  className="bg-white flex flex-col justify-center items-center   "
+                                >
+                                  <div
+                                    className="space-y-16 mx-5 h-60 w-11/12  "
+                                  >
+                                    <div
+                                      className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                                    >
+                                      <img
+                                        alt="card_bg"
+                                        className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                        src="card_bg_2.svg"
+                                      />
+                                      <div
+                                        className="w-full px-8 absolute top-3  "
+                                      >
+                                        <div
+                                          className="flex justify-between"
+                                        >
+                                          <div
+                                            className=""
+                                          >
+                                            <p
+                                              className="font-light"
+                                            >
+                                              Name
+                                            </p>
+                                            <p
+                                              className="font-medium tracking-widest"
+                                            >
+                                              Karthik P
+                                            </p>
+                                          </div>
+                                          <img
+                                            alt="card_bg"
+                                            className="w-1/6 h-1/6  "
+                                            src="logo.png"
+                                          />
+                                        </div>
+                                        <div
+                                          className="pt-1"
+                                        >
+                                          <p
+                                            className="font-light"
+                                          >
+                                            Card Number
+                                          </p>
+                                          <p
+                                            className="font-medium tracking-more-wider"
+                                          >
+                                            XXXX  XXXX  XXXX  7632
+                                          </p>
+                                        </div>
+                                        <div
+                                          className="mt-4 pr-6 "
+                                        >
+                                          <div
+                                            className="flex justify-between "
+                                          >
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                Valid
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm "
+                                              >
+                                                 11/15
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light  text-xs"
+                                              >
+                                                Expiry
+                                              </p>
+                                              <p
+                                                className="font-medium tracking-wider text-sm"
+                                              >
+                                                 03/25
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=""
+                                            >
+                                              <p
+                                                className="font-light text-xs"
+                                              >
+                                                CVV
+                                              </p>
+                                              <p
+                                                className="font-bold tracking-more-wider text-sm"
+                                              >
+                                                 ···
+                                              </p>
+                                            </div>
+                                            <div
+                                              className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                            >
+                                              <button
+                                                className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                                onClick={[Function]}
+                                                type="button "
+                                              >
+                                                 Delete Card - 
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      className="sc-bcXHqe kXteup rec rec-arrow rec rec-arrow-right"
+                      disabled={false}
+                      onClick={[Function]}
+                      style={Object {}}
+                      tabIndex={0}
+                      type="button"
+                    >
+                      ❯
+                    </button>
+                  </div>
+                  <div
+                    className="sc-iBYQkv jtKTCe rec rec-pagination"
+                  >
+                    <button
+                      className="sc-gKPRtg cVXxbE rec rec-dot rec rec-dot_active"
+                      onClick={[Function]}
+                      tabIndex={-1}
+                      type="button"
+                    />
+                    <button
+                      className="sc-gKPRtg ezKHIn rec rec-dot "
+                      onClick={[Function]}
+                      tabIndex={0}
+                      type="button"
+                    />
+                    <button
+                      className="sc-gKPRtg ezKHIn rec rec-dot "
+                      onClick={[Function]}
+                      tabIndex={0}
+                      type="button"
+                    />
+                    <button
+                      className="sc-gKPRtg ezKHIn rec rec-dot "
+                      onClick={[Function]}
+                      tabIndex={0}
+                      type="button"
+                    />
+                    <button
+                      className="sc-gKPRtg ezKHIn rec rec-dot "
+                      onClick={[Function]}
+                      tabIndex={0}
+                      type="button"
+                    />
+                    <button
+                      className="sc-gKPRtg ezKHIn rec rec-dot "
+                      onClick={[Function]}
+                      tabIndex={0}
+                      type="button"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="mt-40 mb-20"
+      >
+        <div
+          className="flex flex-col items-start justify-evenly sm:-mt-10 "
+        >
+          <input
+            className="  py-3 px-10 hover:bg-cyan-200 bg-cyan-400 font-medium rounded-lg text-lg md:text-lg"
+            onClick={[Function]}
+            type="button"
+            value="ADD NEW CARD +"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className=""
+  >
+    <div
+      className=" justify-center items-center flex flex-col min-w-[500px] "
+    >
+      <div
+        className="justify-center flex flex-col w-full items-center h-11/12 "
+      >
+        <div
+          className="sc-jSUZER dQEjUh rec rec-carousel-wrapper justify-center items-center h-11/12 w-full "
+          style={Object {}}
+        >
+          <div
+            className="sc-eDvSVe lguFiu rec rec-carousel"
+            size={
+              Object {
+                "height": 0,
+              }
+            }
+            style={
+              Object {
+                "height": 0,
+              }
+            }
+          >
+            <button
+              className="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-left"
+              disabled={true}
+              onClick={[Function]}
+              style={Object {}}
+              tabIndex={0}
+              type="button"
+            >
+              ❮
+            </button>
+            <div
+              className="sc-dkrFOg biYdFZ rec rec-slider-container"
+            >
+              <div
+                className="sc-hLBbgP ikrMvi rec rec-slider"
+                style={
+                  Object {
+                    "left": "0px",
+                    "right": "auto",
+                    "top": "auto",
+                    "transition": "all 500ms ease",
+                  }
+                }
+              >
+                <div
+                  className="rec rec-swipable"
+                  onMouseDown={[Function]}
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <div
+                    className="rec rec-carousel-item rec-carousel-item-0 rec-carousel-item-visible"
+                  >
+                    <div
+                      className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                      id={0}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "padding": "0px 0px 0px 0px",
+                          "width": "0px",
+                        }
+                      }
+                    >
+                      <div>
+                        <div
+                          className="bg-white flex flex-col justify-center items-center   "
+                        >
+                          <div
+                            className="space-y-16 mx-5 h-60 w-11/12  "
+                          >
+                            <div
+                              className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                            >
+                              <img
+                                alt="card_bg"
+                                className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                src="card_bg.svg"
+                              />
+                              <div
+                                className="w-full px-8 absolute top-3  "
+                              >
+                                <div
+                                  className="flex justify-between"
+                                >
+                                  <div
+                                    className=""
+                                  >
+                                    <p
+                                      className="font-light"
+                                    >
+                                      Name
+                                    </p>
+                                    <p
+                                      className="font-medium tracking-widest"
+                                    >
+                                      Karthik P
+                                    </p>
+                                  </div>
+                                  <img
+                                    alt="card_bg"
+                                    className="w-1/6 h-1/6  "
+                                    src="logo.png"
+                                  />
+                                </div>
+                                <div
+                                  className="pt-1"
+                                >
+                                  <p
+                                    className="font-light"
+                                  >
+                                    Card Number
+                                  </p>
+                                  <p
+                                    className="font-medium tracking-more-wider"
+                                  >
+                                    XXXX  XXXX  XXXX  7632
+                                  </p>
+                                </div>
+                                <div
+                                  className="mt-4 pr-6 "
+                                >
+                                  <div
+                                    className="flex justify-between "
+                                  >
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        Valid
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm "
+                                      >
+                                         11/15
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light  text-xs"
+                                      >
+                                        Expiry
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm"
+                                      >
+                                         03/25
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        CVV
+                                      </p>
+                                      <p
+                                        className="font-bold tracking-more-wider text-sm"
+                                      >
+                                         ···
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                    >
+                                      <button
+                                        className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                        onClick={[Function]}
+                                        type="button "
+                                      >
+                                         Delete Card - 
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="rec rec-carousel-item rec-carousel-item-1 rec-carousel-item-hidden rec-carousel-item-next"
+                  >
+                    <div
+                      className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                      id={1}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "padding": "0px 0px 0px 0px",
+                          "width": "0px",
+                        }
+                      }
+                    >
+                      <div>
+                        <div
+                          className="bg-white flex flex-col justify-center items-center   "
+                        >
+                          <div
+                            className="space-y-16 mx-5 h-60 w-11/12  "
+                          >
+                            <div
+                              className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                            >
+                              <img
+                                alt="card_bg"
+                                className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                src="card_bg_3.svg"
+                              />
+                              <div
+                                className="w-full px-8 absolute top-3  "
+                              >
+                                <div
+                                  className="flex justify-between"
+                                >
+                                  <div
+                                    className=""
+                                  >
+                                    <p
+                                      className="font-light"
+                                    >
+                                      Name
+                                    </p>
+                                    <p
+                                      className="font-medium tracking-widest"
+                                    >
+                                      Karthik P
+                                    </p>
+                                  </div>
+                                  <img
+                                    alt="card_bg"
+                                    className="w-1/6 h-1/6  "
+                                    src="logo.png"
+                                  />
+                                </div>
+                                <div
+                                  className="pt-1"
+                                >
+                                  <p
+                                    className="font-light"
+                                  >
+                                    Card Number
+                                  </p>
+                                  <p
+                                    className="font-medium tracking-more-wider"
+                                  >
+                                    XXXX  XXXX  XXXX  7632
+                                  </p>
+                                </div>
+                                <div
+                                  className="mt-4 pr-6 "
+                                >
+                                  <div
+                                    className="flex justify-between "
+                                  >
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        Valid
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm "
+                                      >
+                                         11/15
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light  text-xs"
+                                      >
+                                        Expiry
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm"
+                                      >
+                                         03/25
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        CVV
+                                      </p>
+                                      <p
+                                        className="font-bold tracking-more-wider text-sm"
+                                      >
+                                         ···
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                    >
+                                      <button
+                                        className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                        onClick={[Function]}
+                                        type="button "
+                                      >
+                                         Delete Card - 
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="rec rec-carousel-item rec-carousel-item-2 rec-carousel-item-hidden"
+                  >
+                    <div
+                      className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                      id={2}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "padding": "0px 0px 0px 0px",
+                          "width": "0px",
+                        }
+                      }
+                    >
+                      <div>
+                        <div
+                          className="bg-white flex flex-col justify-center items-center   "
+                        >
+                          <div
+                            className="space-y-16 mx-5 h-60 w-11/12  "
+                          >
+                            <div
+                              className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                            >
+                              <img
+                                alt="card_bg"
+                                className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                src="card_bg_4.svg"
+                              />
+                              <div
+                                className="w-full px-8 absolute top-3  "
+                              >
+                                <div
+                                  className="flex justify-between"
+                                >
+                                  <div
+                                    className=""
+                                  >
+                                    <p
+                                      className="font-light"
+                                    >
+                                      Name
+                                    </p>
+                                    <p
+                                      className="font-medium tracking-widest"
+                                    >
+                                      Karthik P
+                                    </p>
+                                  </div>
+                                  <img
+                                    alt="card_bg"
+                                    className="w-1/6 h-1/6  "
+                                    src="logo.png"
+                                  />
+                                </div>
+                                <div
+                                  className="pt-1"
+                                >
+                                  <p
+                                    className="font-light"
+                                  >
+                                    Card Number
+                                  </p>
+                                  <p
+                                    className="font-medium tracking-more-wider"
+                                  >
+                                    XXXX  XXXX  XXXX  7632
+                                  </p>
+                                </div>
+                                <div
+                                  className="mt-4 pr-6 "
+                                >
+                                  <div
+                                    className="flex justify-between "
+                                  >
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        Valid
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm "
+                                      >
+                                         11/15
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light  text-xs"
+                                      >
+                                        Expiry
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm"
+                                      >
+                                         03/25
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        CVV
+                                      </p>
+                                      <p
+                                        className="font-bold tracking-more-wider text-sm"
+                                      >
+                                         ···
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                    >
+                                      <button
+                                        className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                        onClick={[Function]}
+                                        type="button "
+                                      >
+                                         Delete Card - 
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="rec rec-carousel-item rec-carousel-item-3 rec-carousel-item-hidden"
+                  >
+                    <div
+                      className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                      id={3}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "padding": "0px 0px 0px 0px",
+                          "width": "0px",
+                        }
+                      }
+                    >
+                      <div>
+                        <div
+                          className="bg-white flex flex-col justify-center items-center   "
+                        >
+                          <div
+                            className="space-y-16 mx-5 h-60 w-11/12  "
+                          >
+                            <div
+                              className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                            >
+                              <img
+                                alt="card_bg"
+                                className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                src="card_bg_1.svg"
+                              />
+                              <div
+                                className="w-full px-8 absolute top-3  "
+                              >
+                                <div
+                                  className="flex justify-between"
+                                >
+                                  <div
+                                    className=""
+                                  >
+                                    <p
+                                      className="font-light"
+                                    >
+                                      Name
+                                    </p>
+                                    <p
+                                      className="font-medium tracking-widest"
+                                    >
+                                      Karthik P
+                                    </p>
+                                  </div>
+                                  <img
+                                    alt="card_bg"
+                                    className="w-1/6 h-1/6  "
+                                    src="logo2.png"
+                                  />
+                                </div>
+                                <div
+                                  className="pt-1"
+                                >
+                                  <p
+                                    className="font-light"
+                                  >
+                                    Card Number
+                                  </p>
+                                  <p
+                                    className="font-medium tracking-more-wider"
+                                  >
+                                    XXXX  XXXX  XXXX  7632
+                                  </p>
+                                </div>
+                                <div
+                                  className="mt-4 pr-6 "
+                                >
+                                  <div
+                                    className="flex justify-between "
+                                  >
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        Valid
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm "
+                                      >
+                                         11/15
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light  text-xs"
+                                      >
+                                        Expiry
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm"
+                                      >
+                                         03/25
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        CVV
+                                      </p>
+                                      <p
+                                        className="font-bold tracking-more-wider text-sm"
+                                      >
+                                         ···
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                    >
+                                      <button
+                                        className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                        onClick={[Function]}
+                                        type="button "
+                                      >
+                                         Delete Card - 
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="rec rec-carousel-item rec-carousel-item-4 rec-carousel-item-hidden"
+                  >
+                    <div
+                      className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                      id={4}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "padding": "0px 0px 0px 0px",
+                          "width": "0px",
+                        }
+                      }
+                    >
+                      <div>
+                        <div
+                          className="bg-white flex flex-col justify-center items-center   "
+                        >
+                          <div
+                            className="space-y-16 mx-5 h-60 w-11/12  "
+                          >
+                            <div
+                              className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                            >
+                              <img
+                                alt="card_bg"
+                                className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                src="card_bg_3.svg"
+                              />
+                              <div
+                                className="w-full px-8 absolute top-3  "
+                              >
+                                <div
+                                  className="flex justify-between"
+                                >
+                                  <div
+                                    className=""
+                                  >
+                                    <p
+                                      className="font-light"
+                                    >
+                                      Name
+                                    </p>
+                                    <p
+                                      className="font-medium tracking-widest"
+                                    >
+                                      Karthik P
+                                    </p>
+                                  </div>
+                                  <img
+                                    alt="card_bg"
+                                    className="w-1/6 h-1/6  "
+                                    src="logo.png"
+                                  />
+                                </div>
+                                <div
+                                  className="pt-1"
+                                >
+                                  <p
+                                    className="font-light"
+                                  >
+                                    Card Number
+                                  </p>
+                                  <p
+                                    className="font-medium tracking-more-wider"
+                                  >
+                                    XXXX  XXXX  XXXX  7632
+                                  </p>
+                                </div>
+                                <div
+                                  className="mt-4 pr-6 "
+                                >
+                                  <div
+                                    className="flex justify-between "
+                                  >
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        Valid
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm "
+                                      >
+                                         11/15
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light  text-xs"
+                                      >
+                                        Expiry
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm"
+                                      >
+                                         03/25
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        CVV
+                                      </p>
+                                      <p
+                                        className="font-bold tracking-more-wider text-sm"
+                                      >
+                                         ···
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                    >
+                                      <button
+                                        className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                        onClick={[Function]}
+                                        type="button "
+                                      >
+                                         Delete Card - 
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="rec rec-carousel-item rec-carousel-item-5 rec-carousel-item-hidden"
+                  >
+                    <div
+                      className="sc-gswNZR fAVBsF rec rec-item-wrapper"
+                      id={5}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "padding": "0px 0px 0px 0px",
+                          "width": "0px",
+                        }
+                      }
+                    >
+                      <div>
+                        <div
+                          className="bg-white flex flex-col justify-center items-center   "
+                        >
+                          <div
+                            className="space-y-16 mx-5 h-60 w-11/12  "
+                          >
+                            <div
+                              className="w-full min-w-full  h-60 gap-20 bg-red-100 rounded-xl relative text-white shadow-2sxl transition-transform transform hover:scale-90 "
+                            >
+                              <img
+                                alt="card_bg"
+                                className=" relative object-cover  h-full rounded-xl gap-20 w-full "
+                                src="card_bg_2.svg"
+                              />
+                              <div
+                                className="w-full px-8 absolute top-3  "
+                              >
+                                <div
+                                  className="flex justify-between"
+                                >
+                                  <div
+                                    className=""
+                                  >
+                                    <p
+                                      className="font-light"
+                                    >
+                                      Name
+                                    </p>
+                                    <p
+                                      className="font-medium tracking-widest"
+                                    >
+                                      Karthik P
+                                    </p>
+                                  </div>
+                                  <img
+                                    alt="card_bg"
+                                    className="w-1/6 h-1/6  "
+                                    src="logo.png"
+                                  />
+                                </div>
+                                <div
+                                  className="pt-1"
+                                >
+                                  <p
+                                    className="font-light"
+                                  >
+                                    Card Number
+                                  </p>
+                                  <p
+                                    className="font-medium tracking-more-wider"
+                                  >
+                                    XXXX  XXXX  XXXX  7632
+                                  </p>
+                                </div>
+                                <div
+                                  className="mt-4 pr-6 "
+                                >
+                                  <div
+                                    className="flex justify-between "
+                                  >
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        Valid
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm "
+                                      >
+                                         11/15
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light  text-xs"
+                                      >
+                                        Expiry
+                                      </p>
+                                      <p
+                                        className="font-medium tracking-wider text-sm"
+                                      >
+                                         03/25
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=""
+                                    >
+                                      <p
+                                        className="font-light text-xs"
+                                      >
+                                        CVV
+                                      </p>
+                                      <p
+                                        className="font-bold tracking-more-wider text-sm"
+                                      >
+                                         ···
+                                      </p>
+                                    </div>
+                                    <div
+                                      className=" flex flex-col justify-center items-end mt-10 mb-5  "
+                                    >
+                                      <button
+                                        className=" justify-end items-end  py-2 px-3  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-xs md:text-sm"
+                                        onClick={[Function]}
+                                        type="button "
+                                      >
+                                         Delete Card - 
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              className="sc-bcXHqe kXteup rec rec-arrow rec rec-arrow-right"
+              disabled={false}
+              onClick={[Function]}
+              style={Object {}}
+              tabIndex={0}
+              type="button"
+            >
+              ❯
+            </button>
+          </div>
+          <div
+            className="sc-iBYQkv jtKTCe rec rec-pagination"
+          >
+            <button
+              className="sc-gKPRtg cVXxbE rec rec-dot rec rec-dot_active"
+              onClick={[Function]}
+              tabIndex={-1}
+              type="button"
+            />
+            <button
+              className="sc-gKPRtg ezKHIn rec rec-dot "
+              onClick={[Function]}
+              tabIndex={0}
+              type="button"
+            />
+            <button
+              className="sc-gKPRtg ezKHIn rec rec-dot "
+              onClick={[Function]}
+              tabIndex={0}
+              type="button"
+            />
+            <button
+              className="sc-gKPRtg ezKHIn rec rec-dot "
+              onClick={[Function]}
+              tabIndex={0}
+              type="button"
+            />
+            <button
+              className="sc-gKPRtg ezKHIn rec rec-dot "
+              onClick={[Function]}
+              tabIndex={0}
+              type="button"
+            />
+            <button
+              className="sc-gKPRtg ezKHIn rec rec-dot "
+              onClick={[Function]}
+              tabIndex={0}
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
 exports[`Navbar component renders correctly 1`] = `
 Array [
   <div>

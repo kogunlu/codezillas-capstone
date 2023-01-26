@@ -5,7 +5,7 @@ import CardSlider from '../CardSlider';
 import SavedCards from '../SavedCards';
 
 
-test('Navbar component renders correctly', () => {
+test('Career component renders correctly', () => {
   const tree = renderer
     .create(
       <BrowserRouter>

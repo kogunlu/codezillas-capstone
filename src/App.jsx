@@ -18,7 +18,7 @@ import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
-import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
+import PurchaseThanks from './components/pages/selectCardImpovements/purchaseThanks/PurchaseThanks';
 import SelectCardSlider from './components/pages/selectCardImpovements/SelectCardSlider';
 
 function App() {

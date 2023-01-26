@@ -19,14 +19,14 @@ import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
-import CardSlider from './components/pages/selectCardImpovements/CardSlider';
+import SelectCardSlider from './components/pages/selectCardImpovements/SelectCardSlider';
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="select-card" element={<CardSlider />} />
+        <Route path="select-card" element={<SelectCardSlider />} />
         <Route path="purchase-thanks" element={<PurchaseThanks />} />
         <Route path="/" element={<Home />} />
         <Route path="book" element={<Book />} />

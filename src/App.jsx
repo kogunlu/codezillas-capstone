@@ -21,13 +21,10 @@ import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 import CreateAccountTherapist from './components/pages/CreateAccountTherapist/CreateAccountTherapist';
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
-
 import PurchaseThanks from './components/pages/selectCardImpovements/purchaseThanks/PurchaseThanks';
 import SelectCardSlider from './components/pages/selectCardImpovements/SelectCardSlider';
 
-//import SelectCard from './components/pages/selectCard/SelectCard';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
-
 
 function App() {
   return (
@@ -49,8 +46,8 @@ function App() {
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blog" element={<Blog />} />
 
-        <Route path='contact' element={<Contact />} />
-        <Route path= "thanks-contacts" element={<ContactThanks />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="thanks-contacts" element={<ContactThanks />} />
 
         <Route path="work-with-healing" element={<HealingRequirement />} />
         <Route path="/thanks-therapist" element={<ThanksTherapist />} />

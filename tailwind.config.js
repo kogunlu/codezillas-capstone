@@ -5,15 +5,9 @@ module.exports = {
     extend: {
       colors: {
         'yellow-white': '#FEE89E',
+        'main-background': '#EAF8F9',
       },
     },
   },
-  plugins: [
-    // ...
-    // eslint-disable-next-line import/no-extraneous-dependencies, global-require
-    require('tailwind-scrollbar')
-],
-variants: {
-  scrollbar: ['rounded']
-}
+  plugins: [],
 };

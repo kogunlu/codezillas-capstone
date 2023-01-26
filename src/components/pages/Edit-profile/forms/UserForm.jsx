@@ -28,6 +28,7 @@ import {
   setAnswer8,
   setAnswer9,
   setAnswer10,
+  setAnswer11,
 } from '../../../../features/user/userSlice';
 
 function UserForm() {
@@ -96,6 +97,10 @@ function UserForm() {
       if (values.confirmPassword !== values.password) {
         errors.confirmPassword = 'Passwords don`t match';
       }
+    }
+
+    if (!values.phone) {
+      errors.phone = '*Required';
     }
 
     return errors;

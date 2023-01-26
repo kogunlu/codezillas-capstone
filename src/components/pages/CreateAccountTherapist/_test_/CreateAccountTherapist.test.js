@@ -1,19 +1,18 @@
-import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
 import { store } from '../../../../app/store';
-import HealingRequirement from '../HealingRequirement';
+import CreateAccountTherapist from '../CreateAccountTherapist';
 
-it(`renders correctly for HealingRequirement`, () => {
-  const Healingcomponent = renderer
+it('Renders correctly for EditUser Component', () => {
+  const tree = renderer
     .create(
       <Provider store={store}>
         <BrowserRouter>
-          <HealingRequirement />
+          <CreateAccountTherapist />
         </BrowserRouter>
       </Provider>
     )
-
     .toJSON();
-  expect(Healingcomponent).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });

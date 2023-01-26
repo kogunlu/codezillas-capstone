@@ -1,7 +1,6 @@
-/* eslint-disable no-lone-blocks */
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-destructuring */
- import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -164,4 +163,4 @@ function Socials() {
   );
 }
 
-export default Socials; 
+export default Socials;

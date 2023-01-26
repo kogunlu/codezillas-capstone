@@ -13,6 +13,8 @@ const initialState = {
     phone: '',
     id: '',
     confirmPassword: '',
+    isTherapist: false,
+    bio: '',
   },
 };
 
@@ -50,6 +52,9 @@ export const userSlice = createSlice({
     setAnswer10: (state, action) => {
       state.user.hobbies = action.payload;
     },
+    setAnswer11: (state, action) => {
+      state.user.isTherapist = action.payload;
+    },
   },
 });
 
@@ -64,6 +69,7 @@ export const {
   setAnswer8,
   setAnswer9,
   setAnswer10,
+  setAnswer11,
 } = userSlice.actions;
 
 export const userObj = (state) => state.user.answers;

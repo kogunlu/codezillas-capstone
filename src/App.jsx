@@ -25,7 +25,6 @@ import HealingRequirement from './components/pages/healing/HealingRequirement';
 import SelectCard from './components/pages/selectCard/SelectCard';
 import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -50,7 +49,6 @@ function App() {
         <Route path= "thanks-contacts" element={<ContactThanks />} />
 
         <Route path="work-with-healing" element={<HealingRequirement />} />
-
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>

@@ -20,18 +20,7 @@ import ContactThanks from './components/pages/Contact/ContactThanks/ContactThank
 import EditUser from './components/pages/Edit-profile/EditUser';
 import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 
- Sara_Career
-import Career from './components/pages/About/Career/Career';
-import OpenPositions from './components/pages/About/Career/OpenPositions';
-import Card from './components/pages/CreditCards/Card'
-import SavedCards from './components/pages/CreditCards/SavedCards';
-
-
-
-
-
 import HealingRequirement from './components/pages/healing/HealingRequirement';
- main-before-last-push
 
 import SelectCard from './components/pages/selectCard/SelectCard';
 import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
@@ -42,22 +31,6 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
- Sara_Career
-        <Route path='/' element={<Home />} />
-        <Route path='book' element={<Book />} />
-        <Route path='about' element= {<About/>} />
-        <Route path='career' element= {<Career/>} />
-        <Route path='OpenPositions' element= {<OpenPositions/>} />
-        <Route path='Card' element= {<Card/>} />
-        <Route path='SavedCards' element= {<SavedCards/>} />
-        <Route path='login' element = {<Login />} />
-        <Route path='signup' element = {<Signup />} />
-        <Route path='team' element= {<Team/>} /> 
-        <Route path='thanks-subs' element={<SubsThanks />} />
-
-
-        <Route path='*' element= {<ErrorPage />}  />
-
         <Route path="select-card" element={<SelectCard />} />
         <Route path="purchase-thanks" element={<PurchaseThanks />} />
         <Route path="/" element={<Home />} />
@@ -80,7 +53,6 @@ function App() {
 
 
         <Route path="*" element={<ErrorPage />} />
- main-before-last-push
       </Routes>
 
       <Footer />

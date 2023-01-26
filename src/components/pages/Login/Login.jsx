@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-lone-blocks
-// eslint-disable no-unused-vars */
 /* eslint-disable prefer-destructuring */
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import {
   getAuth,
   signInWithEmailAndPassword,

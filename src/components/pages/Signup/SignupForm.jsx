@@ -1,6 +1,7 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+ import React, { useEffect, useState } from 'react';
 import swal from 'sweetalert';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
@@ -334,4 +335,4 @@ function SignupForm() {
   );
 }
 
-export default SignupForm;
+export default SignupForm; 

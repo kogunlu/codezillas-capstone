@@ -9,5 +9,12 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // ...
+    // eslint-disable-next-line import/no-extraneous-dependencies, global-require
+    require('tailwind-scrollbar')
+],
+variants: {
+  scrollbar: ['rounded']
+}
 };

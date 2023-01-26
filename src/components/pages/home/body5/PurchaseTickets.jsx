@@ -4,7 +4,7 @@ import PurchaseCard from './PurchaseCard';
 function PurchaseTickets() {
   return (
     <div className="flex justify-center">
-      <div className="w-5/6 flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <div className="w-5/6 flex flex-col justify-between items-start">
           <p className="text-4xl mt-12 mb-6 text-center lg:text-start 2xl:text-6xl font-bold ">
             PURCHASE TICKETS

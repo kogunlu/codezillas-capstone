@@ -21,16 +21,20 @@ import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 import CreateAccountTherapist from './components/pages/CreateAccountTherapist/CreateAccountTherapist';
 import HealingRequirement from './components/pages/healing/HealingRequirement';
 
-import SelectCard from './components/pages/selectCard/SelectCard';
-import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
+
+import PurchaseThanks from './components/pages/selectCardImpovements/purchaseThanks/PurchaseThanks';
+import SelectCardSlider from './components/pages/selectCardImpovements/SelectCardSlider';
+
+//import SelectCard from './components/pages/selectCard/SelectCard';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
+
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="select-card" element={<SelectCard />} />
+        <Route path="select-card" element={<SelectCardSlider />} />
         <Route path="purchase-thanks" element={<PurchaseThanks />} />
         <Route path="/" element={<Home />} />
         <Route path="book" element={<Book />} />

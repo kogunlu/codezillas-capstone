@@ -15,7 +15,18 @@ import {
 import { FaFacebook } from 'react-icons/fa';
 import { GrGoogle } from 'react-icons/gr';
 import db from '../../../db/firebase.config';
-import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
+import {
+  setAnswer1,
+  setAnswer2,
+  setAnswer3,
+  setAnswer4,
+  setAnswer5,
+  setAnswer6,
+  setAnswer7,
+  setAnswer8,
+  setAnswer9,
+  setAnswer10,
+} from '../../../features/user/userSlice';
 
 function Socials() {
   const [isSignedUp, setIsSignedUp] = useState(false);
@@ -29,6 +40,35 @@ function Socials() {
 
   async function handleGoogleSignUp() {
     await signInWithRedirect(auth, provider);
+  }
+
+  async function readLoggedInUserData(userEmailAdress) {
+    const docRef = doc(db, 'user-details', `${userEmailAdress}`);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      return docSnap.data();
+    }
+    return null;
+  }
+
+  async function writeData(userEmail) {
+    const relatedData = await readLoggedInUserData(userEmail);
+
+    if (relatedData) {
+      dispatch(setAnswer1(relatedData.email));
+      dispatch(setAnswer2(relatedData.name));
+      dispatch(setAnswer3(relatedData.password));
+      dispatch(setAnswer4(relatedData.birthdate));
+      dispatch(setAnswer5(relatedData.education));
+      dispatch(setAnswer6(relatedData.family));
+      dispatch(setAnswer7(relatedData.gender));
+      dispatch(setAnswer8(relatedData.phone));
+      dispatch(setAnswer9(relatedData.id));
+      dispatch(setAnswer10(relatedData.hobbies));
+    }
+
+    return relatedData;
   }
 
   useEffect(() => {
@@ -71,8 +111,10 @@ function Socials() {
           setIsSignedUp(true);
         }
 
-        dispatch(setAnswer1(user.email));
-        dispatch(setAnswer2(user.displayName));
+        // dispatch(setAnswer1(user.email));
+        // dispatch(setAnswer2(user.displayName));
+
+        writeData(user.email);
       })
       .catch(async (error) => {
         if (error) {

@@ -9,19 +9,30 @@ import Footer from './components/shared/footer/Footer';
 import Blog from './components/pages/Blog/Blog';
 
 import Navbar from './components/shared/navbar/Navbar';
-
 import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 import Team from './components/pages/About/Team';
+
 import Contact from './components/pages/Contact/Contact';
 import ContactThanks from './components/pages/Contact/ContactThanks/ContactThanks';
+
+import EditUser from './components/pages/Edit-profile/EditUser';
+import EditTherapist from './components/pages/Edit-profile/EditTherapist';
+
+import HealingRequirement from './components/pages/healing/HealingRequirement';
+
+import SelectCard from './components/pages/selectCard/SelectCard';
+import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
+
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
+        <Route path="select-card" element={<SelectCard />} />
+        <Route path="purchase-thanks" element={<PurchaseThanks />} />
         <Route path="/" element={<Home />} />
         <Route path="book" element={<Book />} />
         <Route path="about" element={<About />} />
@@ -30,9 +41,17 @@ function App() {
         <Route path="team" element={<Team />} />
         <Route path="thanks-subs" element={<SubsThanks />} />
         <Route path="thanks-signup" element={<SignupThanks />} />
+
+        <Route path="edit-user" element={<EditUser />} />
+        <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blog" element={<Blog />} />
+
         <Route path='contact' element={<Contact />} />
         <Route path= "thanks-contacts" element={<ContactThanks />} />
+
+        <Route path="work-with-healing" element={<HealingRequirement />} />
+
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 

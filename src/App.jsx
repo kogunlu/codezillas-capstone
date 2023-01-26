@@ -44,7 +44,7 @@ function App() {
         <Route path="create-therapist" element={<CreateAccountTherapist />} />
         <Route path="edit-user" element={<EditUser />} />
         <Route path="edit-therapist" element={<EditTherapist />} />
-        <Route path="blog" element={<Blog />} />
+        <Route path="blogs" element={<Blog />} />
 
         <Route path="contact" element={<Contact />} />
         <Route path="thanks-contacts" element={<ContactThanks />} />

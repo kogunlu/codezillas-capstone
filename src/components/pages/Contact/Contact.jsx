@@ -5,15 +5,15 @@ import { doc, setDoc } from "firebase/firestore";
 import { useDispatch  } from 'react-redux';
 import db from "../../../db/firebase.config";
 import contact from "./images/Contact.png";
-import ContactAdress from "./ContactAdress";
+import ContactAddress from "./ContactAddress";
 
 
 
 
 function Contact () {
     const [contactType, setContactType] = useState("") 
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
+    const [name,setName] = useState("")
+    const [email,setEmail] = useState("")
     const [details, setDetails] = useState("")
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -22,7 +22,10 @@ function Contact () {
     const handleNameChange = e => {setName(e.target.value)}
     const handleEmailChange = e => {setEmail(e.target.value)}
     const handleDetailsChange = e => {setDetails(e.target.value)}
+    
    
+   
+    
       
         async function sendData(contactTypeValue1, nameValue1, emailValue1, detailsValue1){
           
@@ -40,25 +43,24 @@ function Contact () {
 
    return ( 
    <div className="">
-    <div className="py-10 pl-10">
-        <h1 className="text-5xl ">SEND US YOUR REQUEST!</h1>
-        <p className="text-gray-500 mt-2">Do you have a question, concern, idea, feedback, or problem? If you need assistance,
+    <div className="pl-2 py-10 md:pl-10 ">
+        <h1 className="text-sm md:text-5xl xs:text-left ">SEND US YOUR REQUEST!</h1>
+        <p className="text-gray-500  mt-2 text-xs md:text-3xl ">Do you have a question, concern, idea, feedback, or problem? If you need assistance,
              please fill out the <br/> form below and we’d be happy to help!</p>
     </div>
     <div className="flex ">
   
     <div>
-    
 
-<div className=' h-96 w-full md:w-5/6 lg:w-4/6 px-2 md:px-10 py-5 flex  justify-between items-start   flex-wrap'>
+<div className=' h-auto md:h-auto md:text-xl lg:w-4/6 px-2 md:px-10 py-3 md:py-3 flex  justify-between items-start   flex-wrap'>
 
     <div className='h-auto mb-6'>
-        <h2 className='text-xl font-medium'>
+        <h2 className='xs:text-xs md:text-xl font-medium'>
             Type of contact
         </h2>
     </div>
 
-    <div className='w-full h-auto py-5 md:py-0 flex flex-col justify-center items-start gap-1 '>
+    <div className=' py-0 md:py-0 flex flex-col justify-center items-start gap-1 text-xs md:text-xl '>
         <div className='mb-2'>
             <input 
             name="contactType"
@@ -129,15 +131,11 @@ function Contact () {
             /> I have a billing related question.
         </div>
     </div>
-
-  
 </div>
-
-
     </div>
     
     <div><img
-        className=" items-start lg:justify-center rounded mx-auto py-7 "
+        className=" items-start lg:justify-center rounded mx-auto py-7  w-96 md:h-auto md:w-auto "
         src={contact} 
         alt="contact"
       /> </div> 
@@ -147,9 +145,9 @@ function Contact () {
       
   
       
-         <form className=' w-full md:w-1/4 lg:w-4/6 px-2 md:px-8 sm:text-small  '>
+         <form className=' w-full md:w-2/4 lg:w-4/6 px-2 md:px-8 text-xs md:text-lg  '>
           <span className='mb-3 '>
-              <label htmlFor='name' className='font-medium'>Full Name:
+              <label htmlFor='name' className='font-medium text-xs md:text-lg'>Full Name:
               <input type="name" placeholder='Enter your full name here...' value={name} onChange={handleNameChange} className=' box-border w-full border rounded-md
         bg-transparent border-slate-300 p-3 mt-2 mb-2 shadow-md focus:outline-none'/> 
               </label>
@@ -170,14 +168,16 @@ function Contact () {
               <input 
               type="button" 
               value="SUBMIT" 
-              className='py-2 px-5 w-6/12 md:w-5/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded'
-              onClick={() =>  sendData(contactType, name, email, details)} />
-            
+              className='py-2 px-5 w-6/12 md:w-5/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded '
+              onClick={() => { 
+                sendData(contactType, name, email, details); 
+                }} />
+    
           </div> 
          </form>
       
   
-        <ContactAdress />
+        <ContactAddress />
       </div>
    </div>
    )

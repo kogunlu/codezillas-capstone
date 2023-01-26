@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly for Contact Component 1`] = `
+<div>
+  <div
+    className="p-10 h-72 md:h-64"
+  >
+    <div
+      className="h-full w-full flex flex-col justify-between"
+    >
+      <h2
+        className="text-4xl font-medium"
+      >
+        THANK YOU!
+      </h2>
+      <p
+        className="text-gray-400 text-lg font-medium"
+      >
+        Your request has been sent, a member of the support team will get in contact with you through the email you provided as soon as possible.
+      </p>
+      <div
+        className="w-4/6 md:w-3/6 xl:w-2/6"
+      >
+        <input
+          className="py-2 px-5 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
+          onClick={[Function]}
+          type="button"
+          value="BACK TO HOME"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders correctly for ContactThanks Component 1`] = `
+<div>
+  <div
+    className="p-10 h-72 md:h-64"
+  >
+    <div
+      className="h-full w-full flex flex-col justify-between"
+    >
+      <h2
+        className="text-4xl font-medium"
+      >
+        THANK YOU!
+      </h2>
+      <p
+        className="text-gray-400 text-lg font-medium"
+      >
+        Your request has been sent, a member of the support team will get in contact with you through the email you provided as soon as possible.
+      </p>
+      <div
+        className="w-4/6 md:w-3/6 xl:w-2/6"
+      >
+        <input
+          className="py-2 px-5 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
+          onClick={[Function]}
+          type="button"
+          value="BACK TO HOME"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly  1`] = `
+<div
+  className=""
+>
+  <div
+    className="pl-2 py-10 md:pl-10 "
+  >
+    <h1
+      className="text-sm md:text-5xl xs:text-left "
+    >
+      SEND US YOUR REQUEST!
+    </h1>
+    <p
+      className="text-gray-500  mt-2 text-xs md:text-3xl "
+    >
+      Do you have a question, concern, idea, feedback, or problem? If you need assistance, please fill out the 
+      <br />
+       form below and we’d be happy to help!
+    </p>
+  </div>
+  <div
+    className="flex "
+  >
+    <div>
+      <div
+        className=" h-auto md:h-auto md:text-xl lg:w-4/6 px-2 md:px-10 py-3 md:py-3 flex  justify-between items-start   flex-wrap"
+      >
+        <div
+          className="h-auto mb-6"
+        >
+          <h2
+            className="xs:text-xs md:text-xl font-medium"
+          >
+            Type of contact
+          </h2>
+        </div>
+        <div
+          className=" py-0 md:py-0 flex flex-col justify-center items-start gap-1 text-xs md:text-xl "
+        >
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I have a question about the service."
+            />
+             I have a question about the service.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I’m a registered client and I need support."
+            />
+             I’m a registered client and I need support.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value=" I’m a counselor interested in joining."
+            />
+             I’m a counselor interested in joining.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I’m a registered counselor and I need support."
+            />
+             I’m a registered counselor and I need support.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I have a business-related inquiry."
+            />
+             I have a business-related inquiry.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I’m interested in Healing Online for my organization."
+            />
+             I’m interested in Healing Online for my organization.
+          </div>
+          <div>
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I have a billing related question."
+            />
+             I have a billing related question.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="contact"
+        className=" items-start lg:justify-center rounded mx-auto py-7  w-96 md:h-auto md:w-auto "
+        src="Contact.png"
+      />
+       
+    </div>
+  </div>
+  <div
+    className="flex "
+  >
+    <form
+      className=" w-full md:w-2/4 lg:w-4/6 px-2 md:px-8 text-xs md:text-lg  "
+    >
+      <span
+        className="mb-3 "
+      >
+        <label
+          className="font-medium text-xs md:text-lg"
+          htmlFor="name"
+        >
+          Full Name:
+          <input
+            className=" box-border w-full border rounded-md bg-transparent border-slate-300 p-3 mt-2 mb-2 shadow-md focus:outline-none"
+            onChange={[Function]}
+            placeholder="Enter your full name here..."
+            type="name"
+            value=""
+          />
+        </label>
+      </span>
+      <span
+        className="mb-3 "
+      >
+        <label
+          className="font-medium"
+          htmlFor="email"
+        >
+          Email:
+          <input
+            className="w-full border rounded-md border-slate-300 p-3 mt-2 mb-2 shadow-md focus:outline-none"
+            onChange={[Function]}
+            placeholder="Enter your email address here..."
+            type="email"
+            value=""
+          />
+        </label>
+      </span>
+      <span
+        className=""
+      >
+        <label
+          className="font-medium"
+          htmlFor="details"
+        >
+          Details:
+          <textarea
+            className="w-full border rounded-md border-slate-300 p-3 mt-2 shadow-md focus:outline-none"
+            onChange={[Function]}
+            placeholder="Enter your details here..."
+            rows={6}
+            style={
+              Object {
+                "resize": "none",
+              }
+            }
+            type="details"
+            value=""
+          />
+        </label>
+      </span>
+      <div
+        className="flex items-center w-2/3 h-1/7 mb-12 mt-5 focus:outline-none"
+      >
+        <input
+          className="py-2 px-5 w-6/12 md:w-5/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded "
+          onClick={[Function]}
+          type="button"
+          value="SUBMIT"
+        />
+      </div>
+    </form>
+    <div>
+      <div
+        className="relative mt-28 ml-15 m-10"
+      >
+        <img
+          alt="adress"
+          className="h-56 w-96 md:h-auto md:w-auto "
+          src="ContactAdressImg.png"
+        />
+        <span
+          className="absolute top-3 left-3 w-4/6 pl-5 pt-3"
+        >
+          <p
+            className="font-medium text-xs md:text-lg text-start mb-1"
+          >
+            Find Us At:
+          </p>
+          <div
+            className="text-gray-500 text-xs md:text-lg"
+          >
+            <p>
+              Nergiz Plaza
+            </p>
+            <p>
+              3rd Floor
+            </p>
+            <p>
+              Bakhtiyari Street 40m
+            </p>
+            <p>
+              Erbil, Iraq
+            </p>
+            <p>
+              44001
+            </p>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className=""
+>
+  <div
+    className="pl-2 py-10 md:pl-10 "
+  >
+    <h1
+      className="text-sm md:text-5xl xs:text-left "
+    >
+      SEND US YOUR REQUEST!
+    </h1>
+    <p
+      className="text-gray-500  mt-2 text-xs md:text-lg "
+    >
+      Do you have a question, concern, idea, feedback, or problem? If you need assistance, please fill out the 
+      <br />
+       form below and we’d be happy to help!
+    </p>
+  </div>
+  <div
+    className="flex "
+  >
+    <div>
+      <div
+        className=" h-auto md:h-auto lg:w-4/6 px-2 md:px-10 py-4 md:py-0 flex  justify-between items-start   flex-wrap"
+      >
+        <div
+          className="h-auto mb-6"
+        >
+          <h2
+            className="xs:text-xs md:text-lg font-medium "
+          >
+            Type of contact
+          </h2>
+        </div>
+        <div
+          className=" py-0 md:py-0 flex flex-col justify-center items-start gap-1 text-xs md:text-lg "
+        >
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I have a question about the service."
+            />
+             I have a question about the service.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I’m a registered client and I need support."
+            />
+             I’m a registered client and I need support.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value=" I’m a counselor interested in joining."
+            />
+             I’m a counselor interested in joining.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I’m a registered counselor and I need support."
+            />
+             I’m a registered counselor and I need support.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I have a business-related inquiry."
+            />
+             I have a business-related inquiry.
+          </div>
+          <div
+            className="mb-2"
+          >
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I’m interested in Healing Online for my organization."
+            />
+             I’m interested in Healing Online for my organization.
+          </div>
+          <div>
+            <input
+              name="contactType"
+              onChange={[Function]}
+              type="radio"
+              value="I have a billing related question."
+            />
+             I have a billing related question.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="contact"
+        className=" items-start lg:justify-center rounded mx-auto py-7  w-96 md:h-auto md:w-auto "
+        src="Contact.png"
+      />
+       
+    </div>
+  </div>
+  <div
+    className="flex "
+  >
+    <form
+      className=" w-full md:w-2/4 lg:w-4/6 px-2 md:px-8 text-xs md:text-lg  "
+    >
+      <span
+        className="mb-3 "
+      >
+        <label
+          className="font-medium text-xs md:text-lg"
+          htmlFor="name"
+        >
+          Full Name:
+          <input
+            className=" box-border w-full border rounded-md bg-transparent border-slate-300 p-3 mt-2 mb-2 shadow-md focus:outline-none"
+            onChange={[Function]}
+            placeholder="Enter your full name here..."
+            type="name"
+            value=""
+          />
+        </label>
+      </span>
+      <span
+        className="mb-3 "
+      >
+        <label
+          className="font-medium"
+          htmlFor="email"
+        >
+          Email:
+          <input
+            className="w-full border rounded-md border-slate-300 p-3 mt-2 mb-2 shadow-md focus:outline-none"
+            onChange={[Function]}
+            placeholder="Enter your email address here..."
+            type="email"
+            value=""
+          />
+        </label>
+      </span>
+      <span
+        className=""
+      >
+        <label
+          className="font-medium"
+          htmlFor="details"
+        >
+          Details:
+          <textarea
+            className="w-full border rounded-md border-slate-300 p-3 mt-2 shadow-md focus:outline-none"
+            onChange={[Function]}
+            placeholder="Enter your details here..."
+            rows={6}
+            style={
+              Object {
+                "resize": "none",
+              }
+            }
+            type="details"
+            value=""
+          />
+        </label>
+      </span>
+      <div
+        className="flex items-center w-2/3 h-1/7 mb-12 mt-5 focus:outline-none"
+      >
+        <input
+          className="py-2 px-5 w-6/12 md:w-5/12 lg:w-3/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded "
+          onClick={[Function]}
+          type="button"
+          value="SUBMIT"
+        />
+      </div>
+    </form>
+    <div>
+      <div
+        className="relative mt-28 ml-15 m-10"
+      >
+        <img
+          alt="adress"
+          className="h-56 w-96 md:h-auto md:w-auto "
+          src="ContactAdressImg.png"
+        />
+        <span
+          className="absolute top-3 left-3 w-4/6 pl-5 pt-3"
+        >
+          <p
+            className="font-medium text-xs md:text-lg text-start mb-1"
+          >
+            Find Us At:
+          </p>
+          <div
+            className="text-gray-500 text-xs md:text-lg"
+          >
+            <p>
+              Nergiz Plaza
+            </p>
+            <p>
+              3rd Floor
+            </p>
+            <p>
+              Bakhtiyari Street 40m
+            </p>
+            <p>
+              Erbil, Iraq
+            </p>
+            <p>
+              44001
+            </p>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

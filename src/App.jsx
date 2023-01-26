@@ -13,6 +13,10 @@ import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 import Team from './components/pages/About/Team';
+
+import Contact from './components/pages/Contact/Contact';
+import ContactThanks from './components/pages/Contact/ContactThanks/ContactThanks';
+
 import EditUser from './components/pages/Edit-profile/EditUser';
 import EditTherapist from './components/pages/Edit-profile/EditTherapist';
 
@@ -20,6 +24,7 @@ import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 import SelectCard from './components/pages/selectCard/SelectCard';
 import PurchaseThanks from './components/pages/selectCard/purchaseThanks/PurchaseThanks';
+
 
 function App() {
   return (
@@ -40,7 +45,12 @@ function App() {
         <Route path="edit-user" element={<EditUser />} />
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blog" element={<Blog />} />
+
+        <Route path='contact' element={<Contact />} />
+        <Route path= "thanks-contacts" element={<ContactThanks />} />
+
         <Route path="work-with-healing" element={<HealingRequirement />} />
+
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>

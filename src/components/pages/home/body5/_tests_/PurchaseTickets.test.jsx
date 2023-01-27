@@ -1,11 +1,17 @@
-import React from "react";
-import renderer from "react-test-renderer";
+import renderer from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom';
 import PurchaseTickets from "../PurchaseTickets";
+import PurchaseCard from "../PurchaseCard";
 
 
-it('Renders correctly for PurchaseTickets Component', () => {
-    const tree = renderer
-    .create(<PurchaseTickets />)
+test('PurchaseTickets component renders correctly', () => {
+  const tree = renderer
+    .create(
+      <BrowserRouter>
+    <PurchaseCard />
+    <PurchaseTickets />
+      </BrowserRouter>
+    )
     .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  expect(tree).toMatchSnapshot();
+});

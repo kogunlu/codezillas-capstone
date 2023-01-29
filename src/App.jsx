@@ -23,7 +23,9 @@ import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 import PurchaseThanks from './components/pages/selectCardImpovements/purchaseThanks/PurchaseThanks';
 import SelectCardSlider from './components/pages/selectCardImpovements/SelectCardSlider';
-
+import Career from './components/pages/Career/Career';
+import OpenPositions from './components/pages/Career/OpenPositions';
+import SavedCards from './components/pages/CreditCards/SavedCards';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
@@ -45,6 +47,10 @@ function App() {
         <Route path="edit-user" element={<EditUser />} />
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blogs" element={<Blog />} />
+        <Route path='career' element= {<Career/>} />
+        <Route path='OpenPositions' element= {<OpenPositions/>} />
+        
+        <Route path='SavedCards' element= {<SavedCards/>} />
 
         <Route path="contact" element={<Contact />} />
         <Route path="thanks-contacts" element={<ContactThanks />} />

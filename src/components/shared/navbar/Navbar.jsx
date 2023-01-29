@@ -51,19 +51,6 @@ function Navbar() {
       });
   }
 
-  const [SideMenuClose, setSideMenuClose] = useState('hidden');
-  const [SideMenu, setSideMenu] = useState('');
-  const [ShowHide, setShowHide] = useState('left-[-400px] opacity-0 z-[-1]');
-
-  function handleNavAboutDropDown() {
-    if (NavDropDown === 'opacity-0 hidden') {
-      setNavDropDown('opacity-100');
-    } else {
-      setNavDropDown('opacity-0 block');
-      setTimeout(() => setNavDropDown('opacity-0 hidden'), 500);
-    }
-  }
-
   const [NavDropDownProfile, setNavDropDownProfile] =
     useState('opacity-0 hidden');
 
@@ -73,6 +60,19 @@ function Navbar() {
     } else {
       setNavDropDownProfile('opacity-0 block');
       setTimeout(() => setNavDropDownProfile('opacity-0 hidden'), 500);
+    }
+  }
+
+  const [NavDropDown, setNavDropDown] = useState("opacity-0 hidden")
+
+  function handleNavAboutDropDown()
+  {
+    if(NavDropDown === 'opacity-0 hidden')
+    {
+      setNavDropDown('opacity-100')
+    }else{
+      setNavDropDown('opacity-0 block')
+      setTimeout(()=>setNavDropDown('opacity-0 hidden'),500)
     }
   }
 

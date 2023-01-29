@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="343" height="183" viewBox="0 0 343 183">
+    <defs>
+      <linearGradient id="linear-gradient" x1="0.068" y1="0.546" x2="1.199" y2="0.704" gradientUnits="objectBoundingBox">
+        <stop offset="0" stop-color="#f68749"/>
+        <stop offset="1" stop-color="#fda271"/>
+      </linearGradient>
+      <clipPath id="clip-path">
+        <rect id="Rectangle_2141" data-name="Rectangle 2141" width="343" height="183" rx="15" fill="url(#linear-gradient)"/>
+      </clipPath>
+    </defs>
+    <g id="Group_3224" data-name="Group 3224" transform="translate(-16 -127)">
+      <rect id="Rectangle_2140" data-name="Rectangle 2140" width="343" height="183" transform="translate(16 127)" fill="url(#linear-gradient)"/>
+      <g id="Mask_Group_74" data-name="Mask Group 74" transform="translate(16 127)" clip-path="url(#clip-path)">
+        <g id="Group_3209" data-name="Group 3209" transform="translate(219 -1.072)">
+          <ellipse id="Ellipse_168" data-name="Ellipse 168" cx="62" cy="66.5" rx="62" ry="66.5" transform="translate(16 0.072)" fill="#fff" opacity="0.07"/>
+          <ellipse id="Ellipse_169" data-name="Ellipse 169" cx="62" cy="66.5" rx="62" ry="66.5" transform="translate(0 85.072)" fill="#fff" opacity="0.07"/>
+        </g>
+      </g>
+    </g>
+  </svg>
+  

@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders correctly 1`] = `
+<form
+  className="w-fit mx-10 my-8 lg:mx-16 lg:my-10  xl:mx-24 xl:my-16 grid gap-y-6 md:gap-y-12"
+  onSubmit={[Function]}
+>
+  <div
+    className="grid md:grid-cols-3"
+  >
+    <span
+      className="uppercase text-2xl lg:text-5xl col-span-3 mb-3"
+    >
+      add card details
+    </span>
+    <span
+      className="capitalize text-la lg:text-2xl col-span-3 row-start-auto w-fit text-[#00000080]"
+    >
+      Please make sure all of the info you enter are the same as your card registration info.
+    </span>
+  </div>
+  <div
+    className="grid md:grid-cols-3 md:gap-x-6 lg:gap-x-9 gap-y-5  "
+  >
+    <div
+      className="grid gap-6 "
+    >
+      <div
+        className="h-20 grid content-center"
+      >
+        <span
+          className="text-zinc-400 "
+        >
+          Supported Card Type
+        </span>
+        <div
+          className="grid grid-cols-2 "
+        >
+          <span
+            className="border-white-cyan text-white-cyan border-[1px] text-center"
+          >
+            MasterCard
+          </span>
+          <span
+            className="border-white-cyan text-white-cyan border-[1px] text-center"
+          >
+            Visa
+          </span>
+        </div>
+      </div>
+      <label
+        className="text-zinc-400"
+        htmlFor="cnumber"
+      >
+        Card Number
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black  true"
+          id="cnumber"
+          maxLength="19"
+          name="number"
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="4287  8874 9511 3263"
+          required={true}
+          type="text"
+        />
+        <p
+          className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm"
+        >
+          Please provide one of Supported cards
+        </p>
+      </label>
+      <div
+        className="grid grid-cols-2 gap-3"
+      >
+        <label
+          className="text-zinc-400"
+          htmlFor="expiry"
+        >
+          Expiry Date
+          <input
+            className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black"
+            id="expiry"
+            maxLength="5"
+            name="expiry"
+            onChange={[Function]}
+            onFocus={[Function]}
+            placeholder="MM / YY"
+            required={true}
+            type="text"
+          />
+        </label>
+        <label
+          className="text-zinc-400"
+          htmlFor="cvv"
+        >
+          CVV Code
+          <input
+            className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black"
+            id="cvv"
+            maxLength="3"
+            name="cvc"
+            onChange={[Function]}
+            onFocus={[Function]}
+            placeholder="***"
+            required={true}
+          />
+        </label>
+      </div>
+      <label
+        className="text-zinc-400"
+        htmlFor="name"
+      >
+        Name on Card
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black"
+          id="name"
+          name="name"
+          onChange={[Function]}
+          onFocus={[Function]}
+          pattern="[a-z A-Z-]+"
+          placeholder="Irene Ramos"
+          required={true}
+          type="text"
+        />
+      </label>
+    </div>
+    <div
+      className="grid gap-6 "
+    >
+      <label
+        className="text-zinc-400"
+        htmlFor="country"
+      >
+        Country
+        <select
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black bg-white"
+          onChange={[Function]}
+        >
+          <option
+            selected="selected"
+          >
+            Please Select Country
+          </option>
+          <option
+            value="Loading...."
+          >
+            Loading....
+          </option>
+        </select>
+      </label>
+      <label
+        className="text-zinc-400"
+        htmlFor="zip"
+      >
+        Zip Code
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black"
+          id="zip"
+          minLength={1}
+          onChange={[Function]}
+          placeholder="17121-1300"
+          required={true}
+          type="text"
+        />
+      </label>
+      <label
+        className="text-zinc-400"
+        htmlFor="city"
+      >
+        City
+        <select
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black bg-white"
+          onChange={[Function]}
+        >
+          <option
+            selected="selected"
+          >
+            Please Select Country
+          </option>
+          <option
+            value="Loading...."
+          >
+            Loading....
+          </option>
+        </select>
+      </label>
+      <label
+        className="text-zinc-400"
+        htmlFor="address"
+      >
+        Adress
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black"
+          id="address"
+          minLength={3}
+          onChange={[Function]}
+          placeholder="509 Adele Mills Suite 833"
+          required={true}
+          type="text"
+        />
+      </label>
+    </div>
+    <div
+      className="grid place-content-center cursor-pointer"
+    >
+      <div
+        className="rccs"
+      >
+        <div
+          className="rccs__card rccs__card--unknown"
+        >
+          <div
+            className="rccs__card--front"
+          >
+            <div
+              className="rccs__card__background"
+            />
+            <div
+              className="rccs__issuer"
+            />
+            <div
+              className="rccs__cvc__front"
+            />
+            <div
+              className="rccs__number  rccs--focused"
+            >
+              •••• •••• •••• ••••
+            </div>
+            <div
+              className="rccs__name"
+            >
+              YOUR NAME HERE
+            </div>
+            <div
+              className="rccs__expiry"
+            >
+              <div
+                className="rccs__expiry__valid"
+              >
+                valid thru
+              </div>
+              <div
+                className="rccs__expiry__value"
+              >
+                ••/••
+              </div>
+            </div>
+            <div
+              className="rccs__chip"
+            />
+          </div>
+          <div
+            className="rccs__card--back"
+          >
+            <div
+              className="rccs__card__background"
+            />
+            <div
+              className="rccs__stripe"
+            />
+            <div
+              className="rccs__signature"
+            />
+            <div
+              className="rccs__cvc"
+            />
+            <div
+              className="rccs__issuer"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="grid grid-cols-5"
+  >
+    <input
+      className="col-span-3 sm:col-span-2 md:col-span-1  py-2 md:py-3 px-5 md:h-14 hover:bg-cyan-200 focus:outline-none hover:scale-105 border border-cyan-400 bg-cyan-400 text-base sm:text-lg font-semibold rounded-md shadow-lg"
+      onClick={[Function]}
+      type="submit"
+      value="ADD CARD"
+    />
+  </div>
+</form>
+`;

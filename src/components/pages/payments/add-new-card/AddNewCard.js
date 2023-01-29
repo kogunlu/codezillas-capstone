@@ -261,7 +261,7 @@ function AddNewCard()
             method: 'get', 
             headers: new Headers({
                 "Accept": "application/json",
-                "api-token": "h52YxZHrFFEXyTsuH_vQVFmc8Ao8JicISlOLU50r99DtXAVTcsePVdVRUMu3N93CGDM",
+                "api-token": atob("aDUyWXhaSHJGRkVYeVRzdUhfdlFWRm1jOEFvOEppY0lTbE9MVTUwcjk5RHRYQVZUY3NlUFZkVlJVTXUzTjkzQ0dETQ==") ,
                 "user-email": "nour.majed1234@gmail.com",
             }), 
         })

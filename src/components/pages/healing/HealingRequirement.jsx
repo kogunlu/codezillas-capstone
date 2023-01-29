@@ -36,8 +36,8 @@ function HealingRequirement() {
   </div>
   
   <div className="w-full px-5 py-10 lg:pb-20 lg:pl-20 xl:px-20 2xl:px-32 flex flex-col justify-evenly gap-5">
-      <Link  to="/create-account">
-      <Button type='button' name="GET STARTED" classes="py-2 px-5 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"/>
+      <Link  to="/create-therapist">
+      <Button type='button' name="GET STARTED" classList="py-2 px-5 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"/>
       </Link>
   </div>
   </div>

@@ -44,9 +44,9 @@ const Slidernew = () => {
   };
 
   return (
-    <div className="bg-cyan-50">
-    <div className="w-5/6 flex flex-col items-center pt-20 pb-10">
-    <p className="w-5/6 text-center text-4xl md:text-start 2xl:text-6xl font-bold mt-10">RECENT BLOGS</p>
+    <div className="bg-main-background">
+    <div className="flex flex-col justify-between sm:items-center lg:items-start lg:px-24 xl:px-32 2xl:px-48">
+    <p className=" text-center text-4xl md:text-start 2xl:text-6xl font-bold mt-10">RECENT BLOGS</p>
   </div>
 <div className="mt-5 flex justify-center pb-20">
       <Slider

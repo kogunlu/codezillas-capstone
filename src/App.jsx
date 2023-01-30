@@ -1,5 +1,7 @@
-import React from 'react';
+import {React,useState,useEffect} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { getAuth, onAuthStateChanged} from 'firebase/auth';
+import { useSelector } from 'react-redux';
 import About from './components/pages/About/About';
 import ErrorPage from './components/pages/404/ErrorPage';
 import Book from './components/pages/book/Book';
@@ -12,6 +14,7 @@ import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 import Team from './components/pages/About/Team';
+import AddNewCard from './components/pages/payments/add-new-card/AddNewCard';
 
 import Contact from './components/pages/Contact/Contact';
 import ContactThanks from './components/pages/Contact/ContactThanks/ContactThanks';
@@ -29,9 +32,50 @@ import SavedCards from './components/pages/CreditCards/SavedCards';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
+
+  const user = useSelector((state) => state.user.user);
+  const auth = getAuth();
+  const [isLoggedIn , setisLoggedIn] = useState(0)
+
+  function isLoggedInf()
+  {
+    if(auth !== null)
+    {
+      onAuthStateChanged(auth,(userLogged)=>{
+         if(userLogged !== null)
+         {
+           setisLoggedIn(1)
+         }
+       })  
+    }else{
+      setisLoggedIn(0)
+    }
+  }  
+  // To add routes need only logged in users be able to view them just add new object in the following array.
+  const pathes = [
+    {
+      path: 'add-new-card',
+      component: <AddNewCard />
+    },
+  ]
+  let OnlyLoggedIn = [];
+  const routes = []
+  pathes.map((item)=>routes.push(<Route path={item.path} element={item.component} />))
+  if(user.email)
+  {
+    OnlyLoggedIn =  routes
+  }else if(isLoggedIn){
+    OnlyLoggedIn =  routes
+  }else{
+    // navigate user to please login to enter this page
+  }
+  useEffect(()=>{
+  isLoggedInf()
+  },[auth])
+  
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} isLoggedInFun={setisLoggedIn} />
       <Routes>
         <Route path="select-card" element={<SelectCardSlider />} />
         <Route path="purchase-thanks" element={<PurchaseThanks />} />
@@ -58,6 +102,7 @@ function App() {
         <Route path="work-with-healing" element={<HealingRequirement />} />
         <Route path="/thanks-therapist" element={<ThanksTherapist />} />
 
+        {OnlyLoggedIn.map((element)=>element)}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 

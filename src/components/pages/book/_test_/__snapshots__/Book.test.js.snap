@@ -137,7 +137,7 @@ Array [
           </a>
           <a
             className="text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg"
-            href="/blog"
+            href="/blogs"
             onClick={[Function]}
           >
             Blogs

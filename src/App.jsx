@@ -32,7 +32,6 @@ import SavedCards from './components/pages/CreditCards/SavedCards';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
-
   const user = useSelector((state) => state.user.user);
   const auth = getAuth();
   const [isLoggedIn, setisLoggedIn] = useState(0);
@@ -55,11 +54,25 @@ function App() {
       component: <AddNewCard />,
     },
   ];
+
+  if (!user.isTherapist) {
+    pathes.push({
+      path: 'edit-user',
+      component: <EditUser />,
+    });
+  } else {
+    pathes.push({
+      path: 'edit-therapist',
+      component: <EditTherapist />,
+    });
+  }
+
   let OnlyLoggedIn = [];
   const routes = [];
   pathes.map((item) =>
     routes.push(<Route path={item.path} element={item.component} />)
   );
+
   if (user.email) {
     OnlyLoggedIn = routes;
   } else if (isLoggedIn) {
@@ -70,7 +83,6 @@ function App() {
   useEffect(() => {
     isLoggedInf();
   }, [auth]);
-
 
   return (
     <BrowserRouter>

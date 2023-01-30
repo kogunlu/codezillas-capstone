@@ -99,7 +99,9 @@ Array [
                     onClick={[Function]}
                     type="button "
                   >
-                     Delete Card - 
+                     
+                    Delete Card -
+                     
                   </button>
                 </div>
               </div>
@@ -316,7 +318,9 @@ Array [
                                                 onClick={[Function]}
                                                 type="button "
                                               >
-                                                 Delete Card - 
+                                                 
+                                                Delete Card -
+                                                 
                                               </button>
                                             </div>
                                           </div>
@@ -453,7 +457,9 @@ Array [
                                                 onClick={[Function]}
                                                 type="button "
                                               >
-                                                 Delete Card - 
+                                                 
+                                                Delete Card -
+                                                 
                                               </button>
                                             </div>
                                           </div>
@@ -590,7 +596,9 @@ Array [
                                                 onClick={[Function]}
                                                 type="button "
                                               >
-                                                 Delete Card - 
+                                                 
+                                                Delete Card -
+                                                 
                                               </button>
                                             </div>
                                           </div>
@@ -727,7 +735,9 @@ Array [
                                                 onClick={[Function]}
                                                 type="button "
                                               >
-                                                 Delete Card - 
+                                                 
+                                                Delete Card -
+                                                 
                                               </button>
                                             </div>
                                           </div>
@@ -864,7 +874,9 @@ Array [
                                                 onClick={[Function]}
                                                 type="button "
                                               >
-                                                 Delete Card - 
+                                                 
+                                                Delete Card -
+                                                 
                                               </button>
                                             </div>
                                           </div>
@@ -1001,7 +1013,9 @@ Array [
                                                 onClick={[Function]}
                                                 type="button "
                                               >
-                                                 Delete Card - 
+                                                 
+                                                Delete Card -
+                                                 
                                               </button>
                                             </div>
                                           </div>
@@ -1274,7 +1288,9 @@ Array [
                                         onClick={[Function]}
                                         type="button "
                                       >
-                                         Delete Card - 
+                                         
+                                        Delete Card -
+                                         
                                       </button>
                                     </div>
                                   </div>
@@ -1411,7 +1427,9 @@ Array [
                                         onClick={[Function]}
                                         type="button "
                                       >
-                                         Delete Card - 
+                                         
+                                        Delete Card -
+                                         
                                       </button>
                                     </div>
                                   </div>
@@ -1548,7 +1566,9 @@ Array [
                                         onClick={[Function]}
                                         type="button "
                                       >
-                                         Delete Card - 
+                                         
+                                        Delete Card -
+                                         
                                       </button>
                                     </div>
                                   </div>
@@ -1685,7 +1705,9 @@ Array [
                                         onClick={[Function]}
                                         type="button "
                                       >
-                                         Delete Card - 
+                                         
+                                        Delete Card -
+                                         
                                       </button>
                                     </div>
                                   </div>
@@ -1822,7 +1844,9 @@ Array [
                                         onClick={[Function]}
                                         type="button "
                                       >
-                                         Delete Card - 
+                                         
+                                        Delete Card -
+                                         
                                       </button>
                                     </div>
                                   </div>
@@ -1959,7 +1983,9 @@ Array [
                                         onClick={[Function]}
                                         type="button "
                                       >
-                                         Delete Card - 
+                                         
+                                        Delete Card -
+                                         
                                       </button>
                                     </div>
                                   </div>

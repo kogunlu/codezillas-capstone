@@ -277,9 +277,9 @@ exports[`Navbar component renders correctly 1`] = `
     className="grid grid-cols-5"
   >
     <input
-      className="col-span-3 sm:col-span-2 md:col-span-1  py-2 md:py-3 px-5 md:h-14 hover:bg-cyan-200 focus:outline-none hover:scale-105 border border-cyan-400 bg-cyan-400 text-base sm:text-lg font-semibold rounded-md shadow-lg"
+      className="py-2 px-5 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
       onClick={[Function]}
-      type="submit"
+      type="button"
       value="ADD CARD"
     />
   </div>

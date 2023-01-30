@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/button-has-type */
 /* eslint-disable no-undef */
 /* eslint-disable no-alert */

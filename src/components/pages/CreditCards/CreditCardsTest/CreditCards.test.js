@@ -4,14 +4,13 @@ import Card from '../Card';
 import CardSlider from '../CardSlider';
 import SavedCards from '../SavedCards';
 
-
 test('Career component renders correctly', () => {
   const tree = renderer
     .create(
       <BrowserRouter>
-    <Card />
-    <SavedCards />
-    <CardSlider />
+        <Card />
+        <SavedCards />
+        <CardSlider />
       </BrowserRouter>
     )
     .toJSON();

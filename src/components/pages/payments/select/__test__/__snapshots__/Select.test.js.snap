@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders correctly 1`] = `
+<select
+  onChange={[Function]}
+>
+  <option
+    selected="selected"
+  >
+    Please Select Country
+  </option>
+</select>
+`;

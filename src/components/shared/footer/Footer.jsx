@@ -3,9 +3,17 @@ import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import { GrGoogle } from 'react-icons/gr';
 import SubsInput from '../subsInput/SubsInput';
 
-function Footer() {
+function Footer({ isShortContent = false }) {
+  let classForFooter = '';
+  if (isShortContent) {
+    classForFooter =
+      'absolute inset-x-0 bottom-0 w-full h-60 md:h-44 bg-amber-200 flex justify-center';
+  } else {
+    classForFooter = 'w-full h-60 md:h-44 bg-amber-200 flex justify-center';
+  }
+
   return (
-    <div className="w-full h-60 md:h-44 bg-amber-200 flex justify-center ">
+    <div className={classForFooter}>
       <div className="w-full md:w-10/12 h-full flex flex-col md:flex-row justify-between items-center">
         <div className="h-5/6 w-5/6 md:w-4/12 flex flex-col items-center md:items-start justify-around">
           <div className="flex flex-col items-center md:items-start gap-2 w-full ">
@@ -27,7 +35,7 @@ function Footer() {
               Home
             </Link>
             <Link
-              to="blog"
+              to="blogs"
               className="text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg"
             >
               Blogs

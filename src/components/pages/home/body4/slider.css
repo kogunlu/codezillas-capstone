@@ -7,15 +7,15 @@
     color:black;
     border-style: solid;
     border-radius:4px;
-    width: 2vw;
-    height: 2vw;
-    border-width: thin medium;
+    width: 30px;
+    height: 30px;
+    border-width: thin;
     }
     .slick-arrow.slick-next{
     color:black;
     border-style: solid;
     border-radius:4px;
-    width: 2vw;
-    height: 2vw;
-    border-width: thin medium;
+    width: 30px;
+    height: 30px;
+    border-width: thin;
     }

@@ -1,11 +1,10 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import CardSlider from './CardSlider'
-
-
-
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Footer from '../../shared/footer/Footer';
+import CardSlider from './CardSlider';
 
 const SavedCards = () => {
+
     const navigate = useNavigate()
       
         function handleClick(){
@@ -15,6 +14,7 @@ const SavedCards = () => {
  
 
   return (
+   <>
     <div className='  bg-white flex flex-col justify-center items-start w-11/12 min-w-[700px]  mx-20'>
         <div className='w-full h-full  flex flex-col items-start justify-start mt-20'>       
   <div className='flex flex-col justify-center w-full items-start px-20 '>
@@ -42,9 +42,11 @@ const SavedCards = () => {
         </div>
         
                
-     
+      <Footer isShortContent />
+    </>
         
   )
 }
 
-export default SavedCards
+
+export default SavedCards;

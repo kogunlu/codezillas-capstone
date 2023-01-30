@@ -35,7 +35,7 @@ function Footer({ isShortContent = false }) {
               Home
             </Link>
             <Link
-              to="blog"
+              to="blogs"
               className="text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg"
             >
               Blogs

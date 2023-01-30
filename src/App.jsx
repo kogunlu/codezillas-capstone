@@ -1,13 +1,13 @@
-import {React,useState,useEffect} from 'react';
+import { React, useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { getAuth, onAuthStateChanged} from 'firebase/auth';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useSelector } from 'react-redux';
 import About from './components/pages/About/About';
 import ErrorPage from './components/pages/404/ErrorPage';
 import Book from './components/pages/book/Book';
 import Home from './components/pages/home/Home';
 import SubsThanks from './components/pages/thanks/SubsThanks';
-import Footer from './components/shared/footer/Footer';
+// import Footer from './components/shared/footer/Footer';
 import Blog from './components/pages/Blog/Blog';
 import Navbar from './components/shared/navbar/Navbar';
 import Login from './components/pages/Login/Login';
@@ -32,47 +32,44 @@ import SavedCards from './components/pages/CreditCards/SavedCards';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
-
   const user = useSelector((state) => state.user.user);
   const auth = getAuth();
-  const [isLoggedIn , setisLoggedIn] = useState(0)
+  const [isLoggedIn, setisLoggedIn] = useState(0);
 
-  function isLoggedInf()
-  {
-    if(auth !== null)
-    {
-      onAuthStateChanged(auth,(userLogged)=>{
-         if(userLogged !== null)
-         {
-           setisLoggedIn(1)
-         }
-       })  
-    }else{
-      setisLoggedIn(0)
+  function isLoggedInf() {
+    if (auth !== null) {
+      onAuthStateChanged(auth, (userLogged) => {
+        if (userLogged !== null) {
+          setisLoggedIn(1);
+        }
+      });
+    } else {
+      setisLoggedIn(0);
     }
-  }  
+  }
   // To add routes need only logged in users be able to view them just add new object in the following array.
   const pathes = [
     {
       path: 'add-new-card',
-      component: <AddNewCard />
+      component: <AddNewCard />,
     },
-  ]
+  ];
   let OnlyLoggedIn = [];
-  const routes = []
-  pathes.map((item)=>routes.push(<Route path={item.path} element={item.component} />))
-  if(user.email)
-  {
-    OnlyLoggedIn =  routes
-  }else if(isLoggedIn){
-    OnlyLoggedIn =  routes
-  }else{
+  const routes = [];
+  pathes.map((item) =>
+    routes.push(<Route path={item.path} element={item.component} />)
+  );
+  if (user.email) {
+    OnlyLoggedIn = routes;
+  } else if (isLoggedIn) {
+    OnlyLoggedIn = routes;
+  } else {
     // navigate user to please login to enter this page
   }
-  useEffect(()=>{
-  isLoggedInf()
-  },[auth])
-  
+  useEffect(() => {
+    isLoggedInf();
+  }, [auth]);
+
   return (
     <BrowserRouter>
       <Navbar isLoggedIn={isLoggedIn} isLoggedInFun={setisLoggedIn} />
@@ -91,10 +88,10 @@ function App() {
         <Route path="edit-user" element={<EditUser />} />
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blogs" element={<Blog />} />
-        <Route path='career' element= {<Career/>} />
-        <Route path='OpenPositions' element= {<OpenPositions/>} />
-        
-        <Route path='SavedCards' element= {<SavedCards/>} />
+        <Route path="career" element={<Career />} />
+        <Route path="OpenPositions" element={<OpenPositions />} />
+
+        <Route path="SavedCards" element={<SavedCards />} />
 
         <Route path="contact" element={<Contact />} />
         <Route path="thanks-contacts" element={<ContactThanks />} />
@@ -102,11 +99,11 @@ function App() {
         <Route path="work-with-healing" element={<HealingRequirement />} />
         <Route path="/thanks-therapist" element={<ThanksTherapist />} />
 
-        {OnlyLoggedIn.map((element)=>element)}
+        {OnlyLoggedIn.map((element) => element)}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

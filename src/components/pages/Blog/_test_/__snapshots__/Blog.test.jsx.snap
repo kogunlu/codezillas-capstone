@@ -1,147 +1,331 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders correctly for Blog Component 1`] = `
-<div
-  className=" lg:mx-auto lg:text-justify "
->
-  <img
-    alt="meditation"
-    className=" items-start lg:justify-center rounded mx-auto py-7  "
-    src="meditation.png"
-  />
+Array [
   <div
-    className="max-w-[800px]  w-full  mx-auto  flex flex-col justify-center px-3"
+    className=" lg:mx-auto lg:text-justify "
   >
-    <h1
-      className=" my-3 text-bold text-3xl"
-    >
-      MENTAL HEALTH AND TECHNOLOGY
-    </h1>
-    <p
-      className="uppercase mb-4"
-    >
-      Technology and mental well-being might seem like profoundly antagonistic terms. However, there are excellent digital tools to help you reach mindfulness and to practice meditation. You can even use smartphone apps, virtual reality solutions and digital devices as a form of relieving stressing and achieving digital detox – as, after a while, you will be able to practice all types of anti-anxiety skills on your own. So, let The Medical Futurist show you how you can enhance your mental and emotional health with the help of technology.
-    </p>
-    <h3
-      className="uppercase py-5 text-xl "
-    >
-      THE NEED FOR TAKING CARE OF OUR EMOTIONAL HEALTH
-    </h3>
-    <p
-      className="uppercase"
-    >
-      “Just as we observe physical hygiene to stay well, we need to cultivate a kind of emotional hygiene too,” wrote the Dalai Lama on his Twitter-feed. There are three crucial points around His Holiness’ statement. First and foremost, the popularity of health-enhancing, physically active lifestyle is soaring worldwide. Nevertheless, there’s always room for improvement: the WHO says that globally, 23 percent of adults and 81 percent of school-going adolescents are not active enough. According to the organization, adults aged 18-64 should do at least 150 minutes of moderately intense physical activity each week, which is not unaccomplishable. Moreover, the numerically and statistically driven 21st-century mind could take a great inspiration and power from the various fitness trackers and wearables.
-    </p>
-     
-    <p
-      className="uppercase py-6"
-    >
-      Secondly, emotional hygiene seems to be thrown into the shade nowadays. Somehow, the culture of busyness prevents us from squeezing some time for mental health into our packed schedules. Information is pouring on us from millions of communication channels; we are connecting with hundreds of ‘friends’ on social media, we are obsessed with data due to the fear of missing out and time management slices up our days into meetings and to-do-lists.
-    </p>
-    <p
-      className="uppercase"
-    >
-      The pressure to perform and the stress to achieve is the air every busy-bee is breathing. However, turbulent lifestyle comes with a price. No wonder so many people have mental health issues. In the US, that means one in five adults – more than 40 million Americans! On the old continent, 27 percent of the population has to cope with mental disorders, which means 83 million struggling Europeans. In Asia, the prevalence of depression is 20 percent in Thailand, 19.9 percent in Taiwan, 19.4 percent in Korea, 17.5 in Malaysia and 16.5 percent in China.
-    </p>
-  </div>
-  <div
-    className=" w-full max-w-[800px] mx-auto mt-12 mb-24 flex flex-col justify-center px-3"
-  >
-    <h3
-      className="uppercase lg:text-xl font-weight:600 sm:m-0"
-    >
-      Sign up for The Healing blog
-    </h3>
-    <h6
-      className="uppercase mb-4 py-2 font-weight:600"
-    >
-      A weekly, ad-free Blog that helps you stay in the know.
-    </h6>
+    <img
+      alt="meditation"
+      className=" items-start lg:justify-center rounded mx-auto py-7  "
+      src="meditation.png"
+    />
     <div
-      className="flex justify-start items-center"
+      className="max-w-[800px]  w-full  mx-auto  flex flex-col justify-center px-3"
     >
-      <input
-        className="border border-gray-400 rounded-l-md h-10 pl-2 focus:outline-none "
-        onChange={[Function]}
-        placeholder="Enter your e-mail"
-        type="email"
-        value=""
-      />
-      <button
-        className="h-10  bg-cyan-400 pl-1 pr-2 rounded-r-md border-y border-r border-gray-400 hover:bg-cyan-300 text-xl"
-        onClick={[Function]}
-        type="button"
+      <h1
+        className=" my-3 text-bold text-3xl"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
+        MENTAL HEALTH AND TECHNOLOGY
+      </h1>
+      <p
+        className="uppercase mb-4"
+      >
+        Technology and mental well-being might seem like profoundly antagonistic terms. However, there are excellent digital tools to help you reach mindfulness and to practice meditation. You can even use smartphone apps, virtual reality solutions and digital devices as a form of relieving stressing and achieving digital detox – as, after a while, you will be able to practice all types of anti-anxiety skills on your own. So, let The Medical Futurist show you how you can enhance your mental and emotional health with the help of technology.
+      </p>
+      <h3
+        className="uppercase py-5 text-xl "
+      >
+        THE NEED FOR TAKING CARE OF OUR EMOTIONAL HEALTH
+      </h3>
+      <p
+        className="uppercase"
+      >
+        “Just as we observe physical hygiene to stay well, we need to cultivate a kind of emotional hygiene too,” wrote the Dalai Lama on his Twitter-feed. There are three crucial points around His Holiness’ statement. First and foremost, the popularity of health-enhancing, physically active lifestyle is soaring worldwide. Nevertheless, there’s always room for improvement: the WHO says that globally, 23 percent of adults and 81 percent of school-going adolescents are not active enough. According to the organization, adults aged 18-64 should do at least 150 minutes of moderately intense physical activity each week, which is not unaccomplishable. Moreover, the numerically and statistically driven 21st-century mind could take a great inspiration and power from the various fitness trackers and wearables.
+      </p>
+       
+      <p
+        className="uppercase py-6"
+      >
+        Secondly, emotional hygiene seems to be thrown into the shade nowadays. Somehow, the culture of busyness prevents us from squeezing some time for mental health into our packed schedules. Information is pouring on us from millions of communication channels; we are connecting with hundreds of ‘friends’ on social media, we are obsessed with data due to the fear of missing out and time management slices up our days into meetings and to-do-lists.
+      </p>
+      <p
+        className="uppercase"
+      >
+        The pressure to perform and the stress to achieve is the air every busy-bee is breathing. However, turbulent lifestyle comes with a price. No wonder so many people have mental health issues. In the US, that means one in five adults – more than 40 million Americans! On the old continent, 27 percent of the population has to cope with mental disorders, which means 83 million struggling Europeans. In Asia, the prevalence of depression is 20 percent in Thailand, 19.9 percent in Taiwan, 19.4 percent in Korea, 17.5 in Malaysia and 16.5 percent in China.
+      </p>
+    </div>
+    <div
+      className=" w-full max-w-[800px] mx-auto mt-12 mb-24 flex flex-col justify-center px-3"
+    >
+      <h3
+        className="uppercase lg:text-xl font-weight:600 sm:m-0"
+      >
+        Sign up for The Healing blog
+      </h3>
+      <h6
+        className="uppercase mb-4 py-2 font-weight:600"
+      >
+        A weekly, ad-free Blog that helps you stay in the know.
+      </h6>
+      <div
+        className="flex justify-start items-center"
+      >
+        <input
+          className="border border-gray-400 rounded-l-md h-10 pl-2 focus:outline-none "
+          onChange={[Function]}
+          placeholder="Enter your e-mail"
+          type="email"
+          value=""
+        />
+        <button
+          className="h-10  bg-cyan-400 pl-1 pr-2 rounded-r-md border-y border-r border-gray-400 hover:bg-cyan-300 text-xl"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
             }
-          }
-          viewBox="0 0 448 512"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
-          />
-        </svg>
-      </button>
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
-  </div>
-  <div
-    className="flex justify-center mb-10 "
-  >
     <div
-      className="w-5/6 flex flex-col lg:flex-row justify-between gap-4"
+      className="flex justify-center mb-10 "
     >
       <div
-        className="w-full lg:w-6/12 relative"
+        className="w-5/6 flex flex-col lg:flex-row justify-between gap-4"
       >
-        <img
-          alt="trauma"
-          className=" "
-          src="trauma.png"
-          title="HEAL FROM TRAUMA"
-        />
-        <span
-          className="absolute bottom-1/4 left-5 w-max "
+        <div
+          className="w-full lg:w-6/12 relative"
         >
-          <p
-            className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90  "
+          <img
+            alt="trauma"
+            className=" "
+            src="trauma.png"
+            title="HEAL FROM TRAUMA"
+          />
+          <span
+            className="absolute bottom-1/4 left-5 w-max "
           >
-            HEAL FROM
-          </p>
-          <p
-            className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90 mt-1 "
-          >
-            TRAUMA
-          </p>
-        </span>
-      </div>
-      <div
-        className="w-full lg:w-6/12 relative"
-      >
-        <img
-          alt="anxiety"
-          className=""
-          src="anxiety.png"
-        />
-        <span
-          className="absolute top-5 left-3 w-2/6"
+            <p
+              className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90  "
+            >
+              HEAL FROM
+            </p>
+            <p
+              className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90 mt-1 "
+            >
+              TRAUMA
+            </p>
+          </span>
+        </div>
+        <div
+          className="w-full lg:w-6/12 relative"
         >
-          <p
-            className="font-medium text-sm md:text-lg text-start"
+          <img
+            alt="anxiety"
+            className=""
+            src="anxiety.png"
+          />
+          <span
+            className="absolute top-5 left-3 w-2/6"
           >
-            TELL ME ALL I NEED TO KNOW ABOUT ANXIETY
-          </p>
-        </span>
+            <p
+              className="font-medium text-sm md:text-lg text-start"
+            >
+              TELL ME ALL I NEED TO KNOW ABOUT ANXIETY
+            </p>
+          </span>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+  <div
+    className="w-full h-60 md:h-44 bg-amber-200 flex justify-center"
+  >
+    <div
+      className="w-full md:w-10/12 h-full flex flex-col md:flex-row justify-between items-center"
+    >
+      <div
+        className="h-5/6 w-5/6 md:w-4/12 flex flex-col items-center md:items-start justify-around"
+      >
+        <div
+          className="flex flex-col items-center md:items-start gap-2 w-full "
+        >
+          <h2
+            className="text-2xl font-semibold"
+          >
+            Subscribe
+          </h2>
+          <p
+            className="text-gray-500 "
+          >
+            We\`ll never to spam you or share your email
+          </p>
+        </div>
+        <div
+          className="flex justify-start items-center"
+        >
+          <input
+            className="border border-gray-400 rounded-l-md h-10 pl-2 focus:outline-none "
+            onChange={[Function]}
+            placeholder="Enter your e-mail"
+            type="email"
+            value=""
+          />
+          <button
+            className="h-10  bg-cyan-400 pl-1 pr-2 rounded-r-md border-y border-r border-gray-400 hover:bg-cyan-300 text-xl"
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        className="h-5/6 w-full md:w-4/12 flex flex-col justify-evenly items-center"
+      >
+        <div
+          className="w-full flex justify-between items-center gap-2"
+        >
+          <a
+            className="text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+          <a
+            className="text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg"
+            href="/blog"
+            onClick={[Function]}
+          >
+            Blogs
+          </a>
+          <a
+            className="text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg"
+            href="/about"
+            onClick={[Function]}
+          >
+            About
+          </a>
+          <a
+            className="text-gray-500 hover:scale-110 hover:underline hover:underline-offset-4 text-lg"
+            href="/contact"
+            onClick={[Function]}
+          >
+            Contact
+          </a>
+        </div>
+        <div
+          className="w-6/12 flex justify-around items-center"
+        >
+          <button
+            alt="Twitter"
+            className="text-3xl hover:text-cyan-400"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+              />
+            </svg>
+          </button>
+          <button
+            alt="Facebook"
+            className="text-3xl hover:text-blue-800"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+              />
+            </svg>
+          </button>
+          <button
+            alt="Google"
+            className="text-3xl hover:text-white"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.26620003,9.76452941 C6.19878754,6.93863203 8.85444915,4.90909091 12,4.90909091 C13.6909091,4.90909091 15.2181818,5.50909091 16.4181818,6.49090909 L19.9090909,3 C17.7818182,1.14545455 15.0545455,0 12,0 C7.27006974,0 3.1977497,2.69829785 1.23999023,6.65002441 L5.26620003,9.76452941 Z"
+              />
+              <path
+                d="M16.0407269,18.0125889 C14.9509167,18.7163016 13.5660892,19.0909091 12,19.0909091 C8.86648613,19.0909091 6.21911939,17.076871 5.27698177,14.2678769 L1.23746264,17.3349879 C3.19279051,21.2936293 7.26500293,24 12,24 C14.9328362,24 17.7353462,22.9573905 19.834192,20.9995801 L16.0407269,18.0125889 Z"
+              />
+              <path
+                d="M19.834192,20.9995801 C22.0291676,18.9520994 23.4545455,15.903663 23.4545455,12 C23.4545455,11.2909091 23.3454545,10.5272727 23.1818182,9.81818182 L12,9.81818182 L12,14.4545455 L18.4363636,14.4545455 C18.1187732,16.013626 17.2662994,17.2212117 16.0407269,18.0125889 L19.834192,20.9995801 Z"
+              />
+              <path
+                d="M5.27698177,14.2678769 C5.03832634,13.556323 4.90909091,12.7937589 4.90909091,12 C4.90909091,11.2182781 5.03443647,10.4668121 5.26620003,9.76452941 L1.23999023,6.65002441 C0.43658717,8.26043162 0,10.0753848 0,12 C0,13.9195484 0.444780743,15.7301709 1.23746264,17.3349879 L5.27698177,14.2678769 Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
 `;

@@ -8,6 +8,7 @@ import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import db from '../../../db/firebase.config';
+import Footer from '../../shared/footer/Footer';
 
 function CreateAccountTherapist() {
   const navigate = useNavigate();
@@ -109,128 +110,132 @@ function CreateAccountTherapist() {
   });
 
   return (
-    <form
-      className="w-full h-full py-10 flex flex-col justify-between gap-5 items-start px-2 md:px-5"
-      onSubmit={formik.handleSubmit}
-    >
-      <h2 className="text-4xl font-semibold">Create An Account</h2>
-      {/* username section */}
-      <div className="w-full h-24 flex justify-start">
-        <div className="w-3/12 flex flex-col">
+    <>
+      <form
+        className="w-full h-full py-10 flex flex-col justify-between gap-5 items-start px-2 md:px-5"
+        onSubmit={formik.handleSubmit}
+      >
+        <h2 className="text-4xl font-semibold">Create An Account</h2>
+        {/* username section */}
+        <div className="w-full h-24 flex justify-start">
+          <div className="w-3/12 flex flex-col">
+            <label id="userName" className="text-gray-500 font-semibold">
+              User Name
+            </label>
+            <input
+              type="text"
+              className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+              id="userName"
+              {...formik.getFieldProps('userName')}
+            />
+            {formik.touched.userName && formik.errors.userName ? (
+              <div className="text-red-400 italic text-sm lg:text-base">
+                {formik.errors.userName}
+              </div>
+            ) : null}
+          </div>
+        </div>
+        {/* email section */}
+        <div className="w-3/12 h-24 flex flex-col">
           <label id="userName" className="text-gray-500 font-semibold">
-            User Name
+            Email
+          </label>
+          <input
+            type="email"
+            className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+            id="email"
+            {...formik.getFieldProps('email')}
+          />
+          {formik.touched.email && formik.errors.email ? (
+            <div className="text-red-400 italic text-sm lg:text-base">
+              {formik.errors.email}
+            </div>
+          ) : null}
+        </div>
+
+        {/* city section */}
+        <div className="w-3/12 h-24 flex flex-col">
+          <label id="userName" className="text-gray-500 font-semibold">
+            City
           </label>
           <input
             type="text"
             className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-            id="userName"
-            {...formik.getFieldProps('userName')}
+            id="city"
+            {...formik.getFieldProps('city')}
           />
-          {formik.touched.userName && formik.errors.userName ? (
+          {formik.touched.city && formik.errors.city ? (
             <div className="text-red-400 italic text-sm lg:text-base">
-              {formik.errors.userName}
+              {formik.errors.city}
             </div>
           ) : null}
         </div>
-      </div>
-      {/* email section */}
-      <div className="w-3/12 h-24 flex flex-col">
-        <label id="userName" className="text-gray-500 font-semibold">
-          Email
-        </label>
-        <input
-          type="email"
-          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-          id="email"
-          {...formik.getFieldProps('email')}
-        />
-        {formik.touched.email && formik.errors.email ? (
-          <div className="text-red-400 italic text-sm lg:text-base">
-            {formik.errors.email}
-          </div>
-        ) : null}
-      </div>
 
-      {/* city section */}
-      <div className="w-3/12 h-24 flex flex-col">
-        <label id="userName" className="text-gray-500 font-semibold">
-          City
-        </label>
-        <input
-          type="text"
-          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-          id="city"
-          {...formik.getFieldProps('city')}
-        />
-        {formik.touched.city && formik.errors.city ? (
-          <div className="text-red-400 italic text-sm lg:text-base">
-            {formik.errors.city}
-          </div>
-        ) : null}
-      </div>
+        {/* license number section */}
+        <div className="w-3/12 h-24 flex flex-col">
+          <label id="userName" className="text-gray-500 font-semibold">
+            License Number
+          </label>
+          <input
+            type="text"
+            className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+            id="licenseNum"
+            {...formik.getFieldProps('licenseNum')}
+          />
+          {formik.touched.licenseNum && formik.errors.licenseNum ? (
+            <div className="text-red-400 italic text-sm lg:text-base">
+              {formik.errors.licenseNum}
+            </div>
+          ) : null}
+        </div>
 
-      {/* license number section */}
-      <div className="w-3/12 h-24 flex flex-col">
-        <label id="userName" className="text-gray-500 font-semibold">
-          License Number
-        </label>
-        <input
-          type="text"
-          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-          id="licenseNum"
-          {...formik.getFieldProps('licenseNum')}
-        />
-        {formik.touched.licenseNum && formik.errors.licenseNum ? (
-          <div className="text-red-400 italic text-sm lg:text-base">
-            {formik.errors.licenseNum}
-          </div>
-        ) : null}
-      </div>
+        {/* password section */}
+        <div className="w-3/12 h-24 flex flex-col justify-start">
+          <label id="userName" className="text-gray-500 font-semibold">
+            Password
+          </label>
+          <input
+            type="password"
+            className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+            id="password"
+            {...formik.getFieldProps('password')}
+          />
+          {formik.touched.password && formik.errors.password ? (
+            <div className="text-red-400 italic text-sm lg:text-base">
+              {formik.errors.password}
+            </div>
+          ) : null}
+        </div>
 
-      {/* password section */}
-      <div className="w-3/12 h-24 flex flex-col justify-start">
-        <label id="userName" className="text-gray-500 font-semibold">
-          Password
-        </label>
-        <input
-          type="password"
-          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-          id="password"
-          {...formik.getFieldProps('password')}
-        />
-        {formik.touched.password && formik.errors.password ? (
-          <div className="text-red-400 italic text-sm lg:text-base">
-            {formik.errors.password}
-          </div>
-        ) : null}
-      </div>
+        <div className="w-3/12 h-24 flex flex-col">
+          <label id="userName" className="text-gray-500 font-semibold">
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+            id="confirmPassword"
+            {...formik.getFieldProps('confirmPassword')}
+          />
+          {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
+            <div className="text-red-400 italic text-sm lg:text-base">
+              {formik.errors.confirmPassword}
+            </div>
+          ) : null}
+        </div>
 
-      <div className="w-3/12 h-24 flex flex-col">
-        <label id="userName" className="text-gray-500 font-semibold">
-          Confirm Password
-        </label>
-        <input
-          type="password"
-          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-          id="confirmPassword"
-          {...formik.getFieldProps('confirmPassword')}
-        />
-        {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
-          <div className="text-red-400 italic text-sm lg:text-base">
-            {formik.errors.confirmPassword}
-          </div>
-        ) : null}
-      </div>
+        {/* button section */}
+        <div className="w-full flex justify-between items-center">
+          <input
+            type="submit"
+            value="Create"
+            className="py-1 md:py-3 px-5 h-10 md:h-14 hover:bg-cyan-200 focus:outline-none hover:scale-105 border border-cyan-400 bg-cyan-400 text-lg font-semibold rounded-md w-1/12 shadow-lg"
+          />
+        </div>
+      </form>
 
-      {/* button section */}
-      <div className="w-full flex justify-between items-center">
-        <input
-          type="submit"
-          value="Create"
-          className="py-1 md:py-3 px-5 h-10 md:h-14 hover:bg-cyan-200 focus:outline-none hover:scale-105 border border-cyan-400 bg-cyan-400 text-lg font-semibold rounded-md w-1/12 shadow-lg"
-        />
-      </div>
-    </form>
+      <Footer isShortContent />
+    </>
   );
 }
 

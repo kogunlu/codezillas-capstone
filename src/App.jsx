@@ -7,7 +7,6 @@ import ErrorPage from './components/pages/404/ErrorPage';
 import Book from './components/pages/book/Book';
 import Home from './components/pages/home/Home';
 import SubsThanks from './components/pages/thanks/SubsThanks';
-// import Footer from './components/shared/footer/Footer';
 import Blog from './components/pages/Blog/Blog';
 import Navbar from './components/shared/navbar/Navbar';
 import Login from './components/pages/Login/Login';
@@ -102,8 +101,6 @@ function App() {
         {OnlyLoggedIn.map((element) => element)}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-
-      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

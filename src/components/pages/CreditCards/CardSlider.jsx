@@ -30,7 +30,7 @@ function CardSlider() {
       
       <div className=" justify-center items-center flex flex-col min-w-[500px] ">
         
-      <div className='justify-center flex flex-col w-full items-center h-11/12 '>
+      <div className='justify-center flex flex-col w-full items-center h-11/12  '>
      
         <Carousel breakPoints={breakPoints} className='justify-center items-center h-11/12 w-full '>
         

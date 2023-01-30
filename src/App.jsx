@@ -32,6 +32,7 @@ import SavedCards from './components/pages/CreditCards/SavedCards';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
+
   const user = useSelector((state) => state.user.user);
   const auth = getAuth();
   const [isLoggedIn, setisLoggedIn] = useState(0);
@@ -69,6 +70,7 @@ function App() {
   useEffect(() => {
     isLoggedInf();
   }, [auth]);
+
 
   return (
     <BrowserRouter>

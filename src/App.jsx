@@ -29,6 +29,7 @@ import SavedCards from './components/pages/CreditCards/SavedCards';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Navbar />

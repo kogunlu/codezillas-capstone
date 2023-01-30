@@ -85,7 +85,7 @@ Array [
     </div>
   </div>,
   <div
-    className=" max-w-screen min-w-[900px] h-96  scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-300 overflow-y-scroll scrollbar-thumb-rounded-full overflow-x-hidden"
+    className=" max-w-screen min-w-[900px] h-96 scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-300 overflow-y-scroll scrollbar-thumb-rounded-full overflow-x-hidden"
   >
     <div>
       <div
@@ -101,12 +101,12 @@ Array [
               className="flex flex-col  "
             >
               <h4
-                className="   text-5xl font-medium uppercase item-start font-sans mb-5  "
+                className="   text-5xl font-medium uppercase item-start font-sans mb-5 px-28 "
               >
                 CURRENT OPEN POSITIONS
               </h4>
               <h3
-                className="  text-2xl font-medium font-sans text-gray-500 mb-20"
+                className="  text-2xl font-medium font-sans text-gray-500 mb-20 px-28"
               >
                 Please send us an email with the application title as the subject with an attached CV in PDF format!
               </h3>
@@ -114,7 +114,7 @@ Array [
                 className="   "
               >
                 <div
-                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
                 >
                   <ul
                     className=" flex flex-col w-11/12 overflow-scroll "
@@ -174,7 +174,7 @@ Array [
                 className="   "
               >
                 <div
-                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
                 >
                   <ul
                     className=" flex flex-col w-11/12 overflow-scroll "
@@ -234,7 +234,7 @@ Array [
                 className="   "
               >
                 <div
-                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
                 >
                   <ul
                     className=" flex flex-col w-11/12 overflow-scroll "
@@ -294,7 +294,7 @@ Array [
                 className="   "
               >
                 <div
-                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
                 >
                   <ul
                     className=" flex flex-col w-11/12 overflow-scroll "
@@ -354,7 +354,7 @@ Array [
                 className="   "
               >
                 <div
-                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
                 >
                   <ul
                     className=" flex flex-col w-11/12 overflow-scroll "
@@ -414,7 +414,7 @@ Array [
                 className="   "
               >
                 <div
-                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
                 >
                   <ul
                     className=" flex flex-col w-11/12 overflow-scroll "
@@ -474,7 +474,7 @@ Array [
                 className="   "
               >
                 <div
-                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                  className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
                 >
                   <ul
                     className=" flex flex-col w-11/12 overflow-scroll "
@@ -540,7 +540,7 @@ Array [
     className="   "
   >
     <div
-      className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+      className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
     >
       <ul
         className=" flex flex-col w-11/12 overflow-scroll "
@@ -602,12 +602,12 @@ Array [
             className="flex flex-col  "
           >
             <h4
-              className="   text-5xl font-medium uppercase item-start font-sans mb-5  "
+              className="   text-5xl font-medium uppercase item-start font-sans mb-5 px-28 "
             >
               CURRENT OPEN POSITIONS
             </h4>
             <h3
-              className="  text-2xl font-medium font-sans text-gray-500 mb-20"
+              className="  text-2xl font-medium font-sans text-gray-500 mb-20 px-28"
             >
               Please send us an email with the application title as the subject with an attached CV in PDF format!
             </h3>
@@ -615,7 +615,7 @@ Array [
               className="   "
             >
               <div
-                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
               >
                 <ul
                   className=" flex flex-col w-11/12 overflow-scroll "
@@ -675,7 +675,7 @@ Array [
               className="   "
             >
               <div
-                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
               >
                 <ul
                   className=" flex flex-col w-11/12 overflow-scroll "
@@ -735,7 +735,7 @@ Array [
               className="   "
             >
               <div
-                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
               >
                 <ul
                   className=" flex flex-col w-11/12 overflow-scroll "
@@ -795,7 +795,7 @@ Array [
               className="   "
             >
               <div
-                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
               >
                 <ul
                   className=" flex flex-col w-11/12 overflow-scroll "
@@ -855,7 +855,7 @@ Array [
               className="   "
             >
               <div
-                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
               >
                 <ul
                   className=" flex flex-col w-11/12 overflow-scroll "
@@ -915,7 +915,7 @@ Array [
               className="   "
             >
               <div
-                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
               >
                 <ul
                   className=" flex flex-col w-11/12 overflow-scroll "
@@ -975,7 +975,7 @@ Array [
               className="   "
             >
               <div
-                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   "
+                className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  "
               >
                 <ul
                   className=" flex flex-col w-11/12 overflow-scroll "

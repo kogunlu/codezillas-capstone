@@ -4,7 +4,7 @@ const CareerList = ({header, text, subheader, title}) => {
   return (
    
        <div className='   '>
-                  <div className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px]   ">
+                  <div className="flex flex-col justify-evenly w-screen items-start mb-10 min-w-[700px] px-28  ">
                   
                     <ul className=' flex flex-col w-11/12 overflow-scroll '>
                     <div className='  '>

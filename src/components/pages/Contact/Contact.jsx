@@ -60,11 +60,11 @@ function Contact() {
           </h1>
           <p className="text-gray-500  mt-2 text-xs md:text-3xl ">
             Do you have a question, concern, idea, feedback, or problem? If you
-            need assistance, please fill out the <br /> form below and we’d be
-            happy to help!
+            need assistance, please fill out the form below and we’d be happy to
+            help!
           </p>
         </div>
-        <div className="flex ">
+        <div className="2xl:w-8/12 flex justify-between ">
           <div>
             <div className=" h-auto md:h-auto md:text-xl lg:w-4/6 px-2 md:px-10 py-3 md:py-3 flex  justify-between items-start   flex-wrap">
               <div className="h-auto mb-6">

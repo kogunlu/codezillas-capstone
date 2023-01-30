@@ -3,26 +3,26 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className=" bg-white flex  justify-center  max-w-[ 1440px] min-w-[500px] "
+    className=" h-11/12 bg-white flex  justify-center  max-w-[ 1440px] min-w-[500px] "
   >
     <div
-      className="w-8/12 h-full flex flex-col items-start  justify-evenly min-h-[1400px] "
+      className="w-8/12 h-11/12 flex flex-col items-start  justify-evenly  "
     >
       <div
-        className="  text-5xl font-medium uppercase font-sans mt-40 mb-10"
+        className="  text-5xl font-medium uppercase font-sans mt-20 mb-20 "
       >
         <h3>
           we can communicate through
         </h3>
       </div>
       <div
-        className="   justify-center  flex flex-wrap items-starts  "
+        className=" h-8/12  justify-center  flex flex-wrap items-starts  "
       >
         <div
           className="flex items-center justify-center mb-20 "
         >
           <div
-            className=" flex flex-wrap gap-5 justify-center mb-20 "
+            className=" flex flex-wrap gap-10 justify-center mb-20 "
           >
             <div
               className=" max-w-sm bg-white border border-gray-200 rounded-3xl shadow-lg  dark:border-gray-700 p-6 mb-5 "

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import {React,useState} from 'react';
 import { Link,NavLink, useNavigate } from 'react-router-dom';
-import { getAuth, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
 import swal from 'sweetalert';
 import { GrUserSettings,GrMenu,GrClose,GrFormDown } from 'react-icons/gr';
 import {  useDispatch } from 'react-redux';
@@ -9,7 +9,7 @@ import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
 import Button from '../button/Button';
 
 function Navbar(props) {
-  const {isLoggedIn,isLoggedInFun} = props;
+  const {isLoggedIn,isLoggedInFun,auth} = props;
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -19,7 +19,6 @@ function Navbar(props) {
   }
 
   function handleSignOut() {
-    const auth = getAuth();
 
     signOut(auth)
       .then(() => {

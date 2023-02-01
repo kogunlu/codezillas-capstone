@@ -92,6 +92,7 @@ function CreateAccountTherapist() {
               email: formik.values.email,
               licenseNumber: formik.values.licenseNum,
               city: formik.values.city,
+              isTherapist: true,
             })
           )
           .then((userCredential) => {

@@ -235,11 +235,11 @@ function UserForm() {
   }
 
   function handleShowBtn() {
-    console.log('show');
+    navigate('/select-card');
   }
 
   function handleBuyBtn() {
-    console.log('buy');
+    navigate('/select-card');
   }
 
   // Class names for dropdown list

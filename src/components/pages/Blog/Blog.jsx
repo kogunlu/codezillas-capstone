@@ -8,7 +8,7 @@ import Footer from '../../shared/footer/Footer';
 function Blog() {
   return (
     <>
-      <div className=" lg:mx-auto lg:text-justify ">
+      <div className=" lg:mx-auto text-lg  lg:text-justify px-5 ">
         <img
           className=" items-start lg:justify-center rounded mx-auto py-7  "
           src={meditation}
@@ -29,7 +29,7 @@ function Blog() {
             you how you can enhance your mental and emotional health with the
             help of technology.
           </p>
-          <h3 className="uppercase py-5 text-xl ">
+          <h3 className="uppercase text-bold py-5 text-xl ">
             THE NEED FOR TAKING CARE OF OUR EMOTIONAL HEALTH
           </h3>
           <p className="uppercase">
@@ -69,35 +69,38 @@ function Blog() {
           </p>
         </div>
         <div className=" w-full max-w-[800px] mx-auto mt-12 mb-24 flex flex-col justify-center px-3">
-          <h3 className="uppercase lg:text-xl font-weight:600 sm:m-0">
+          <h3 className="uppercase lg:text-xl text-bold  sm:m-0">
             Sign up for The Healing blog
           </h3>
-          <h6 className="uppercase mb-4 py-2 font-weight:600">
+          <h6 className="uppercase mb-4 py-2 text-bold">
             A weekly, ad-free Blog that helps you stay in the know.
           </h6>
 
           <SubsInput className="" />
+          
         </div>
-
-        <div className="flex justify-center mb-10 ">
-          <div className="w-5/6 flex flex-col lg:flex-row justify-between gap-4">
-            <div className="w-full lg:w-6/12 relative">
+        <h3 className="uppercase lg:text-xl max-w-[800px]  w-full  mx-auto  flex flex-col justify-center px-3 mb-10 ">
+           Recommended for you
+          </h3>
+        <div className="flex justify-center mb-20 ">
+          <div className=" flex flex-col lg:flex-row justify-between gap-4">
+          <span className=" flex justify-end  relative">
               <img
-                className=" "
+                className=""
                 title="HEAL FROM TRAUMA"
                 src={trauma}
                 alt="trauma"
-              />
-              <span className="absolute bottom-1/4 left-5 w-max ">
-                <p className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90  ">
+              /> 
+              <span className="absolute right-3/4 bottom-1/4 2xl:right-[430px] w-max ">
+                <p className="text-white  text-lg  font-bold bg-slate-400 opacity-90  ">
                   HEAL FROM
                 </p>
-                <p className="text-white text-start text-sm md:text-lg font-bold bg-slate-400 opacity-90 mt-1 ">
+                <p className="text-white  text-lg  font-bold bg-slate-400 opacity-90 mt-1 ">
                   TRAUMA
                 </p>
               </span>
-            </div>
-            <div className="w-full lg:w-6/12 relative">
+            </span>
+            <div className="  relative">
               <img className="" src={anxiety} alt="anxiety" />
               <span className="absolute top-5 left-3 w-2/6">
                 <p className="font-medium text-sm md:text-lg text-start">

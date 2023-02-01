@@ -12,7 +12,7 @@ const Body2 = () => {
 
   return (
     
-    <div className='  bg-amber-100 flex flex-col justify-center items-center max-w-[ 1440px] min-w-[500px]'>
+    <div className='  bg-amber-200 flex flex-col justify-center items-center max-w-[ 1440px] min-w-[500px]'>
       <div className='w-8/12 h-screen  flex flex-col items-start justify-evenly  '>
         <div className="h-4/6 flex flex-col justify-evenly items-start gap-10 min-w-fit ">
           <h4 className=' w-3/4  text-5xl font-medium uppercase font-sans  '>Professional, licensed, and vetted therapists that you can trust</h4>

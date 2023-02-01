@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="  bg-amber-100 flex flex-col justify-center items-center max-w-[ 1440px] min-w-[500px]"
+  className="  bg-amber-200 flex flex-col justify-center items-center max-w-[ 1440px] min-w-[500px]"
 >
   <div
     className="w-8/12 h-screen  flex flex-col items-start justify-evenly  "

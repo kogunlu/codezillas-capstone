@@ -1,30 +1,31 @@
 /* eslint-disable no-console */
 import {React,useState} from 'react';
 import { Link,NavLink, useNavigate } from 'react-router-dom';
-import { getAuth, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
 import swal from 'sweetalert';
 import { GrUserSettings,GrMenu,GrClose,GrFormDown } from 'react-icons/gr';
-import { useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import { setAnswer1, setAnswer2 } from '../../../features/user/userSlice';
 import Button from '../button/Button';
 
-function Navbar() {
+function Navbar(props) {
+  const {isLoggedIn,isLoggedInFun,auth} = props;
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const user = useSelector((state) => state.user.user);
 
   function handleLoginClick() {
     navigate('/login');
   }
 
   function handleSignOut() {
-    const auth = getAuth();
 
     signOut(auth)
       .then(() => {
         swal('Signed Out', `Hope to see you soon!`);
+        isLoggedInFun(0)
         navigate('/');
+
         dispatch(setAnswer1(''));
         dispatch(setAnswer2(''));
       })
@@ -34,6 +35,7 @@ function Navbar() {
         console.log(error.message);
       });
   }
+  
 
   const [SideMenuClose, setSideMenuClose] = useState("hidden")
   const [SideMenu, setSideMenu] = useState("")
@@ -53,46 +55,78 @@ function Navbar() {
     }
   }
 
-  const [NavDropDown, setNavDropDown] = useState("opacity-0 hidden")
+  const [NavDropDown, setNavDropDown] = useState("opacity-0 hidden z-[-1]")
+  const [OpenCloseAboutNavDropDown, setOpenCloseAboutNavDropDown] = useState(true)
 
-  function handleNavAboutDropDown()
+  function handleNavAboutDropDown(bool = null)
   {
-    if(NavDropDown === 'opacity-0 hidden')
+    if(bool === true) {setOpenCloseAboutNavDropDown(false)}
+    if(OpenCloseAboutNavDropDown)
     {
-      setNavDropDown('opacity-100')
+      setNavDropDown('opacity-100 z-[1]')
     }else{
       setNavDropDown('opacity-0 block')
-      setTimeout(()=>setNavDropDown('opacity-0 hidden'),500)
+      setTimeout(()=>setNavDropDown('opacity-0 hidden z-[-1]'),500)
+    }
 
+  }
+
+  function handleOpenCloseAbout()
+  {
+    if(OpenCloseAboutNavDropDown)
+    {
+      setOpenCloseAboutNavDropDown(false)
+    }else{
+      setOpenCloseAboutNavDropDown(true)
     }
 
   }
 
 
 
-  const [NavDropDownProfile, setNavDropDownProfile] = useState("opacity-0 hidden")
+  const [NavDropDownProfile, setNavDropDownProfile] = useState("opacity-0 hidden z-[-1]")
 
   function handleNavAboutDropDownProfile()
   {
-    if(NavDropDownProfile === 'opacity-0 hidden')
+    if(NavDropDownProfile === 'opacity-0 hidden z-[-1]')
     {
-      setNavDropDownProfile('opacity-100')
+      setNavDropDownProfile('opacity-100 z-[1]')
     }else{
       setNavDropDownProfile('opacity-0 block')
-      setTimeout(()=>setNavDropDownProfile('opacity-0 hidden'),500)
+      setTimeout(()=>setNavDropDownProfile('opacity-0 hidden z-[-1]'),500)
 
     }
 
   }
 
+  let ConditionalComponent = '';
+  if(isLoggedIn)
+  {
+    ConditionalComponent =  <button type="button" onClick={handleNavAboutDropDownProfile}>
+                              <GrUserSettings className="text-2xl" />
+                            </button>
+  }else{
+    ConditionalComponent = <Button
+                              className="col-span-2"
+                              type="button"
+                              name="Login"
+                              classList="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
+                              function={() => handleLoginClick()}
+                            />
+  }
+
+  // useEffect(()=>{
+
+
+  // },[ref])
   return (
     <div className='bg-main-background'>
       <div className='p-3'>
         <div className='grid grid-cols-4'>
           <div className='grid grid-cols-2 md:grid-col-2 col-span-2'>
             <Link to="/">
-              <span className='grid grid-cols-2 ml-3 sm:ml-3 md:ml-8  text-3xl md:text-5xl gap-1 sm:gap-4 lg:gap-0 cursor-pointer'>
-                <img className='w-min inline' src="/logo.png" alt='Healing logo' />
+              <span className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 ml-3 sm:ml-3 md:ml-8 text-3xl md:text-5xl cursor-pointer'>
+                <img className='w-min inline float-right md:col-start-2 lg:col-start-3' src="/logo.png" alt='Healing logo' />
                 <span>Healing</span>
               </span>
             </Link>
@@ -104,33 +138,22 @@ function Navbar() {
           <ul className={`grid place-content-center md:grid-cols-12 mt-16 md:my-0 col-span-2 content-center  md:z-auto absolute md:static bg-main-background left-0 w-full md:w-auto py-4 ma:py-0 pl-7 md:pl-0  md:opacity-100  transition-all ease-in duration-500 gap-4 ${ShowHide}` }>
             <li className='py-2 text-center md:col-span-2'><NavLink to="/" className="hover:text-yellow-white duration-300">Home</NavLink></li>
             <li className='py-2 text-center md:col-span-2'><NavLink to="/blogs" className="hover:text-yellow-white duration-300" >Blogs</NavLink></li>
-            <li className='py-2 flex justify-center grid md:col-span-3'>
-              <button type='button' className='hover:text-yellow-white duration-300 grid grid-cols-3 w-30 ' onClick={()=>handleNavAboutDropDown()}>
-                <span className='col-span-2'>About</span>
-                <span><GrFormDown className='text-xl' /></span>
+            <li className='py-2 flex justify-center grid md:col-span-3 cursor-pointer' >
+              <button type='button' className=' grid grid-cols-2 md:grid-cols-3 w-30 ' onClick={()=>{  handleNavAboutDropDown(); handleOpenCloseAbout(); }}  >
+                <span className='col-span-1 md:col-span-2 hover:text-yellow-white duration-300'>About</span>
+                <span><GrFormDown className='text-xl hover:text-yellow-white duration-300' /></span>
+                <ul className={`row-span-2 col-span-2 md:col-span-1 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-10 static md:block md:absolute transition-all ease-in duration-500 ${NavDropDown}`} onMouseLeave={()=>{ handleNavAboutDropDown(true);setOpenCloseAboutNavDropDown(true) }} >
+                  <li className='text-center py-2 w-full' ><NavLink onClick={()=>{ handleNavAboutDropDown(true);setOpenCloseAboutNavDropDown(true)}} className='hover:text-yellow-white duration-300' to="/about">About Us</NavLink></li>
+                  <li className='text-center py-2 w-full'><NavLink onClick={()=>{handleNavAboutDropDown(true);setOpenCloseAboutNavDropDown(true)}} className='hover:text-yellow-white duration-300' to="/team">Team</NavLink></li>
+                  <li className='text-center py-2  w-full'><NavLink onClick={()=>{handleNavAboutDropDown(true);setOpenCloseAboutNavDropDown(true)}} className='hover:text-yellow-white duration-300' to="/career">Career</NavLink></li>
+                </ul>
               </button>
-              <ul className={`row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-10 static md:block md:absolute transition-all ease-in duration-500 z-[1] ${NavDropDown}`}>
-                <li className='text-center py-2 w-full'><NavLink className='hover:text-yellow-white duration-300' to="/about">About Us</NavLink></li>
-                <li className='text-center py-2 w-full'><NavLink className='hover:text-yellow-white duration-300' to="/team">Team</NavLink></li>
-                <li className='text-center py-2  w-full'><NavLink className='hover:text-yellow-white duration-300' to="/career">Career</NavLink></li>
-              </ul>
+             
             </li>
             <li className='py-2 text-center md:col-span-2'><NavLink className='hover:text-yellow-white duration-300' to="/contact">Contact Us</NavLink></li>
-            <li className=" md:col-span-3 grid place-content-center w-32">
-              {user.email ? (
-                <button type="button" onClick={handleNavAboutDropDownProfile} className="grid place-content-center ">
-                  <GrUserSettings className="text-2xl" />
-                </button>
-              ) : (
-                <Button
-                  className="col-span-2 duration-500"
-                  type="button"
-                  name="Login"
-                  classList="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
-                  function={() => handleLoginClick()}
-                />
-              )}
-              <ul className={`row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-12 static md:block md:absolute transition-all ease-in duration-500 z-[1] ${NavDropDownProfile}`}>
+            <li className="md:col-span-3 grid place-content-center w-32">
+            {ConditionalComponent}
+              <ul className={`row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-12 static md:block md:absolute transition-all ease-in duration-500 ${NavDropDownProfile}`}  onMouseLeave={()=>handleNavAboutDropDownProfile()}>
                 <li className='text-center py-2 w-full hover:text-yellow-white duration-300 '><button className='place-self-center' type='button' onClick={()=>{ handleSignOut();handleNavAboutDropDownProfile();}}>Sign Out</button></li>
               </ul>
             </li>

@@ -86,7 +86,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar isLoggedIn={isLoggedIn} isLoggedInFun={setisLoggedIn} />
+      <Navbar isLoggedIn={isLoggedIn} isLoggedInFun={setisLoggedIn} auth={auth} />
       <Routes>
         <Route path="select-card" element={<SelectCardSlider />} />
         <Route path="purchase-thanks" element={<PurchaseThanks />} />

@@ -315,7 +315,7 @@ Array [
     </div>
   </div>,
   <div
-    className="absolute inset-x-0 bottom-0 w-full h-60 md:h-44 bg-amber-200 flex justify-center"
+    className="inset-x-0 bottom-0 w-full h-60 md:h-44 bg-amber-200 flex justify-center "
   >
     <div
       className="w-full md:w-10/12 h-full flex flex-col md:flex-row justify-between items-center"

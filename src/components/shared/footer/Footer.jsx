@@ -7,9 +7,9 @@ function Footer({ isShortContent = false }) {
   let classForFooter = '';
   if (isShortContent) {
     classForFooter =
-      'absolute inset-x-0 bottom-0 w-full h-60 md:h-44 bg-amber-200 flex justify-center';
+      'inset-x-0 bottom-0 w-full h-60 md:h-44 bg-amber-200 flex justify-center ';
   } else {
-    classForFooter = 'w-full h-60 md:h-44 bg-amber-200 flex justify-center';
+    classForFooter = 'w-full h-60 md:h-44 bg-amber-200 flex justify-center ';
   }
 
   return (

@@ -2,143 +2,147 @@
 
 exports[`Renders correctly for EditUser Component 1`] = `
 Array [
-  <form
-    className="w-full h-full py-10 flex flex-col justify-between gap-5 items-start px-2 md:px-5"
-    onSubmit={[Function]}
+  <div
+    className="flex justify-center"
   >
-    <h2
-      className="text-4xl font-semibold"
+    <form
+      className="w-10/12 h-full py-10 flex flex-col justify-between gap-5 items-start"
+      onSubmit={[Function]}
     >
-      Create An Account
-    </h2>
-    <div
-      className="w-full h-24 flex justify-start"
-    >
+      <h2
+        className="text-4xl font-semibold"
+      >
+        Create An Account
+      </h2>
       <div
-        className="w-3/12 flex flex-col"
+        className="w-full h-24 flex justify-start"
+      >
+        <div
+          className="w-3/12 flex flex-col"
+        >
+          <label
+            className="text-gray-500 font-semibold"
+            id="userName"
+          >
+            User Name
+          </label>
+          <input
+            className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+            id="userName"
+            name="userName"
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="w-3/12 h-24 flex flex-col"
       >
         <label
           className="text-gray-500 font-semibold"
           id="userName"
         >
-          User Name
+          Email
         </label>
         <input
           className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+          id="email"
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="email"
+          value=""
+        />
+      </div>
+      <div
+        className="w-3/12 h-24 flex flex-col"
+      >
+        <label
+          className="text-gray-500 font-semibold"
           id="userName"
-          name="userName"
+        >
+          City
+        </label>
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+          id="city"
+          name="city"
           onBlur={[Function]}
           onChange={[Function]}
           type="text"
           value=""
         />
       </div>
-    </div>
-    <div
-      className="w-3/12 h-24 flex flex-col"
-    >
-      <label
-        className="text-gray-500 font-semibold"
-        id="userName"
+      <div
+        className="w-3/12 h-24 flex flex-col"
       >
-        Email
-      </label>
-      <input
-        className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-        id="email"
-        name="email"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="email"
-        value=""
-      />
-    </div>
-    <div
-      className="w-3/12 h-24 flex flex-col"
-    >
-      <label
-        className="text-gray-500 font-semibold"
-        id="userName"
+        <label
+          className="text-gray-500 font-semibold"
+          id="userName"
+        >
+          License Number
+        </label>
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+          id="licenseNum"
+          name="licenseNum"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="w-3/12 h-24 flex flex-col justify-start"
       >
-        City
-      </label>
-      <input
-        className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-        id="city"
-        name="city"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      className="w-3/12 h-24 flex flex-col"
-    >
-      <label
-        className="text-gray-500 font-semibold"
-        id="userName"
+        <label
+          className="text-gray-500 font-semibold"
+          id="userName"
+        >
+          Password
+        </label>
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+          id="password"
+          name="password"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="w-3/12 h-24 flex flex-col"
       >
-        License Number
-      </label>
-      <input
-        className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-        id="licenseNum"
-        name="licenseNum"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      className="w-3/12 h-24 flex flex-col justify-start"
-    >
-      <label
-        className="text-gray-500 font-semibold"
-        id="userName"
+        <label
+          className="text-gray-500 font-semibold"
+          id="userName"
+        >
+          Confirm Password
+        </label>
+        <input
+          className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
+          id="confirmPassword"
+          name="confirmPassword"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="w-full flex justify-between items-center"
       >
-        Password
-      </label>
-      <input
-        className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-        id="password"
-        name="password"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="password"
-        value=""
-      />
-    </div>
-    <div
-      className="w-3/12 h-24 flex flex-col"
-    >
-      <label
-        className="text-gray-500 font-semibold"
-        id="userName"
-      >
-        Confirm Password
-      </label>
-      <input
-        className="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base"
-        id="confirmPassword"
-        name="confirmPassword"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="password"
-        value=""
-      />
-    </div>
-    <div
-      className="w-full flex justify-between items-center"
-    >
-      <input
-        className="py-1 md:py-3 px-5 h-10 md:h-14 hover:bg-cyan-200 focus:outline-none hover:scale-105 border border-cyan-400 bg-cyan-400 text-lg font-semibold rounded-md w-1/12 shadow-lg"
-        type="submit"
-        value="Create"
-      />
-    </div>
-  </form>,
+        <input
+          className="py-1 md:py-3 px-5 h-10 md:h-14 hover:bg-cyan-200 focus:outline-none hover:scale-105 border border-cyan-400 bg-cyan-400 text-lg font-semibold rounded-md w-1/12 shadow-lg"
+          type="submit"
+          value="Create"
+        />
+      </div>
+    </form>
+  </div>,
   <div
     className="inset-x-0 bottom-0 w-full h-60 md:h-44 bg-amber-200 flex justify-center "
   >

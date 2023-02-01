@@ -18,11 +18,11 @@ exports[`Navbar component renders correctly 1`] = `
           onClick={[Function]}
         >
           <span
-            className="grid grid-cols-2 ml-3 sm:ml-3 md:ml-8  text-3xl md:text-5xl gap-1 sm:gap-4 lg:gap-0 cursor-pointer"
+            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 ml-3 sm:ml-3 md:ml-8 text-3xl md:text-5xl cursor-pointer"
           >
             <img
               alt="Healing logo"
-              className="w-min inline"
+              className="w-min inline float-right md:col-start-2 lg:col-start-3"
               src="/logo.png"
             />
             <span>
@@ -108,21 +108,21 @@ exports[`Navbar component renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="py-2 flex justify-center grid md:col-span-3"
+          className="py-2 flex justify-center grid md:col-span-3 cursor-pointer"
         >
           <button
-            className="hover:text-yellow-white duration-300 grid grid-cols-3 w-30 "
+            className=" grid grid-cols-2 md:grid-cols-3 w-30 "
             onClick={[Function]}
             type="button"
           >
             <span
-              className="col-span-2"
+              className="col-span-1 md:col-span-2 hover:text-yellow-white duration-300"
             >
               About
             </span>
             <span>
               <svg
-                className="text-xl"
+                className="text-xl hover:text-yellow-white duration-300"
                 fill="currentColor"
                 height="1em"
                 stroke="currentColor"
@@ -144,44 +144,45 @@ exports[`Navbar component renders correctly 1`] = `
                 />
               </svg>
             </span>
+            <ul
+              className="row-span-2 col-span-2 md:col-span-1 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-10 static md:block md:absolute transition-all ease-in duration-500 opacity-0 hidden z-[-1]"
+              onMouseLeave={[Function]}
+            >
+              <li
+                className="text-center py-2 w-full"
+              >
+                <a
+                  className="hover:text-yellow-white duration-300"
+                  href="/about"
+                  onClick={[Function]}
+                >
+                  About Us
+                </a>
+              </li>
+              <li
+                className="text-center py-2 w-full"
+              >
+                <a
+                  className="hover:text-yellow-white duration-300"
+                  href="/team"
+                  onClick={[Function]}
+                >
+                  Team
+                </a>
+              </li>
+              <li
+                className="text-center py-2  w-full"
+              >
+                <a
+                  className="hover:text-yellow-white duration-300"
+                  href="/career"
+                  onClick={[Function]}
+                >
+                  Career
+                </a>
+              </li>
+            </ul>
           </button>
-          <ul
-            className="row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-10 static md:block md:absolute transition-all ease-in duration-500 z-[1] opacity-0 hidden"
-          >
-            <li
-              className="text-center py-2 w-full"
-            >
-              <a
-                className="hover:text-yellow-white duration-300"
-                href="/about"
-                onClick={[Function]}
-              >
-                About Us
-              </a>
-            </li>
-            <li
-              className="text-center py-2 w-full"
-            >
-              <a
-                className="hover:text-yellow-white duration-300"
-                href="/team"
-                onClick={[Function]}
-              >
-                Team
-              </a>
-            </li>
-            <li
-              className="text-center py-2  w-full"
-            >
-              <a
-                className="hover:text-yellow-white duration-300"
-                href="/career"
-                onClick={[Function]}
-              >
-                Career
-              </a>
-            </li>
-          </ul>
         </li>
         <li
           className="py-2 text-center md:col-span-2"
@@ -195,7 +196,7 @@ exports[`Navbar component renders correctly 1`] = `
           </a>
         </li>
         <li
-          className=" md:col-span-3 grid place-content-center w-32"
+          className="md:col-span-3 grid place-content-center w-32"
         >
           <input
             className="py-2 px-5  hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
@@ -204,7 +205,8 @@ exports[`Navbar component renders correctly 1`] = `
             value="Login"
           />
           <ul
-            className="row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-12 static md:block md:absolute transition-all ease-in duration-500 z-[1] opacity-0 hidden"
+            className="row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-12 static md:block md:absolute transition-all ease-in duration-500 opacity-0 hidden z-[-1]"
+            onMouseLeave={[Function]}
           >
             <li
               className="text-center py-2 w-full hover:text-yellow-white duration-300 "

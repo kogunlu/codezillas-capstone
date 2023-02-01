@@ -1,17 +1,20 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { useSelector } from 'react-redux';
 import About from './components/pages/About/About';
 import ErrorPage from './components/pages/404/ErrorPage';
 import Book from './components/pages/book/Book';
 import Home from './components/pages/home/Home';
 import SubsThanks from './components/pages/thanks/SubsThanks';
-import Footer from './components/shared/footer/Footer';
+// import Footer from './components/shared/footer/Footer';
 import Blog from './components/pages/Blog/Blog';
 import Navbar from './components/shared/navbar/Navbar';
 import Login from './components/pages/Login/Login';
 import Signup from './components/pages/Signup/Signup';
 import SignupThanks from './components/pages/Signup/SignupThanks';
 import Team from './components/pages/About/Team';
+import AddNewCard from './components/pages/payments/add-new-card/AddNewCard';
 
 import Contact from './components/pages/Contact/Contact';
 import ContactThanks from './components/pages/Contact/ContactThanks/ContactThanks';
@@ -23,13 +26,67 @@ import HealingRequirement from './components/pages/healing/HealingRequirement';
 
 import PurchaseThanks from './components/pages/selectCardImpovements/purchaseThanks/PurchaseThanks';
 import SelectCardSlider from './components/pages/selectCardImpovements/SelectCardSlider';
-
+import Career from './components/pages/Career/Career';
+import OpenPositions from './components/pages/Career/OpenPositions';
+import SavedCards from './components/pages/CreditCards/SavedCards';
 import ThanksTherapist from './components/pages/CreateAccountTherapist/ThanksTherapist';
 
 function App() {
+  const user = useSelector((state) => state.user.user);
+  const auth = getAuth();
+  const [isLoggedIn, setisLoggedIn] = useState(0);
+
+  function isLoggedInf() {
+    if (auth !== null) {
+      onAuthStateChanged(auth, (userLogged) => {
+        if (userLogged !== null) {
+          setisLoggedIn(1);
+        }
+      });
+    } else {
+      setisLoggedIn(0);
+    }
+  }
+  // To add routes need only logged in users be able to view them just add new object in the following array.
+  const pathes = [
+    {
+      path: 'add-new-card',
+      component: <AddNewCard />,
+    },
+  ];
+
+  if (!user.isTherapist) {
+    pathes.push({
+      path: 'edit-user',
+      component: <EditUser />,
+    });
+  } else {
+    pathes.push({
+      path: 'edit-therapist',
+      component: <EditTherapist />,
+    });
+  }
+
+  let OnlyLoggedIn = [];
+  const routes = [];
+  pathes.map((item) =>
+    routes.push(<Route path={item.path} element={item.component} />)
+  );
+
+  if (user.email) {
+    OnlyLoggedIn = routes;
+  } else if (isLoggedIn) {
+    OnlyLoggedIn = routes;
+  } else {
+    // navigate user to please login to enter this page
+  }
+  useEffect(() => {
+    isLoggedInf();
+  }, [auth]);
+
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} isLoggedInFun={setisLoggedIn} auth={auth} />
       <Routes>
         <Route path="select-card" element={<SelectCardSlider />} />
         <Route path="purchase-thanks" element={<PurchaseThanks />} />
@@ -45,6 +102,10 @@ function App() {
         <Route path="edit-user" element={<EditUser />} />
         <Route path="edit-therapist" element={<EditTherapist />} />
         <Route path="blogs" element={<Blog />} />
+        <Route path="career" element={<Career />} />
+        <Route path="OpenPositions" element={<OpenPositions />} />
+
+        <Route path="SavedCards" element={<SavedCards />} />
 
         <Route path="contact" element={<Contact />} />
         <Route path="thanks-contacts" element={<ContactThanks />} />
@@ -52,10 +113,11 @@ function App() {
         <Route path="work-with-healing" element={<HealingRequirement />} />
         <Route path="/thanks-therapist" element={<ThanksTherapist />} />
 
+        {OnlyLoggedIn.map((element) => element)}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

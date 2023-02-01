@@ -1,158 +1,200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders correctly for PurchaseTickets Component 1`] = `
-<div
-  className="flex justify-center"
->
+exports[`PurchaseTickets component renders correctly 1`] = `
+Array [
   <div
-    className="flex flex-col items-center"
+    className="border border-solid w-60 xl:w-80 2xl:w-96 border-gray-200 rounded-lg shadow-xl"
   >
     <div
-      className="w-5/6 flex flex-col justify-between items-start"
+      className="flex flex-col align-center m-6"
     >
-      <p
-        className="text-4xl mt-12 mb-6 text-center lg:text-start 2xl:text-6xl font-bold "
+      <h1
+        className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
+      />
+      <h2
+        className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
+      />
+      <h2
+        className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
+      />
+      <div
+        className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
       >
-        PURCHASE TICKETS
-      </p>
-      <p
-        className="text-l font-normal mb-16 text-center lg:text-start 2xl:text-3xl "
-      >
-        PURCHASE TICKETS THAT CAN BE USED TO BOOK APPOINTMENTS!
-      </p>
+        <a
+          href="/select-card"
+          onClick={[Function]}
+        >
+          <input
+            className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
+            type="button"
+          />
+        </a>
+      </div>
     </div>
+  </div>,
+  <div
+    className=""
+  >
     <div
-      className="w-5/6 flex flex-col gap-4 2xl:gap-20"
+      className=""
     >
       <div
-        className="flex flex-wrap justify-center lg:justify-between w-full gap-4 "
+        className="flex flex-col justify-between sm:items-center lg:items-start lg:px-24 xl:px-32 2xl:px-48"
       >
-        <div
-          className="border border-solid w-72 lg:w-96 border-gray-200 rounded-lg shadow-xl"
+        <p
+          className="text-4xl mt-12 mb-6 text-center lg:text-start 2xl:text-6xl font-bold "
         >
-          <div
-            className="flex flex-col m-6"
-          >
-            <h1
-              className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
-            >
-              5 TICKETS
-            </h1>
-            <h2
-              className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
-            >
-              10$
-            </h2>
-            <h2
-              className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
-            />
-            <div
-              className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
-            >
-              <input
-                className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
-                type="button"
-                value="PURCHASE"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="border border-solid w-72 lg:w-96 border-gray-200 rounded-lg shadow-xl"
+          PURCHASE TICKETS
+        </p>
+        <p
+          className="text-l font-normal mb-16 text-center lg:text-start 2xl:text-3xl "
         >
-          <div
-            className="flex flex-col m-6"
-          >
-            <h1
-              className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
-            >
-              25 TICKETS
-            </h1>
-            <h2
-              className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
-            >
-              40$
-            </h2>
-            <h2
-              className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
-            />
-            <div
-              className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
-            >
-              <input
-                className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
-                type="button"
-                value="PURCHASE"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="border border-solid w-72 lg:w-96 border-gray-200 rounded-lg shadow-xl"
-        >
-          <div
-            className="flex flex-col m-6"
-          >
-            <h1
-              className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
-            >
-              50 TICKETS
-            </h1>
-            <h2
-              className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
-            >
-              70$
-            </h2>
-            <h2
-              className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
-            />
-            <div
-              className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
-            >
-              <input
-                className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
-                type="button"
-                value="PURCHASE"
-              />
-            </div>
-          </div>
-        </div>
+          PURCHASE TICKETS THAT CAN BE USED TO BOOK APPOINTMENTS!
+        </p>
       </div>
       <div
-        className="flex justify-center mb-10"
+        className="flex flex-col gap-4 2xl:gap-20 items-center "
       >
         <div
-          className="border border-solid text-center w-full border-gray-200 rounded-lg shadow-xl"
+          className="flex flex-wrap justify-center gap-4 lg:gap-14 xl:gap-32 2xl:gap-20"
         >
           <div
-            className="flex flex-col m-6"
+            className="border border-solid w-60 xl:w-80 2xl:w-96 border-gray-200 rounded-lg shadow-xl"
           >
-            <h1
-              className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
-            >
-              ARE YOU A COUNSELOR?
-            </h1>
-            <h2
-              className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
-            />
-            <h2
-              className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
-            >
-              interested in joining our mental health platform? you decide your schedule and how much you want to work, we'll take care of the client referrals and billing details!
-            </h2>
             <div
-              className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
+              className="flex flex-col align-center m-6"
+            >
+              <h1
+                className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
+              >
+                5 TICKETS
+              </h1>
+              <h2
+                className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
+              >
+                10$
+              </h2>
+              <h2
+                className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
+              />
+              <div
+                className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
+              >
+                <a
+                  href="/select-card"
+                  onClick={[Function]}
+                >
+                  <input
+                    className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
+                    type="button"
+                    value="PURCHASE"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="border border-solid w-60 xl:w-80 2xl:w-96 border-gray-200 rounded-lg shadow-xl"
+          >
+            <div
+              className="flex flex-col align-center m-6"
+            >
+              <h1
+                className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
+              >
+                25 TICKETS
+              </h1>
+              <h2
+                className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
+              >
+                40$
+              </h2>
+              <h2
+                className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
+              />
+              <div
+                className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
+              >
+                <a
+                  href="/select-card"
+                  onClick={[Function]}
+                >
+                  <input
+                    className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
+                    type="button"
+                    value="PURCHASE"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="border border-solid w-60 xl:w-80 2xl:w-96 border-gray-200 rounded-lg shadow-xl"
+          >
+            <div
+              className="flex flex-col align-center m-6"
+            >
+              <h1
+                className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
+              >
+                50 TICKETS
+              </h1>
+              <h2
+                className="text-gray-400 text-xl pt-3 font-medium flex flex-col items-center justify-center 2xl:text-3xl 2xl:py-8"
+              >
+                70$
+              </h2>
+              <h2
+                className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
+              />
+              <div
+                className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
+              >
+                <a
+                  href="/select-card"
+                  onClick={[Function]}
+                >
+                  <input
+                    className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
+                    type="button"
+                    value="PURCHASE"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="flex flex-col text-center mb-10 border border-solid w-5/6 border-gray-200 rounded-lg shadow-xl"
+        >
+          <h1
+            className="text-3xl font-semibold pt-12  flex flex-col items-center justify-center 2xl:text-5xl"
+          >
+            ARE YOU A COUNSELOR?
+          </h1>
+          <h2
+            className="text-base pt-2 font-normal 2xl:text-2xl pb-6"
+          >
+            interested in joining our mental health platform? you decide your schedule and how much you want to work, we'll take care of the client referrals and billing details!
+          </h2>
+          <div
+            className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
+          >
+            <a
+              href="/work-with-healing"
+              onClick={[Function]}
             >
               <input
                 className="py-2 px-7 hover:bg-cyan-200 bg-cyan-400 font-medium rounded"
+                onClick={[Function]}
                 type="button"
                 value="LEARN MORE"
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;

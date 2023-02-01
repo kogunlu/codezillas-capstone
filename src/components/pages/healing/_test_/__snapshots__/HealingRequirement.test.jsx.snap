@@ -97,11 +97,11 @@ exports[`renders correctly for HealingRequirement 1`] = `
     className="w-full px-5 py-10 lg:pb-20 lg:pl-20 xl:px-20 2xl:px-32 flex flex-col justify-evenly gap-5"
   >
     <a
-      href="/create-account"
+      href="/create-therapist"
       onClick={[Function]}
     >
       <input
-        className="py-2 px-5 w-10/12 md:w-8/12 lg:w-5/12 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
+        className="py-2 px-5 hover:bg-cyan-200 bg-cyan-400 font-medium rounded text-sm md:text-lg"
         onClick={[Function]}
         type="button"
         value="GET STARTED"

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import Navbar from '../Navbar';
 import { store } from '../../../../app/store';
 
-test('Navbar component renders correctly', () => {
+it('Navbar component renders correctly', () => {
   const tree = renderer
     .create(
       <Provider store={store}>

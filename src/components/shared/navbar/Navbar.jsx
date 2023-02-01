@@ -13,13 +13,13 @@ function Navbar(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const auth = getAuth();
 
   function handleLoginClick() {
     navigate('/login');
   }
 
   function handleSignOut() {
+    const auth = getAuth();
 
     signOut(auth)
       .then(() => {

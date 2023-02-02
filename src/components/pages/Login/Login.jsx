@@ -24,6 +24,7 @@ import {
   setAnswer8,
   setAnswer9,
   setAnswer10,
+  setAnswer11,
 } from '../../../features/user/userSlice';
 import Footer from '../../shared/footer/Footer';
 
@@ -64,6 +65,7 @@ function Login() {
       dispatch(setAnswer8(relatedData.phone));
       dispatch(setAnswer9(relatedData.id));
       dispatch(setAnswer10(relatedData.hobbies));
+      dispatch(setAnswer11(relatedData.isTherapist));
     }
 
     return relatedData;

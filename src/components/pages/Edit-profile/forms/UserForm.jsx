@@ -124,7 +124,7 @@ function UserForm() {
       email: `${activeUser.email}`,
       phone: `${activeUser.phone}`,
       id: `${activeUser.id}`,
-      password: `${activeUser.password}`,
+      password: ``,
       confirmPassword: `${activeUser.confirmPassword}`,
     },
     validate,
@@ -235,11 +235,11 @@ function UserForm() {
   }
 
   function handleShowBtn() {
-    console.log('show');
+    navigate('/select-card');
   }
 
   function handleBuyBtn() {
-    console.log('buy');
+    navigate('/select-card');
   }
 
   // Class names for dropdown list

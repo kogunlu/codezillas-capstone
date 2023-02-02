@@ -111,6 +111,7 @@ function App() {
         <Route path="blogs" element={<Blog />} />
         <Route path="career" element={<Career />} />
         <Route path="OpenPositions" element={<OpenPositions />} />
+        <Route path="SavedCards" element={<SavedCards />} />
 
         <Route path="contact" element={<Contact />} />
         <Route path="thanks-contacts" element={<ContactThanks />} />

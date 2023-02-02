@@ -3,7 +3,15 @@ import {Link } from 'react-router-dom';
 import PurchaseCard from './PurchaseCard';
 import Button from '../../../shared/button/Button';
 /* Purchase button should take us to the Select Card and Learn More button shoul navigate to the Why Work With Healing? */
-function PurchaseTickets() {
+function PurchaseTickets(props) {
+  const {auth} = props
+  let url;
+  if (auth) {
+    url = 'select-card'
+  }else {
+    url = 'login'
+  }
+
   return (
     <div className="">
       <div className="">
@@ -18,11 +26,11 @@ function PurchaseTickets() {
 
         <div className="flex flex-col gap-4 2xl:gap-20 items-center ">
           <div className="flex flex-wrap justify-center gap-4 lg:gap-14 xl:gap-32 2xl:gap-20">
-            <PurchaseCard title="5 TICKETS" dollar="10$" button="PURCHASE" />
+            <PurchaseCard title="5 TICKETS" dollar="10$" button="PURCHASE" url={url} />
 
-            <PurchaseCard title="25 TICKETS" dollar="40$" button="PURCHASE" />
+            <PurchaseCard title="25 TICKETS" dollar="40$" button="PURCHASE" url={url} />
 
-            <PurchaseCard title="50 TICKETS" dollar="70$" button="PURCHASE" />
+            <PurchaseCard title="50 TICKETS" dollar="70$" button="PURCHASE" url={url} />
           </div>
 
         <div className="flex flex-col text-center mb-10 border border-solid w-5/6 border-gray-200 rounded-lg shadow-xl">

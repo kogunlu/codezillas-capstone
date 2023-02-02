@@ -53,6 +53,14 @@ function App() {
       path: 'add-new-card',
       component: <AddNewCard />,
     },
+    {
+      path: 'select-card',
+      component: <SelectCardSlider />,
+    },
+    {
+      path: 'SavedCards',
+      component: <SavedCards />,
+    },
   ];
 
   if (!user.isTherapist) {
@@ -88,9 +96,8 @@ function App() {
     <BrowserRouter>
       <Navbar isLoggedIn={isLoggedIn} isLoggedInFun={setisLoggedIn} auth={auth} />
       <Routes>
-        <Route path="select-card" element={<SelectCardSlider />} />
         <Route path="purchase-thanks" element={<PurchaseThanks />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home auth={[isLoggedIn,user.email]} />}  />
         <Route path="book" element={<Book />} />
         <Route path="about" element={<About />} />
         <Route path="login" element={<Login />} />
@@ -104,7 +111,6 @@ function App() {
         <Route path="blogs" element={<Blog />} />
         <Route path="career" element={<Career />} />
         <Route path="OpenPositions" element={<OpenPositions />} />
-
         <Route path="SavedCards" element={<SavedCards />} />
 
         <Route path="contact" element={<Contact />} />

@@ -7,14 +7,15 @@ import Body3 from './Body3/Body3'
 import Body1 from './body1/Body1';
 import Footer from '../../shared/footer/Footer';
 
-function Home() {
+function Home(props) {
+  const {auth} = props
   return (
     <div>
       <Body1 />
       <Body2 />
       <Body3 />
      <Slidernew/>
-     <PurchaseTickets/>
+     <PurchaseTickets auth={auth[0]} />
       <Footer />
      
 

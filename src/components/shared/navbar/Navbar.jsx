@@ -154,6 +154,7 @@ function Navbar(props) {
             <li className="md:col-span-3 grid place-content-center w-32">
             {ConditionalComponent}
               <ul className={`row-span-2 bg-white grid gap-3 px-8 divide-y divide-slate-300 border-2 border-slate-400 mt-12 static md:block md:absolute transition-all ease-in duration-500 ${NavDropDownProfile}`}  onMouseLeave={()=>handleNavAboutDropDownProfile()}>
+                <li className='text-center py-2 w-full hover:text-yellow-white duration-300 '><NavLink className='place-self-center' to='/edit-user' onClick={()=>{handleNavAboutDropDownProfile();}}>Edit Profile</NavLink></li>
                 <li className='text-center py-2 w-full hover:text-yellow-white duration-300 '><button className='place-self-center' type='button' onClick={()=>{ handleSignOut();handleNavAboutDropDownProfile();}}>Sign Out</button></li>
               </ul>
             </li>

@@ -21,7 +21,7 @@ Array [
         className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
       >
         <a
-          href="/select-card"
+          href="/"
           onClick={[Function]}
         >
           <input
@@ -81,7 +81,7 @@ Array [
                 className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
               >
                 <a
-                  href="/select-card"
+                  href="/login"
                   onClick={[Function]}
                 >
                   <input
@@ -116,7 +116,7 @@ Array [
                 className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
               >
                 <a
-                  href="/select-card"
+                  href="/login"
                   onClick={[Function]}
                 >
                   <input
@@ -151,7 +151,7 @@ Array [
                 className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12"
               >
                 <a
-                  href="/select-card"
+                  href="/login"
                   onClick={[Function]}
                 >
                   <input

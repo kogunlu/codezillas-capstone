@@ -177,7 +177,7 @@ Array [
             <option
               selected="selected"
             >
-              Please Select Country
+              Please Select City
             </option>
             <option
               value="Loading...."

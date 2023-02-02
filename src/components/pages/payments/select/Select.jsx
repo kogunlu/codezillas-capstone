@@ -2,7 +2,7 @@
 /* eslint-disable react/destructuring-assignment */
 export default function Select(props)
 {
-    const {options} = props;
+    const {options,defaultVal} = props;
     function handleSelect(e)
     {
         props.func ? props.func(e.target.selectedOptions[0].value,undefined) : ''
@@ -14,7 +14,7 @@ export default function Select(props)
         className={props.AllClassess}
         onChange={(e) => handleSelect(e)   }
         >
-            <option selected="selected">Please Select Country</option>
+            <option selected="selected">{defaultVal}</option>
             {options?.map(element => {
                 return <option key={element?.country_name} value={element?.country_name || element?.state_name}>{element?.country_name || element?.state_name}</option>
             })}

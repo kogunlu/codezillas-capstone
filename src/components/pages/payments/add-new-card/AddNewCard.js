@@ -391,7 +391,7 @@ function AddNewCard() {
                 AllClassess="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black bg-white"
                 options={Countries}
                 selected={setSelectedCountry}
-                // default={90}
+                defaultVal='Please Select Country'
                 // eslint-disable-next-line react/jsx-no-bind
                 func={fetchCities}
               />
@@ -418,6 +418,7 @@ function AddNewCard() {
                 AllClassess="border w-full h-12 md:h-16 rounded-md pl-2 px-5 focus:outline-none focus:shadow-lg text-sm lg:text-base text-black bg-white"
                 required
                 options={Cities}
+                defaultVal='Please Select City'
                 selected={setSelectedCity}
               />
             </label>

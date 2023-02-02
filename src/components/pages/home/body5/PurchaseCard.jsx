@@ -2,7 +2,7 @@ import React from 'react';
 import {Link } from 'react-router-dom';
 
 function PurchaseCard(props) {
-  const { title, dollar, text, button, classList } = props;
+  const { title, dollar, text, button, classList,url } = props;
   return (
     <div
       className={
@@ -21,7 +21,7 @@ function PurchaseCard(props) {
         <h2 className="text-base pt-2 font-normal 2xl:text-2xl pb-6">{text}</h2>
 
         <div className="flex flex-col items-center justify-center pb-10 2xl:text-3xl 2xl:pb-12">
-        <Link  to="/select-card">
+        <Link  to={url}>
           <input
             type="button"
             value={button}
